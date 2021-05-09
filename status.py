@@ -8,6 +8,9 @@ class Status:
     PREPARE = 'prepare'
     COMMIT = 'commit'
     REPLY = "reply"
+    FEEDBACK = "FEEDBACK"
+    CONFIRM = "CONFIRM"
+    FAST_REPLY = "FAST_REPLY"
 
     def __init__(self, f):
         self.f = f
@@ -19,6 +22,11 @@ class Status:
         # but can not commit if there are any bubbles previously.
         self.commit_certificate = None # proposal
 
+        # {(view, digest(proposal)) : SequenceElement}
+        self.feedback_msgs = {}
+        self.feedback_certificate = None
+        self.confim_msgs = {}
+    
         # Set it to True only after commit
         self.is_committed = False
     
@@ -85,6 +93,10 @@ class Status:
             if key not in self.commit_msgs:
                 self.commit_msgs[key] = self.SequenceElement(proposal)
             self.commit_msgs[key].from_nodes.add(from_node)
+        if msg_type == Status.FEEDBACK:
+            if key not in self.feedback_msgs:
+                self.feedback_msgs[key] = self.SequenceElement(proposal)
+            self.feedback_msgs[key].from_nodes.add(from_node)
 
     def _check_majority(self, msg_type):
         '''
@@ -105,5 +117,14 @@ class Status:
                 return True
             for key in self.commit_msgs:
                 if len(self.commit_msgs[key].from_nodes) >= 2 * self.f + 1:
+                    return True
+            return False 
+
+        # must receive 3f + 1 feedback instead of 2f + 1 
+        if msg_type == Status.FEEDBACK:
+            if self.feedback_certificate:
+                return True
+            for key in self.feedback_msgs:
+                if len(self.feedback_msgs[key].from_nodes) == 3 * self.f + 1:
                     return True
             return False 

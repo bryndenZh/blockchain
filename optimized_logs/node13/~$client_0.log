@@ -1,0 +1,235 @@
+[2021-05-10 00:34:51,935 DEBUG] blockchain_client->setup: 	 {'nodes': [{'host': 'localhost', 'port': 30000}, {'host': 'localhost', 'port': 30001}, {'host': 'localhost', 'port': 30002}, {'host': 'localhost', 'port': 30003}, {'host': 'localhost', 'port': 30004}, {'host': 'localhost', 'port': 30005}, {'host': 'localhost', 'port': 30006}, {'host': 'localhost', 'port': 30007}, {'host': 'localhost', 'port': 30008}, {'host': 'localhost', 'port': 30009}, {'host': 'localhost', 'port': 30010}, {'host': 'localhost', 'port': 30011}, {'host': 'localhost', 'port': 30012}], 'clients': [{'host': 'localhost', 'port': 20001}, {'host': 'localhost', 'port': 20002}], 'loss%': 0, 'ckpt_interval': 10, 'retry_times_before_view_change': 2, 'sync_interval': 5, 'misc': {'network_timeout': 1000}}
+[2021-05-10 00:34:51,935 INFO] blockchain_client->setup: 	 begin
+[2021-05-10 00:34:51,936 DEBUG] selector_events->__init__: 	 Using selector: EpollSelector
+[2021-05-10 00:34:52,422 INFO] blockchain_client->send_request: 	 client 0's  message 0 sent.
+[2021-05-10 00:34:52,472 INFO] blockchain_client->get_reply: 	 Get reply from 0
+[2021-05-10 00:34:52,474 INFO] blockchain_client->get_reply: 	 Get reply from 1
+[2021-05-10 00:34:52,476 INFO] blockchain_client->get_reply: 	 Get reply from 2
+[2021-05-10 00:34:52,479 INFO] blockchain_client->get_reply: 	 Get reply from 3
+[2021-05-10 00:34:52,481 INFO] blockchain_client->get_reply: 	 Get reply from 4
+[2021-05-10 00:34:52,481 INFO] blockchain_client->get_reply: 	 check majority for message [0, 0] passed!
+[2021-05-10 00:34:52,483 INFO] blockchain_client->get_reply: 	 Get reply from 5
+[2021-05-10 00:34:52,483 INFO] blockchain_client->get_reply: 	 check majority for message [0, 0] passed!
+[2021-05-10 00:34:52,486 INFO] blockchain_client->get_reply: 	 Get reply from 6
+[2021-05-10 00:34:52,486 INFO] blockchain_client->get_reply: 	 check majority for message [0, 0] passed!
+[2021-05-10 00:34:52,488 INFO] blockchain_client->get_reply: 	 Get reply from 7
+[2021-05-10 00:34:52,488 INFO] blockchain_client->get_reply: 	 check majority for message [0, 0] passed!
+[2021-05-10 00:34:52,491 INFO] blockchain_client->get_reply: 	 Get reply from 8
+[2021-05-10 00:34:52,491 INFO] blockchain_client->get_reply: 	 check majority for message [0, 0] passed!
+[2021-05-10 00:34:52,494 INFO] blockchain_client->get_reply: 	 Get reply from 9
+[2021-05-10 00:34:52,494 INFO] blockchain_client->get_reply: 	 check majority for message [0, 0] passed!
+[2021-05-10 00:34:52,498 INFO] blockchain_client->get_reply: 	 Get reply from 10
+[2021-05-10 00:34:52,498 INFO] blockchain_client->get_reply: 	 check majority for message [0, 0] passed!
+[2021-05-10 00:34:52,501 INFO] blockchain_client->get_reply: 	 Get reply from 11
+[2021-05-10 00:34:52,501 INFO] blockchain_client->get_reply: 	 check majority for message [0, 0] passed!
+[2021-05-10 00:34:52,504 INFO] blockchain_client->get_reply: 	 Get reply from 12
+[2021-05-10 00:34:52,504 INFO] blockchain_client->get_reply: 	 check majority for message [0, 0] passed!
+[2021-05-10 00:34:52,505 INFO] blockchain_client->send_request: 	 client 0's  message 0 processed successfully.
+[2021-05-10 00:34:52,665 INFO] blockchain_client->send_request: 	 client 0's  message 1 sent.
+[2021-05-10 00:34:52,692 INFO] blockchain_client->get_reply: 	 Get reply from 0
+[2021-05-10 00:34:52,694 INFO] blockchain_client->get_reply: 	 Get reply from 1
+[2021-05-10 00:34:52,695 INFO] blockchain_client->get_reply: 	 Get reply from 2
+[2021-05-10 00:34:52,697 INFO] blockchain_client->get_reply: 	 Get reply from 3
+[2021-05-10 00:34:52,699 INFO] blockchain_client->get_reply: 	 Get reply from 4
+[2021-05-10 00:34:52,699 INFO] blockchain_client->get_reply: 	 check majority for message [0, 1] passed!
+[2021-05-10 00:34:52,701 INFO] blockchain_client->get_reply: 	 Get reply from 5
+[2021-05-10 00:34:52,701 INFO] blockchain_client->get_reply: 	 check majority for message [0, 1] passed!
+[2021-05-10 00:34:52,702 INFO] blockchain_client->get_reply: 	 Get reply from 6
+[2021-05-10 00:34:52,702 INFO] blockchain_client->get_reply: 	 check majority for message [0, 1] passed!
+[2021-05-10 00:34:52,704 INFO] blockchain_client->get_reply: 	 Get reply from 7
+[2021-05-10 00:34:52,704 INFO] blockchain_client->get_reply: 	 check majority for message [0, 1] passed!
+[2021-05-10 00:34:52,706 INFO] blockchain_client->get_reply: 	 Get reply from 8
+[2021-05-10 00:34:52,707 INFO] blockchain_client->get_reply: 	 check majority for message [0, 1] passed!
+[2021-05-10 00:34:52,709 INFO] blockchain_client->get_reply: 	 Get reply from 9
+[2021-05-10 00:34:52,709 INFO] blockchain_client->get_reply: 	 check majority for message [0, 1] passed!
+[2021-05-10 00:34:52,711 INFO] blockchain_client->get_reply: 	 Get reply from 10
+[2021-05-10 00:34:52,711 INFO] blockchain_client->get_reply: 	 check majority for message [0, 1] passed!
+[2021-05-10 00:34:52,712 INFO] blockchain_client->get_reply: 	 Get reply from 11
+[2021-05-10 00:34:52,712 INFO] blockchain_client->get_reply: 	 check majority for message [0, 1] passed!
+[2021-05-10 00:34:52,714 INFO] blockchain_client->get_reply: 	 Get reply from 12
+[2021-05-10 00:34:52,714 INFO] blockchain_client->get_reply: 	 check majority for message [0, 1] passed!
+[2021-05-10 00:34:52,715 INFO] blockchain_client->send_request: 	 client 0's  message 1 processed successfully.
+[2021-05-10 00:34:52,754 INFO] blockchain_client->send_request: 	 client 0's  message 2 sent.
+[2021-05-10 00:34:52,777 INFO] blockchain_client->get_reply: 	 Get reply from 0
+[2021-05-10 00:34:52,779 INFO] blockchain_client->get_reply: 	 Get reply from 1
+[2021-05-10 00:34:52,780 INFO] blockchain_client->get_reply: 	 Get reply from 2
+[2021-05-10 00:34:52,782 INFO] blockchain_client->get_reply: 	 Get reply from 3
+[2021-05-10 00:34:52,783 INFO] blockchain_client->get_reply: 	 Get reply from 4
+[2021-05-10 00:34:52,783 INFO] blockchain_client->get_reply: 	 check majority for message [0, 2] passed!
+[2021-05-10 00:34:52,785 INFO] blockchain_client->get_reply: 	 Get reply from 5
+[2021-05-10 00:34:52,785 INFO] blockchain_client->get_reply: 	 check majority for message [0, 2] passed!
+[2021-05-10 00:34:52,787 INFO] blockchain_client->get_reply: 	 Get reply from 6
+[2021-05-10 00:34:52,787 INFO] blockchain_client->get_reply: 	 check majority for message [0, 2] passed!
+[2021-05-10 00:34:52,789 INFO] blockchain_client->get_reply: 	 Get reply from 7
+[2021-05-10 00:34:52,789 INFO] blockchain_client->get_reply: 	 check majority for message [0, 2] passed!
+[2021-05-10 00:34:52,790 INFO] blockchain_client->get_reply: 	 Get reply from 8
+[2021-05-10 00:34:52,790 INFO] blockchain_client->get_reply: 	 check majority for message [0, 2] passed!
+[2021-05-10 00:34:52,792 INFO] blockchain_client->get_reply: 	 Get reply from 9
+[2021-05-10 00:34:52,792 INFO] blockchain_client->get_reply: 	 check majority for message [0, 2] passed!
+[2021-05-10 00:34:52,794 INFO] blockchain_client->get_reply: 	 Get reply from 10
+[2021-05-10 00:34:52,794 INFO] blockchain_client->get_reply: 	 check majority for message [0, 2] passed!
+[2021-05-10 00:34:52,795 INFO] blockchain_client->get_reply: 	 Get reply from 11
+[2021-05-10 00:34:52,795 INFO] blockchain_client->get_reply: 	 check majority for message [0, 2] passed!
+[2021-05-10 00:34:52,797 INFO] blockchain_client->get_reply: 	 Get reply from 12
+[2021-05-10 00:34:52,797 INFO] blockchain_client->get_reply: 	 check majority for message [0, 2] passed!
+[2021-05-10 00:34:52,798 INFO] blockchain_client->send_request: 	 client 0's  message 2 processed successfully.
+[2021-05-10 00:34:53,744 INFO] blockchain_client->send_request: 	 client 0's  message 3 sent.
+[2021-05-10 00:34:53,766 INFO] blockchain_client->get_reply: 	 Get reply from 0
+[2021-05-10 00:34:53,768 INFO] blockchain_client->get_reply: 	 Get reply from 1
+[2021-05-10 00:34:53,769 INFO] blockchain_client->get_reply: 	 Get reply from 2
+[2021-05-10 00:34:53,771 INFO] blockchain_client->get_reply: 	 Get reply from 3
+[2021-05-10 00:34:53,772 INFO] blockchain_client->get_reply: 	 Get reply from 4
+[2021-05-10 00:34:53,773 INFO] blockchain_client->get_reply: 	 check majority for message [0, 3] passed!
+[2021-05-10 00:34:53,774 INFO] blockchain_client->get_reply: 	 Get reply from 5
+[2021-05-10 00:34:53,774 INFO] blockchain_client->get_reply: 	 check majority for message [0, 3] passed!
+[2021-05-10 00:34:53,776 INFO] blockchain_client->get_reply: 	 Get reply from 6
+[2021-05-10 00:34:53,776 INFO] blockchain_client->get_reply: 	 check majority for message [0, 3] passed!
+[2021-05-10 00:34:53,778 INFO] blockchain_client->get_reply: 	 Get reply from 7
+[2021-05-10 00:34:53,778 INFO] blockchain_client->get_reply: 	 check majority for message [0, 3] passed!
+[2021-05-10 00:34:53,779 INFO] blockchain_client->get_reply: 	 Get reply from 8
+[2021-05-10 00:34:53,779 INFO] blockchain_client->get_reply: 	 check majority for message [0, 3] passed!
+[2021-05-10 00:34:53,781 INFO] blockchain_client->get_reply: 	 Get reply from 9
+[2021-05-10 00:34:53,781 INFO] blockchain_client->get_reply: 	 check majority for message [0, 3] passed!
+[2021-05-10 00:34:53,783 INFO] blockchain_client->get_reply: 	 Get reply from 10
+[2021-05-10 00:34:53,783 INFO] blockchain_client->get_reply: 	 check majority for message [0, 3] passed!
+[2021-05-10 00:34:53,785 INFO] blockchain_client->get_reply: 	 Get reply from 11
+[2021-05-10 00:34:53,785 INFO] blockchain_client->get_reply: 	 check majority for message [0, 3] passed!
+[2021-05-10 00:34:53,787 INFO] blockchain_client->get_reply: 	 Get reply from 12
+[2021-05-10 00:34:53,787 INFO] blockchain_client->get_reply: 	 check majority for message [0, 3] passed!
+[2021-05-10 00:34:53,788 INFO] blockchain_client->send_request: 	 client 0's  message 3 processed successfully.
+[2021-05-10 00:34:54,474 INFO] blockchain_client->send_request: 	 client 0's  message 4 sent.
+[2021-05-10 00:34:54,514 INFO] blockchain_client->get_reply: 	 Get reply from 0
+[2021-05-10 00:34:54,516 INFO] blockchain_client->get_reply: 	 Get reply from 1
+[2021-05-10 00:34:54,518 INFO] blockchain_client->get_reply: 	 Get reply from 2
+[2021-05-10 00:34:54,520 INFO] blockchain_client->get_reply: 	 Get reply from 3
+[2021-05-10 00:34:54,521 INFO] blockchain_client->get_reply: 	 Get reply from 4
+[2021-05-10 00:34:54,521 INFO] blockchain_client->get_reply: 	 check majority for message [0, 4] passed!
+[2021-05-10 00:34:54,523 INFO] blockchain_client->get_reply: 	 Get reply from 5
+[2021-05-10 00:34:54,523 INFO] blockchain_client->get_reply: 	 check majority for message [0, 4] passed!
+[2021-05-10 00:34:54,524 INFO] blockchain_client->get_reply: 	 Get reply from 6
+[2021-05-10 00:34:54,524 INFO] blockchain_client->get_reply: 	 check majority for message [0, 4] passed!
+[2021-05-10 00:34:54,526 INFO] blockchain_client->get_reply: 	 Get reply from 7
+[2021-05-10 00:34:54,526 INFO] blockchain_client->get_reply: 	 check majority for message [0, 4] passed!
+[2021-05-10 00:34:54,527 INFO] blockchain_client->get_reply: 	 Get reply from 8
+[2021-05-10 00:34:54,528 INFO] blockchain_client->get_reply: 	 check majority for message [0, 4] passed!
+[2021-05-10 00:34:54,529 INFO] blockchain_client->get_reply: 	 Get reply from 9
+[2021-05-10 00:34:54,529 INFO] blockchain_client->get_reply: 	 check majority for message [0, 4] passed!
+[2021-05-10 00:34:54,531 INFO] blockchain_client->get_reply: 	 Get reply from 10
+[2021-05-10 00:34:54,531 INFO] blockchain_client->get_reply: 	 check majority for message [0, 4] passed!
+[2021-05-10 00:34:54,532 INFO] blockchain_client->get_reply: 	 Get reply from 11
+[2021-05-10 00:34:54,532 INFO] blockchain_client->get_reply: 	 check majority for message [0, 4] passed!
+[2021-05-10 00:34:54,534 INFO] blockchain_client->get_reply: 	 Get reply from 12
+[2021-05-10 00:34:54,534 INFO] blockchain_client->get_reply: 	 check majority for message [0, 4] passed!
+[2021-05-10 00:34:54,535 INFO] blockchain_client->send_request: 	 client 0's  message 4 processed successfully.
+[2021-05-10 00:34:55,014 INFO] blockchain_client->send_request: 	 client 0's  message 5 sent.
+[2021-05-10 00:34:55,041 INFO] blockchain_client->get_reply: 	 Get reply from 0
+[2021-05-10 00:34:55,043 INFO] blockchain_client->get_reply: 	 Get reply from 1
+[2021-05-10 00:34:55,045 INFO] blockchain_client->get_reply: 	 Get reply from 2
+[2021-05-10 00:34:55,046 INFO] blockchain_client->get_reply: 	 Get reply from 3
+[2021-05-10 00:34:55,048 INFO] blockchain_client->get_reply: 	 Get reply from 4
+[2021-05-10 00:34:55,048 INFO] blockchain_client->get_reply: 	 check majority for message [0, 5] passed!
+[2021-05-10 00:34:55,050 INFO] blockchain_client->get_reply: 	 Get reply from 5
+[2021-05-10 00:34:55,050 INFO] blockchain_client->get_reply: 	 check majority for message [0, 5] passed!
+[2021-05-10 00:34:55,051 INFO] blockchain_client->get_reply: 	 Get reply from 6
+[2021-05-10 00:34:55,051 INFO] blockchain_client->get_reply: 	 check majority for message [0, 5] passed!
+[2021-05-10 00:34:55,053 INFO] blockchain_client->get_reply: 	 Get reply from 7
+[2021-05-10 00:34:55,053 INFO] blockchain_client->get_reply: 	 check majority for message [0, 5] passed!
+[2021-05-10 00:34:55,055 INFO] blockchain_client->get_reply: 	 Get reply from 8
+[2021-05-10 00:34:55,055 INFO] blockchain_client->get_reply: 	 check majority for message [0, 5] passed!
+[2021-05-10 00:34:55,057 INFO] blockchain_client->get_reply: 	 Get reply from 9
+[2021-05-10 00:34:55,057 INFO] blockchain_client->get_reply: 	 check majority for message [0, 5] passed!
+[2021-05-10 00:34:55,059 INFO] blockchain_client->get_reply: 	 Get reply from 10
+[2021-05-10 00:34:55,059 INFO] blockchain_client->get_reply: 	 check majority for message [0, 5] passed!
+[2021-05-10 00:34:55,060 INFO] blockchain_client->get_reply: 	 Get reply from 11
+[2021-05-10 00:34:55,060 INFO] blockchain_client->get_reply: 	 check majority for message [0, 5] passed!
+[2021-05-10 00:34:55,062 INFO] blockchain_client->get_reply: 	 Get reply from 12
+[2021-05-10 00:34:55,062 INFO] blockchain_client->get_reply: 	 check majority for message [0, 5] passed!
+[2021-05-10 00:34:55,063 INFO] blockchain_client->send_request: 	 client 0's  message 5 processed successfully.
+[2021-05-10 00:34:55,788 INFO] blockchain_client->send_request: 	 client 0's  message 6 sent.
+[2021-05-10 00:34:55,810 INFO] blockchain_client->get_reply: 	 Get reply from 0
+[2021-05-10 00:34:55,812 INFO] blockchain_client->get_reply: 	 Get reply from 1
+[2021-05-10 00:34:55,813 INFO] blockchain_client->get_reply: 	 Get reply from 2
+[2021-05-10 00:34:55,815 INFO] blockchain_client->get_reply: 	 Get reply from 3
+[2021-05-10 00:34:55,817 INFO] blockchain_client->get_reply: 	 Get reply from 4
+[2021-05-10 00:34:55,817 INFO] blockchain_client->get_reply: 	 check majority for message [0, 6] passed!
+[2021-05-10 00:34:55,818 INFO] blockchain_client->get_reply: 	 Get reply from 5
+[2021-05-10 00:34:55,818 INFO] blockchain_client->get_reply: 	 check majority for message [0, 6] passed!
+[2021-05-10 00:34:55,820 INFO] blockchain_client->get_reply: 	 Get reply from 6
+[2021-05-10 00:34:55,820 INFO] blockchain_client->get_reply: 	 check majority for message [0, 6] passed!
+[2021-05-10 00:34:55,823 INFO] blockchain_client->get_reply: 	 Get reply from 7
+[2021-05-10 00:34:55,823 INFO] blockchain_client->get_reply: 	 check majority for message [0, 6] passed!
+[2021-05-10 00:34:55,825 INFO] blockchain_client->get_reply: 	 Get reply from 8
+[2021-05-10 00:34:55,825 INFO] blockchain_client->get_reply: 	 check majority for message [0, 6] passed!
+[2021-05-10 00:34:55,826 INFO] blockchain_client->get_reply: 	 Get reply from 9
+[2021-05-10 00:34:55,827 INFO] blockchain_client->get_reply: 	 check majority for message [0, 6] passed!
+[2021-05-10 00:34:55,828 INFO] blockchain_client->get_reply: 	 Get reply from 10
+[2021-05-10 00:34:55,828 INFO] blockchain_client->get_reply: 	 check majority for message [0, 6] passed!
+[2021-05-10 00:34:55,830 INFO] blockchain_client->get_reply: 	 Get reply from 11
+[2021-05-10 00:34:55,830 INFO] blockchain_client->get_reply: 	 check majority for message [0, 6] passed!
+[2021-05-10 00:34:55,832 INFO] blockchain_client->get_reply: 	 Get reply from 12
+[2021-05-10 00:34:55,832 INFO] blockchain_client->get_reply: 	 check majority for message [0, 6] passed!
+[2021-05-10 00:34:55,833 INFO] blockchain_client->send_request: 	 client 0's  message 6 processed successfully.
+[2021-05-10 00:34:56,475 INFO] blockchain_client->send_request: 	 client 0's  message 7 sent.
+[2021-05-10 00:34:56,501 INFO] blockchain_client->get_reply: 	 Get reply from 0
+[2021-05-10 00:34:56,503 INFO] blockchain_client->get_reply: 	 Get reply from 1
+[2021-05-10 00:34:56,504 INFO] blockchain_client->get_reply: 	 Get reply from 2
+[2021-05-10 00:34:56,506 INFO] blockchain_client->get_reply: 	 Get reply from 3
+[2021-05-10 00:34:56,507 INFO] blockchain_client->get_reply: 	 Get reply from 4
+[2021-05-10 00:34:56,507 INFO] blockchain_client->get_reply: 	 check majority for message [0, 7] passed!
+[2021-05-10 00:34:56,509 INFO] blockchain_client->get_reply: 	 Get reply from 5
+[2021-05-10 00:34:56,509 INFO] blockchain_client->get_reply: 	 check majority for message [0, 7] passed!
+[2021-05-10 00:34:56,511 INFO] blockchain_client->get_reply: 	 Get reply from 6
+[2021-05-10 00:34:56,511 INFO] blockchain_client->get_reply: 	 check majority for message [0, 7] passed!
+[2021-05-10 00:34:56,512 INFO] blockchain_client->get_reply: 	 Get reply from 7
+[2021-05-10 00:34:56,512 INFO] blockchain_client->get_reply: 	 check majority for message [0, 7] passed!
+[2021-05-10 00:34:56,514 INFO] blockchain_client->get_reply: 	 Get reply from 8
+[2021-05-10 00:34:56,514 INFO] blockchain_client->get_reply: 	 check majority for message [0, 7] passed!
+[2021-05-10 00:34:56,516 INFO] blockchain_client->get_reply: 	 Get reply from 9
+[2021-05-10 00:34:56,516 INFO] blockchain_client->get_reply: 	 check majority for message [0, 7] passed!
+[2021-05-10 00:34:56,518 INFO] blockchain_client->get_reply: 	 Get reply from 10
+[2021-05-10 00:34:56,518 INFO] blockchain_client->get_reply: 	 check majority for message [0, 7] passed!
+[2021-05-10 00:34:56,520 INFO] blockchain_client->get_reply: 	 Get reply from 11
+[2021-05-10 00:34:56,520 INFO] blockchain_client->get_reply: 	 check majority for message [0, 7] passed!
+[2021-05-10 00:34:56,522 INFO] blockchain_client->get_reply: 	 Get reply from 12
+[2021-05-10 00:34:56,523 INFO] blockchain_client->get_reply: 	 check majority for message [0, 7] passed!
+[2021-05-10 00:34:56,523 INFO] blockchain_client->send_request: 	 client 0's  message 7 processed successfully.
+[2021-05-10 00:34:57,108 INFO] blockchain_client->send_request: 	 client 0's  message 8 sent.
+[2021-05-10 00:34:57,135 INFO] blockchain_client->get_reply: 	 Get reply from 0
+[2021-05-10 00:34:57,138 INFO] blockchain_client->get_reply: 	 Get reply from 1
+[2021-05-10 00:34:57,140 INFO] blockchain_client->get_reply: 	 Get reply from 2
+[2021-05-10 00:34:57,142 INFO] blockchain_client->get_reply: 	 Get reply from 3
+[2021-05-10 00:34:57,144 INFO] blockchain_client->get_reply: 	 Get reply from 4
+[2021-05-10 00:34:57,144 INFO] blockchain_client->get_reply: 	 check majority for message [0, 8] passed!
+[2021-05-10 00:34:57,146 INFO] blockchain_client->get_reply: 	 Get reply from 5
+[2021-05-10 00:34:57,146 INFO] blockchain_client->get_reply: 	 check majority for message [0, 8] passed!
+[2021-05-10 00:34:57,148 INFO] blockchain_client->get_reply: 	 Get reply from 6
+[2021-05-10 00:34:57,148 INFO] blockchain_client->get_reply: 	 check majority for message [0, 8] passed!
+[2021-05-10 00:34:57,150 INFO] blockchain_client->get_reply: 	 Get reply from 7
+[2021-05-10 00:34:57,150 INFO] blockchain_client->get_reply: 	 check majority for message [0, 8] passed!
+[2021-05-10 00:34:57,152 INFO] blockchain_client->get_reply: 	 Get reply from 8
+[2021-05-10 00:34:57,152 INFO] blockchain_client->get_reply: 	 check majority for message [0, 8] passed!
+[2021-05-10 00:34:57,153 INFO] blockchain_client->get_reply: 	 Get reply from 9
+[2021-05-10 00:34:57,154 INFO] blockchain_client->get_reply: 	 check majority for message [0, 8] passed!
+[2021-05-10 00:34:57,155 INFO] blockchain_client->get_reply: 	 Get reply from 10
+[2021-05-10 00:34:57,155 INFO] blockchain_client->get_reply: 	 check majority for message [0, 8] passed!
+[2021-05-10 00:34:57,157 INFO] blockchain_client->get_reply: 	 Get reply from 11
+[2021-05-10 00:34:57,157 INFO] blockchain_client->get_reply: 	 check majority for message [0, 8] passed!
+[2021-05-10 00:34:57,159 INFO] blockchain_client->get_reply: 	 Get reply from 12
+[2021-05-10 00:34:57,159 INFO] blockchain_client->get_reply: 	 check majority for message [0, 8] passed!
+[2021-05-10 00:34:57,160 INFO] blockchain_client->send_request: 	 client 0's  message 8 processed successfully.
+[2021-05-10 00:34:57,183 INFO] blockchain_client->send_request: 	 client 0's  message 9 sent.
+[2021-05-10 00:34:57,219 INFO] blockchain_client->get_reply: 	 Get reply from 0
+[2021-05-10 00:34:57,238 INFO] blockchain_client->get_reply: 	 Get reply from 1
+[2021-05-10 00:34:57,255 INFO] blockchain_client->get_reply: 	 Get reply from 2
+[2021-05-10 00:34:57,274 INFO] blockchain_client->get_reply: 	 Get reply from 3
+[2021-05-10 00:34:57,291 INFO] blockchain_client->get_reply: 	 Get reply from 4
+[2021-05-10 00:34:57,291 INFO] blockchain_client->get_reply: 	 check majority for message [0, 9] passed!
+[2021-05-10 00:34:57,310 INFO] blockchain_client->get_reply: 	 Get reply from 5
+[2021-05-10 00:34:57,310 INFO] blockchain_client->get_reply: 	 check majority for message [0, 9] passed!
+[2021-05-10 00:34:57,327 INFO] blockchain_client->get_reply: 	 Get reply from 6
+[2021-05-10 00:34:57,328 INFO] blockchain_client->get_reply: 	 check majority for message [0, 9] passed!
+[2021-05-10 00:34:57,345 INFO] blockchain_client->get_reply: 	 Get reply from 7
+[2021-05-10 00:34:57,345 INFO] blockchain_client->get_reply: 	 check majority for message [0, 9] passed!
+[2021-05-10 00:34:57,364 INFO] blockchain_client->get_reply: 	 Get reply from 8
+[2021-05-10 00:34:57,364 INFO] blockchain_client->get_reply: 	 check majority for message [0, 9] passed!
+[2021-05-10 00:34:57,368 INFO] blockchain_client->send_request: 	 client 0's  message 9 processed successfully.

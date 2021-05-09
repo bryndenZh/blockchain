@@ -1,0 +1,106 @@
+[2021-05-10 00:34:37,348 DEBUG] node->main: 	 {'nodes': [{'host': 'localhost', 'port': 30000}, {'host': 'localhost', 'port': 30001}, {'host': 'localhost', 'port': 30002}, {'host': 'localhost', 'port': 30003}, {'host': 'localhost', 'port': 30004}, {'host': 'localhost', 'port': 30005}, {'host': 'localhost', 'port': 30006}, {'host': 'localhost', 'port': 30007}, {'host': 'localhost', 'port': 30008}, {'host': 'localhost', 'port': 30009}, {'host': 'localhost', 'port': 30010}, {'host': 'localhost', 'port': 30011}, {'host': 'localhost', 'port': 30012}], 'clients': [{'host': 'localhost', 'port': 20001}, {'host': 'localhost', 'port': 20002}], 'loss%': 0, 'ckpt_interval': 10, 'retry_times_before_view_change': 2, 'sync_interval': 5, 'misc': {'network_timeout': 1000}}
+[2021-05-10 00:34:37,348 INFO] checkpoint->__init__: 	 ---> 1: Create checkpoint.
+[2021-05-10 00:34:37,348 DEBUG] selector_events->__init__: 	 Using selector: EpollSelector
+[2021-05-10 00:34:52,437 INFO] pbft_handler->feedback: 	 ---> 1: on feedback
+[2021-05-10 00:34:52,437 INFO] pbft_handler->feedback: 	 ---> 1: receive preprepare msg from 0
+[2021-05-10 00:34:52,438 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:52,473 INFO] pbft_handler->fast_reply: 	 ---> 1: on fast_reply
+[2021-05-10 00:34:52,473 INFO] pbft_handler->fast_reply: 	 ---> 1: receive confirm msg from 0
+[2021-05-10 00:34:52,473 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 0
+[2021-05-10 00:34:52,474 INFO] pbft_handler->fast_reply: 	 1 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:52,672 INFO] pbft_handler->feedback: 	 ---> 1: on feedback
+[2021-05-10 00:34:52,672 INFO] pbft_handler->feedback: 	 ---> 1: receive preprepare msg from 0
+[2021-05-10 00:34:52,672 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:52,693 INFO] pbft_handler->fast_reply: 	 ---> 1: on fast_reply
+[2021-05-10 00:34:52,693 INFO] pbft_handler->fast_reply: 	 ---> 1: receive confirm msg from 0
+[2021-05-10 00:34:52,693 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 1
+[2021-05-10 00:34:52,694 INFO] pbft_handler->fast_reply: 	 1 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:52,757 INFO] pbft_handler->feedback: 	 ---> 1: on feedback
+[2021-05-10 00:34:52,757 INFO] pbft_handler->feedback: 	 ---> 1: receive preprepare msg from 0
+[2021-05-10 00:34:52,757 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:52,778 INFO] pbft_handler->fast_reply: 	 ---> 1: on fast_reply
+[2021-05-10 00:34:52,778 INFO] pbft_handler->fast_reply: 	 ---> 1: receive confirm msg from 0
+[2021-05-10 00:34:52,778 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 2
+[2021-05-10 00:34:52,779 INFO] pbft_handler->fast_reply: 	 1 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:53,747 INFO] pbft_handler->feedback: 	 ---> 1: on feedback
+[2021-05-10 00:34:53,747 INFO] pbft_handler->feedback: 	 ---> 1: receive preprepare msg from 0
+[2021-05-10 00:34:53,747 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:53,767 INFO] pbft_handler->fast_reply: 	 ---> 1: on fast_reply
+[2021-05-10 00:34:53,767 INFO] pbft_handler->fast_reply: 	 ---> 1: receive confirm msg from 0
+[2021-05-10 00:34:53,767 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 3
+[2021-05-10 00:34:53,768 INFO] pbft_handler->fast_reply: 	 1 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:54,495 INFO] pbft_handler->feedback: 	 ---> 1: on feedback
+[2021-05-10 00:34:54,495 INFO] pbft_handler->feedback: 	 ---> 1: receive preprepare msg from 0
+[2021-05-10 00:34:54,495 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:54,515 INFO] pbft_handler->fast_reply: 	 ---> 1: on fast_reply
+[2021-05-10 00:34:54,515 INFO] pbft_handler->fast_reply: 	 ---> 1: receive confirm msg from 0
+[2021-05-10 00:34:54,515 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 4
+[2021-05-10 00:34:54,516 INFO] pbft_handler->fast_reply: 	 1 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:55,021 INFO] pbft_handler->feedback: 	 ---> 1: on feedback
+[2021-05-10 00:34:55,021 INFO] pbft_handler->feedback: 	 ---> 1: receive preprepare msg from 0
+[2021-05-10 00:34:55,021 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:55,042 INFO] pbft_handler->fast_reply: 	 ---> 1: on fast_reply
+[2021-05-10 00:34:55,042 INFO] pbft_handler->fast_reply: 	 ---> 1: receive confirm msg from 0
+[2021-05-10 00:34:55,043 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 5
+[2021-05-10 00:34:55,043 INFO] pbft_handler->fast_reply: 	 1 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:55,791 INFO] pbft_handler->feedback: 	 ---> 1: on feedback
+[2021-05-10 00:34:55,791 INFO] pbft_handler->feedback: 	 ---> 1: receive preprepare msg from 0
+[2021-05-10 00:34:55,791 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:55,811 INFO] pbft_handler->fast_reply: 	 ---> 1: on fast_reply
+[2021-05-10 00:34:55,811 INFO] pbft_handler->fast_reply: 	 ---> 1: receive confirm msg from 0
+[2021-05-10 00:34:55,811 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 6
+[2021-05-10 00:34:55,812 INFO] pbft_handler->fast_reply: 	 1 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:56,482 INFO] pbft_handler->feedback: 	 ---> 1: on feedback
+[2021-05-10 00:34:56,482 INFO] pbft_handler->feedback: 	 ---> 1: receive preprepare msg from 0
+[2021-05-10 00:34:56,482 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:56,502 INFO] pbft_handler->fast_reply: 	 ---> 1: on fast_reply
+[2021-05-10 00:34:56,502 INFO] pbft_handler->fast_reply: 	 ---> 1: receive confirm msg from 0
+[2021-05-10 00:34:56,502 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 7
+[2021-05-10 00:34:56,503 INFO] pbft_handler->fast_reply: 	 1 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:57,115 INFO] pbft_handler->feedback: 	 ---> 1: on feedback
+[2021-05-10 00:34:57,116 INFO] pbft_handler->feedback: 	 ---> 1: receive preprepare msg from 0
+[2021-05-10 00:34:57,116 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:57,137 INFO] pbft_handler->fast_reply: 	 ---> 1: on fast_reply
+[2021-05-10 00:34:57,137 INFO] pbft_handler->fast_reply: 	 ---> 1: receive confirm msg from 0
+[2021-05-10 00:34:57,137 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 8
+[2021-05-10 00:34:57,138 INFO] pbft_handler->fast_reply: 	 1 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:57,186 INFO] pbft_handler->feedback: 	 ---> 1: on feedback
+[2021-05-10 00:34:57,186 INFO] pbft_handler->feedback: 	 ---> 1: receive preprepare msg from 0
+[2021-05-10 00:34:57,186 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:57,206 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 1: receive checkpoint vote.
+[2021-05-10 00:34:57,206 DEBUG] checkpoint->receive_vote: 	 ---> 1: Receive checkpoint votes
+[2021-05-10 00:34:57,220 INFO] pbft_handler->fast_reply: 	 ---> 1: on fast_reply
+[2021-05-10 00:34:57,220 INFO] pbft_handler->fast_reply: 	 ---> 1: receive confirm msg from 0
+[2021-05-10 00:34:57,220 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 9
+[2021-05-10 00:34:57,221 DEBUG] checkpoint->_post: 	 make request to 0, receive_ckpt_vote
+[2021-05-10 00:34:57,222 DEBUG] checkpoint->_post: 	 make request to 1, receive_ckpt_vote
+[2021-05-10 00:34:57,223 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 1: receive checkpoint vote.
+[2021-05-10 00:34:57,223 DEBUG] checkpoint->receive_vote: 	 ---> 1: Receive checkpoint votes
+[2021-05-10 00:34:57,223 DEBUG] checkpoint->_post: 	 make request to 2, receive_ckpt_vote
+[2021-05-10 00:34:57,224 DEBUG] checkpoint->_post: 	 make request to 3, receive_ckpt_vote
+[2021-05-10 00:34:57,225 DEBUG] checkpoint->_post: 	 make request to 4, receive_ckpt_vote
+[2021-05-10 00:34:57,227 DEBUG] checkpoint->_post: 	 make request to 5, receive_ckpt_vote
+[2021-05-10 00:34:57,228 DEBUG] checkpoint->_post: 	 make request to 6, receive_ckpt_vote
+[2021-05-10 00:34:57,229 DEBUG] checkpoint->_post: 	 make request to 7, receive_ckpt_vote
+[2021-05-10 00:34:57,231 DEBUG] checkpoint->_post: 	 make request to 8, receive_ckpt_vote
+[2021-05-10 00:34:57,232 DEBUG] checkpoint->_post: 	 make request to 9, receive_ckpt_vote
+[2021-05-10 00:34:57,233 DEBUG] checkpoint->_post: 	 make request to 10, receive_ckpt_vote
+[2021-05-10 00:34:57,235 DEBUG] checkpoint->_post: 	 make request to 11, receive_ckpt_vote
+[2021-05-10 00:34:57,236 DEBUG] checkpoint->_post: 	 make request to 12, receive_ckpt_vote
+[2021-05-10 00:34:57,237 INFO] pbft_handler->fast_reply: 	 ---> 1: Propose checkpoint with last slot: 9. In addition, current checkpoint's next_slot is: 0
+[2021-05-10 00:34:57,238 INFO] pbft_handler->fast_reply: 	 1 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:57,241 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 1: receive checkpoint vote.
+[2021-05-10 00:34:57,241 DEBUG] checkpoint->receive_vote: 	 ---> 1: Receive checkpoint votes
+[2021-05-10 00:34:57,258 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 1: receive checkpoint vote.
+[2021-05-10 00:34:57,259 DEBUG] checkpoint->receive_vote: 	 ---> 1: Receive checkpoint votes
+[2021-05-10 00:34:57,277 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 1: receive checkpoint vote.
+[2021-05-10 00:34:57,277 DEBUG] checkpoint->receive_vote: 	 ---> 1: Receive checkpoint votes
+[2021-05-10 00:34:57,295 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 1: receive checkpoint vote.
+[2021-05-10 00:34:57,295 DEBUG] checkpoint->receive_vote: 	 ---> 1: Receive checkpoint votes
+[2021-05-10 00:34:57,314 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 1: receive checkpoint vote.
+[2021-05-10 00:34:57,314 DEBUG] checkpoint->receive_vote: 	 ---> 1: Receive checkpoint votes
+[2021-05-10 00:34:57,331 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 1: receive checkpoint vote.
+[2021-05-10 00:34:57,331 DEBUG] checkpoint->receive_vote: 	 ---> 1: Receive checkpoint votes
+[2021-05-10 00:34:57,349 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 1: receive checkpoint vote.
+[2021-05-10 00:34:57,349 DEBUG] checkpoint->receive_vote: 	 ---> 1: Receive checkpoint votes
+[2021-05-10 00:34:57,349 INFO] checkpoint->receive_vote: 	 ---> 1: Update checkpoint by receiving votes

@@ -18,6 +18,10 @@ class PBFTHandler:
     PREPARE = 'prepare'
     COMMIT = 'commit'
     REPLY = 'reply'
+    
+    FEEDBACK = "FEEDBACK"
+    CONFIRM = "CONFIRM"
+    FAST_REPLY = "FAST_REPLY"
 
     NO_OP = 'NOP'
 
@@ -202,7 +206,9 @@ class PBFTHandler:
             'type': 'preprepare'
         }
         
-        await self._post(self._nodes, PBFTHandler.PREPARE, preprepare_msg)
+        # await self._post(self._nodes, PBFTHandler.PREPARE, preprepare_msg)
+        # require replicas to feedback instead of prepare
+        await self._post(self._nodes, PBFTHandler.FEEDBACK, preprepare_msg)
 
     async def get_request(self, request):
         '''
@@ -233,7 +239,7 @@ class PBFTHandler:
 
     async def prepare(self, request):
         '''
-        Once receive preprepare message from client, broadcast 
+        Once receive preprepare message from leader, broadcast 
         prepare message to all replicas.
 
         input: 
@@ -278,6 +284,191 @@ class PBFTHandler:
             await self._post(self._nodes, PBFTHandler.COMMIT, prepare_msg)
         return web.Response()
 
+
+    async def feedback(self, request):
+        '''
+        Once receive preprepare message from leader, send feedback to leader in return.
+        input: 
+            request: preprepare message from leader:
+                preprepare_msg = {
+                    'leader': self._index,
+                    'view': self._view.get_view(),
+                    'proposal': {
+                        this_slot: json_data
+                    }
+                    'type': 'preprepare'
+                }
+
+        '''
+        json_data = await request.json()
+
+        if json_data['view'] < self._follow_view.get_view():
+            # when receive message with view < follow_view, do nothing
+            return web.Response()
+
+        self._log.info("%d: on feedback", self._index)
+        self._log.info("%d: receive preprepare msg from %d", 
+            self._index, json_data['leader'])
+
+
+        for slot in json_data['proposal']:
+
+            if not self._legal_slot(slot):
+                continue
+
+            if slot not in self._status_by_slot:
+                self._status_by_slot[slot] = Status(self._f)
+
+            feedback_msg = {
+                'index': self._index,
+                'view': json_data['view'],
+                'proposal': {
+                    slot: json_data['proposal'][slot]
+                },
+                'type': Status.FEEDBACK
+            }
+            # require leader to confirm, only send to leader!!!
+            await self._post([self._nodes[self._leader]], PBFTHandler.CONFIRM, feedback_msg)
+        return web.Response()
+
+
+    async def confirm(self, request):
+        '''
+        Once receive 3f + 1 message from replica, send confirm in return
+
+        input: 
+            request: feedback message from replica
+                feedback_msg = {
+                    'leader': self._index,
+                    'view': self._view.get_view(),
+                    'proposal': {
+                        this_slot: json_data
+                    }
+                    'type': 'feedback'
+                }
+
+        '''
+        json_data = await request.json()
+        self._log.info("%d: on confirm", self._index)
+        self._log.info("%d: receive feedback msg from %d", 
+            self._index, json_data['index'])
+
+        if json_data['view'] < self._follow_view.get_view():
+            return web.Response()
+        
+        for slot in json_data['proposal']:
+            if not self._legal_slot(slot):
+                continue
+
+            if slot not in self._status_by_slot:
+                self._status_by_slot[slot] = Status(self._f)
+            status = self._status_by_slot[slot]
+
+            view = View(json_data['view'], self._node_cnt)
+
+            status._update_sequence(json_data['type'], 
+                view, json_data['proposal'][slot], json_data['index'])
+
+            if status._check_majority(json_data['type']):
+                status.feedback_certificate = Status.Certificate(view, 
+                    json_data['proposal'][slot])
+                confirm_msg = {
+                    'index': self._index,
+                    'view': json_data['view'],
+                    'proposal': {
+                        slot: json_data['proposal'][slot]
+                    },
+                    'type': Status.CONFIRM
+                }
+                # send feedback msg, require replica to fast_reply
+                await self._post(self._nodes, PBFTHandler.FAST_REPLY, confirm_msg)
+        return web.Response()
+
+    async def fast_reply(self, request):
+        '''
+        Once receive confirm message from leader, append the commit 
+        certificate and cannot change anymore. In addition, if there is 
+        no bubbles ahead, commit the given slots and update the last_commit_slot.
+        input:
+            request: confirm message from leader:
+                confirm_msg = {
+                    'index': self._index,
+                    'n': self._n,
+                    'proposal': {
+                        this_slot: json_data
+                    }
+                    'type': 'confirm'
+                }
+        '''
+        
+        json_data = await request.json()
+        self._log.info("%d: on fast_reply", self._index)
+
+        if json_data['view'] < self._follow_view.get_view():
+            return web.Response()
+
+        self._log.info("%d: receive confirm msg from %d", 
+            self._index, json_data['index'])
+
+        for slot in json_data['proposal']:
+            if self._index == 3:
+                log.debug("check slot")
+            if not self._legal_slot(slot):
+                continue
+
+            if slot not in self._status_by_slot:
+                self._status_by_slot[slot] = Status(self._f)
+            status = self._status_by_slot[slot]
+
+            view = View(json_data['view'], self._node_cnt)
+
+            status._update_sequence(json_data['type'], 
+                view, json_data['proposal'][slot], json_data['index'])
+
+
+            # Directly Commit, no need to check 2f + 1
+            if not status.commit_certificate:
+                status.commit_certificate = Status.Certificate(view, 
+                    json_data['proposal'][slot])
+
+                self._log.debug("Add commit certifiacte to slot %d", int(slot))
+                
+                if self._last_commit_slot == int(slot) - 1 and not status.is_committed:
+
+                    # client doesn't distinguish fast_reply or reply, so send type REPLY for convenience
+                    fast_reply_msg = {
+                        'index': self._index,
+                        'view': json_data['view'],
+                        'proposal': json_data['proposal'][slot],
+                        'type': Status.REPLY
+                    }
+                    status.is_committed = True
+                    self._last_commit_slot += 1
+
+                    # When commit messages fill the next checkpoint, 
+                    # propose a new checkpoint.
+                    if (self._last_commit_slot + 1) % self._checkpoint_interval == 0:
+                        await self._ckpt.propose_vote(self.get_commit_decisions())
+                        self._log.info("---> %d: Propose checkpoint with last slot: %d. "
+                            "In addition, current checkpoint's next_slot is: %d", 
+                            self._index, self._last_commit_slot, self._ckpt.next_slot)
+
+
+                    # Write to blockchain
+                    await self.dump_to_file()
+                    try:
+                        await self._session.post(
+                            json_data['proposal'][slot]['client_url'], json=fast_reply_msg)
+                    except:
+                        self._log.error("Send message failed to %s", 
+                            json_data['proposal'][slot]['client_url'])
+                        pass
+                    else:
+                        self._log.info("%d fast reply to %s successfully!!", 
+                            self._index, json_data['proposal'][slot]['client_url'])
+                
+        return web.Response()
+
     async def commit(self, request):
         '''
         Once receive more than 2f + 1 prepare message,
@@ -304,9 +495,6 @@ class PBFTHandler:
         if json_data['view'] < self._follow_view.get_view():
             # when receive message with view < follow_view, do nothing
             return web.Response()
-
-
-        
         
         for slot in json_data['proposal']:
             if not self._legal_slot(slot):
@@ -408,7 +596,7 @@ class PBFTHandler:
 
 
                     # Commit!
-                    await self._commit_action()
+                    await self.dump_to_file()
                     try:
                         await self._session.post(
                             json_data['proposal'][slot]['client_url'], json=reply_msg)
@@ -424,10 +612,11 @@ class PBFTHandler:
 
     def get_commit_decisions(self):
         '''
-        Get the commit decision between the next slot of the 
-        current ckpt until last commit slot
+        Get the commit decision between the next slot of the current ckpt until last commit slot.
+        update self.blockchain
         output:
             commit_decisions: list of tuple: [((client_index, client_seq), data), ... ]
+        TODO: move 'update blockchain' to dump_to_file()
 
         '''
         commit_decisions = []
@@ -474,29 +663,14 @@ class PBFTHandler:
         # print(commit_decisions)
         return commit_decisions
 
-    async def _commit_action(self):
+    async def dump_to_file(self):
         '''
         Dump the current commit decisions to disk.
         '''
-        # with open("~$node_{}_blockchain.dump".format(self._index), 'w') as f:
-        dump_data = self._ckpt.checkpoint + self.get_commit_decisions()            
-            # json.dump(dump_data, f)
-        # try:
         with open("~$node_{}.blockchain".format(self._index), 'a') as f:
-            # f.write(str(dump_data)+'\n\n------------\n\n')
-            # print('node :' + str(self._index) +' > '+str(self._blockchain.commit_counter)+' : '+str(self._blockchain.length))
             for i in range(self._blockchain.commit_counter, self._blockchain.length):
                 f.write(str(self._blockchain.chain[i].get_json())+'\n------------\n')
                 self._blockchain.update_commit_counter()
-        # except Exception as e:
-        #     traceback.print_exc()
-        #     print('for i = ' +str(i))
-        #     print(e)
-
-        # pad = ''
-        # for k in range(self._index): 
-        #     pad += '\t'
-        # print(pad+'node :' + str(self._index) +' : '+str(self._blockchain.length))
 
         
 
@@ -586,7 +760,7 @@ class PBFTHandler:
                     "ast slot: %d. In addition, current checkpoint's next_slot is: %d", 
                     self._index, self._last_commit_slot, self._ckpt.next_slot)
 
-        await self._commit_action()
+        await self.dump_to_file()
 
         return web.Response()
         

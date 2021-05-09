@@ -104,8 +104,13 @@ class CheckPoint:
             next_slot for the new update and garbage collection of the Status object.
         '''
         proposed_checkpoint = self.checkpoint + commit_decisions
-        await self._broadcast_checkpoint(proposed_checkpoint, 
-            'vote', CheckPoint.RECEIVE_CKPT_VOTE)
+        json_data = {
+            'node_index': self._node_index,
+            'next_slot': self.next_slot + self._checkpoint_interval,
+            'ckpt': json.dumps(proposed_checkpoint),
+            'type': 'vote'
+        }
+        await self._post(self._nodes, CheckPoint.RECEIVE_CKPT_VOTE, json_data)
 
 
     async def _post(self, nodes, command, json_data):
@@ -121,7 +126,7 @@ class CheckPoint:
             self._session = aiohttp.ClientSession(timeout=timeout)
         for i, node in enumerate(nodes):
             if random() > self._loss_rate:
-                self._log.debug("make request to %d, %s", i, command)
+                self._log.debug("make request to %d, %s", i, json_data['type'])
                 try:
                     _ = await self._session.post(
                         self.make_url(node, command), json=json_data)
@@ -142,14 +147,6 @@ class CheckPoint:
         return "http://{}:{}/{}".format(node['host'], node['port'], command)
 
 
-    async def _broadcast_checkpoint(self, ckpt, msg_type, command):
-        json_data = {
-            'node_index': self._node_index,
-            'next_slot': self.next_slot + self._checkpoint_interval,
-            'ckpt': json.dumps(ckpt),
-            'type': msg_type
-        }
-        await self._post(self._nodes, command, json_data)
 
     def get_ckpt_info(self):
 

@@ -1,0 +1,646 @@
+[2021-05-10 00:34:37,349 DEBUG] node->main: 	 {'nodes': [{'host': 'localhost', 'port': 30000}, {'host': 'localhost', 'port': 30001}, {'host': 'localhost', 'port': 30002}, {'host': 'localhost', 'port': 30003}, {'host': 'localhost', 'port': 30004}, {'host': 'localhost', 'port': 30005}, {'host': 'localhost', 'port': 30006}, {'host': 'localhost', 'port': 30007}, {'host': 'localhost', 'port': 30008}, {'host': 'localhost', 'port': 30009}, {'host': 'localhost', 'port': 30010}, {'host': 'localhost', 'port': 30011}, {'host': 'localhost', 'port': 30012}], 'clients': [{'host': 'localhost', 'port': 20001}, {'host': 'localhost', 'port': 20002}], 'loss%': 0, 'ckpt_interval': 10, 'retry_times_before_view_change': 2, 'sync_interval': 5, 'misc': {'network_timeout': 1000}}
+[2021-05-10 00:34:37,349 INFO] checkpoint->__init__: 	 ---> 0: Create checkpoint.
+[2021-05-10 00:34:37,349 DEBUG] selector_events->__init__: 	 Using selector: EpollSelector
+[2021-05-10 00:34:52,427 INFO] pbft_handler->get_request: 	 ---> 0: on request
+[2021-05-10 00:34:52,427 INFO] pbft_handler->preprepare: 	 ---> 0: on preprepare, propose at slot: 0
+[2021-05-10 00:34:52,428 DEBUG] pbft_handler->_post: 	 make request to 0, preprepare
+[2021-05-10 00:34:52,433 INFO] pbft_handler->feedback: 	 ---> 0: on feedback
+[2021-05-10 00:34:52,433 INFO] pbft_handler->feedback: 	 ---> 0: receive preprepare msg from 0
+[2021-05-10 00:34:52,433 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:52,436 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,436 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 0
+[2021-05-10 00:34:52,436 DEBUG] pbft_handler->_post: 	 make request to 1, preprepare
+[2021-05-10 00:34:52,439 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,439 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 1
+[2021-05-10 00:34:52,439 DEBUG] pbft_handler->_post: 	 make request to 2, preprepare
+[2021-05-10 00:34:52,441 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,441 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 2
+[2021-05-10 00:34:52,442 DEBUG] pbft_handler->_post: 	 make request to 3, preprepare
+[2021-05-10 00:34:52,444 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,444 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 3
+[2021-05-10 00:34:52,445 DEBUG] pbft_handler->_post: 	 make request to 4, preprepare
+[2021-05-10 00:34:52,447 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,447 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 4
+[2021-05-10 00:34:52,447 DEBUG] pbft_handler->_post: 	 make request to 5, preprepare
+[2021-05-10 00:34:52,450 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,450 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 5
+[2021-05-10 00:34:52,450 DEBUG] pbft_handler->_post: 	 make request to 6, preprepare
+[2021-05-10 00:34:52,452 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,452 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 6
+[2021-05-10 00:34:52,453 DEBUG] pbft_handler->_post: 	 make request to 7, preprepare
+[2021-05-10 00:34:52,455 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,455 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 7
+[2021-05-10 00:34:52,456 DEBUG] pbft_handler->_post: 	 make request to 8, preprepare
+[2021-05-10 00:34:52,458 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,458 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 8
+[2021-05-10 00:34:52,458 DEBUG] pbft_handler->_post: 	 make request to 9, preprepare
+[2021-05-10 00:34:52,461 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,461 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 9
+[2021-05-10 00:34:52,461 DEBUG] pbft_handler->_post: 	 make request to 10, preprepare
+[2021-05-10 00:34:52,464 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,464 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 10
+[2021-05-10 00:34:52,465 DEBUG] pbft_handler->_post: 	 make request to 11, preprepare
+[2021-05-10 00:34:52,467 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,467 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 11
+[2021-05-10 00:34:52,468 DEBUG] pbft_handler->_post: 	 make request to 12, preprepare
+[2021-05-10 00:34:52,470 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,470 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 12
+[2021-05-10 00:34:52,470 DEBUG] pbft_handler->_post: 	 make request to 0, CONFIRM
+[2021-05-10 00:34:52,470 INFO] pbft_handler->fast_reply: 	 ---> 0: on fast_reply
+[2021-05-10 00:34:52,471 INFO] pbft_handler->fast_reply: 	 ---> 0: receive confirm msg from 0
+[2021-05-10 00:34:52,471 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 0
+[2021-05-10 00:34:52,472 INFO] pbft_handler->fast_reply: 	 0 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:52,472 DEBUG] pbft_handler->_post: 	 make request to 1, CONFIRM
+[2021-05-10 00:34:52,474 DEBUG] pbft_handler->_post: 	 make request to 2, CONFIRM
+[2021-05-10 00:34:52,477 DEBUG] pbft_handler->_post: 	 make request to 3, CONFIRM
+[2021-05-10 00:34:52,479 DEBUG] pbft_handler->_post: 	 make request to 4, CONFIRM
+[2021-05-10 00:34:52,482 DEBUG] pbft_handler->_post: 	 make request to 5, CONFIRM
+[2021-05-10 00:34:52,484 DEBUG] pbft_handler->_post: 	 make request to 6, CONFIRM
+[2021-05-10 00:34:52,486 DEBUG] pbft_handler->_post: 	 make request to 7, CONFIRM
+[2021-05-10 00:34:52,489 DEBUG] pbft_handler->_post: 	 make request to 8, CONFIRM
+[2021-05-10 00:34:52,492 DEBUG] pbft_handler->_post: 	 make request to 9, CONFIRM
+[2021-05-10 00:34:52,495 DEBUG] pbft_handler->_post: 	 make request to 10, CONFIRM
+[2021-05-10 00:34:52,498 DEBUG] pbft_handler->_post: 	 make request to 11, CONFIRM
+[2021-05-10 00:34:52,501 DEBUG] pbft_handler->_post: 	 make request to 12, CONFIRM
+[2021-05-10 00:34:52,667 INFO] pbft_handler->get_request: 	 ---> 0: on request
+[2021-05-10 00:34:52,667 INFO] pbft_handler->preprepare: 	 ---> 0: on preprepare, propose at slot: 1
+[2021-05-10 00:34:52,668 DEBUG] pbft_handler->_post: 	 make request to 0, preprepare
+[2021-05-10 00:34:52,670 INFO] pbft_handler->feedback: 	 ---> 0: on feedback
+[2021-05-10 00:34:52,670 INFO] pbft_handler->feedback: 	 ---> 0: receive preprepare msg from 0
+[2021-05-10 00:34:52,671 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:52,671 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,671 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 0
+[2021-05-10 00:34:52,672 DEBUG] pbft_handler->_post: 	 make request to 1, preprepare
+[2021-05-10 00:34:52,673 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,673 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 1
+[2021-05-10 00:34:52,673 DEBUG] pbft_handler->_post: 	 make request to 2, preprepare
+[2021-05-10 00:34:52,674 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,674 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 2
+[2021-05-10 00:34:52,675 DEBUG] pbft_handler->_post: 	 make request to 3, preprepare
+[2021-05-10 00:34:52,676 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,676 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 3
+[2021-05-10 00:34:52,677 DEBUG] pbft_handler->_post: 	 make request to 4, preprepare
+[2021-05-10 00:34:52,678 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,678 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 4
+[2021-05-10 00:34:52,678 DEBUG] pbft_handler->_post: 	 make request to 5, preprepare
+[2021-05-10 00:34:52,680 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,680 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 5
+[2021-05-10 00:34:52,680 DEBUG] pbft_handler->_post: 	 make request to 6, preprepare
+[2021-05-10 00:34:52,682 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,682 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 6
+[2021-05-10 00:34:52,682 DEBUG] pbft_handler->_post: 	 make request to 7, preprepare
+[2021-05-10 00:34:52,683 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,683 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 7
+[2021-05-10 00:34:52,684 DEBUG] pbft_handler->_post: 	 make request to 8, preprepare
+[2021-05-10 00:34:52,685 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,685 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 8
+[2021-05-10 00:34:52,685 DEBUG] pbft_handler->_post: 	 make request to 9, preprepare
+[2021-05-10 00:34:52,686 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,686 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 9
+[2021-05-10 00:34:52,687 DEBUG] pbft_handler->_post: 	 make request to 10, preprepare
+[2021-05-10 00:34:52,688 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,688 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 10
+[2021-05-10 00:34:52,688 DEBUG] pbft_handler->_post: 	 make request to 11, preprepare
+[2021-05-10 00:34:52,689 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,690 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 11
+[2021-05-10 00:34:52,690 DEBUG] pbft_handler->_post: 	 make request to 12, preprepare
+[2021-05-10 00:34:52,691 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,691 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 12
+[2021-05-10 00:34:52,691 DEBUG] pbft_handler->_post: 	 make request to 0, CONFIRM
+[2021-05-10 00:34:52,691 INFO] pbft_handler->fast_reply: 	 ---> 0: on fast_reply
+[2021-05-10 00:34:52,691 INFO] pbft_handler->fast_reply: 	 ---> 0: receive confirm msg from 0
+[2021-05-10 00:34:52,691 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 1
+[2021-05-10 00:34:52,692 INFO] pbft_handler->fast_reply: 	 0 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:52,692 DEBUG] pbft_handler->_post: 	 make request to 1, CONFIRM
+[2021-05-10 00:34:52,694 DEBUG] pbft_handler->_post: 	 make request to 2, CONFIRM
+[2021-05-10 00:34:52,696 DEBUG] pbft_handler->_post: 	 make request to 3, CONFIRM
+[2021-05-10 00:34:52,697 DEBUG] pbft_handler->_post: 	 make request to 4, CONFIRM
+[2021-05-10 00:34:52,699 DEBUG] pbft_handler->_post: 	 make request to 5, CONFIRM
+[2021-05-10 00:34:52,701 DEBUG] pbft_handler->_post: 	 make request to 6, CONFIRM
+[2021-05-10 00:34:52,703 DEBUG] pbft_handler->_post: 	 make request to 7, CONFIRM
+[2021-05-10 00:34:52,705 DEBUG] pbft_handler->_post: 	 make request to 8, CONFIRM
+[2021-05-10 00:34:52,707 DEBUG] pbft_handler->_post: 	 make request to 9, CONFIRM
+[2021-05-10 00:34:52,709 DEBUG] pbft_handler->_post: 	 make request to 10, CONFIRM
+[2021-05-10 00:34:52,711 DEBUG] pbft_handler->_post: 	 make request to 11, CONFIRM
+[2021-05-10 00:34:52,713 DEBUG] pbft_handler->_post: 	 make request to 12, CONFIRM
+[2021-05-10 00:34:52,755 INFO] pbft_handler->get_request: 	 ---> 0: on request
+[2021-05-10 00:34:52,755 INFO] pbft_handler->preprepare: 	 ---> 0: on preprepare, propose at slot: 2
+[2021-05-10 00:34:52,755 DEBUG] pbft_handler->_post: 	 make request to 0, preprepare
+[2021-05-10 00:34:52,756 INFO] pbft_handler->feedback: 	 ---> 0: on feedback
+[2021-05-10 00:34:52,756 INFO] pbft_handler->feedback: 	 ---> 0: receive preprepare msg from 0
+[2021-05-10 00:34:52,756 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:52,756 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,756 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 0
+[2021-05-10 00:34:52,757 DEBUG] pbft_handler->_post: 	 make request to 1, preprepare
+[2021-05-10 00:34:52,758 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,758 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 1
+[2021-05-10 00:34:52,758 DEBUG] pbft_handler->_post: 	 make request to 2, preprepare
+[2021-05-10 00:34:52,759 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,759 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 2
+[2021-05-10 00:34:52,760 DEBUG] pbft_handler->_post: 	 make request to 3, preprepare
+[2021-05-10 00:34:52,761 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,761 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 3
+[2021-05-10 00:34:52,761 DEBUG] pbft_handler->_post: 	 make request to 4, preprepare
+[2021-05-10 00:34:52,762 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,762 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 4
+[2021-05-10 00:34:52,763 DEBUG] pbft_handler->_post: 	 make request to 5, preprepare
+[2021-05-10 00:34:52,764 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,764 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 5
+[2021-05-10 00:34:52,764 DEBUG] pbft_handler->_post: 	 make request to 6, preprepare
+[2021-05-10 00:34:52,766 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,766 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 6
+[2021-05-10 00:34:52,766 DEBUG] pbft_handler->_post: 	 make request to 7, preprepare
+[2021-05-10 00:34:52,767 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,767 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 7
+[2021-05-10 00:34:52,768 DEBUG] pbft_handler->_post: 	 make request to 8, preprepare
+[2021-05-10 00:34:52,769 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,769 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 8
+[2021-05-10 00:34:52,769 DEBUG] pbft_handler->_post: 	 make request to 9, preprepare
+[2021-05-10 00:34:52,770 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,770 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 9
+[2021-05-10 00:34:52,771 DEBUG] pbft_handler->_post: 	 make request to 10, preprepare
+[2021-05-10 00:34:52,772 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,772 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 10
+[2021-05-10 00:34:52,773 DEBUG] pbft_handler->_post: 	 make request to 11, preprepare
+[2021-05-10 00:34:52,774 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,774 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 11
+[2021-05-10 00:34:52,775 DEBUG] pbft_handler->_post: 	 make request to 12, preprepare
+[2021-05-10 00:34:52,776 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:52,776 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 12
+[2021-05-10 00:34:52,776 DEBUG] pbft_handler->_post: 	 make request to 0, CONFIRM
+[2021-05-10 00:34:52,776 INFO] pbft_handler->fast_reply: 	 ---> 0: on fast_reply
+[2021-05-10 00:34:52,776 INFO] pbft_handler->fast_reply: 	 ---> 0: receive confirm msg from 0
+[2021-05-10 00:34:52,776 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 2
+[2021-05-10 00:34:52,777 INFO] pbft_handler->fast_reply: 	 0 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:52,777 DEBUG] pbft_handler->_post: 	 make request to 1, CONFIRM
+[2021-05-10 00:34:52,779 DEBUG] pbft_handler->_post: 	 make request to 2, CONFIRM
+[2021-05-10 00:34:52,781 DEBUG] pbft_handler->_post: 	 make request to 3, CONFIRM
+[2021-05-10 00:34:52,782 DEBUG] pbft_handler->_post: 	 make request to 4, CONFIRM
+[2021-05-10 00:34:52,784 DEBUG] pbft_handler->_post: 	 make request to 5, CONFIRM
+[2021-05-10 00:34:52,786 DEBUG] pbft_handler->_post: 	 make request to 6, CONFIRM
+[2021-05-10 00:34:52,787 DEBUG] pbft_handler->_post: 	 make request to 7, CONFIRM
+[2021-05-10 00:34:52,789 DEBUG] pbft_handler->_post: 	 make request to 8, CONFIRM
+[2021-05-10 00:34:52,791 DEBUG] pbft_handler->_post: 	 make request to 9, CONFIRM
+[2021-05-10 00:34:52,792 DEBUG] pbft_handler->_post: 	 make request to 10, CONFIRM
+[2021-05-10 00:34:52,794 DEBUG] pbft_handler->_post: 	 make request to 11, CONFIRM
+[2021-05-10 00:34:52,796 DEBUG] pbft_handler->_post: 	 make request to 12, CONFIRM
+[2021-05-10 00:34:53,745 INFO] pbft_handler->get_request: 	 ---> 0: on request
+[2021-05-10 00:34:53,745 INFO] pbft_handler->preprepare: 	 ---> 0: on preprepare, propose at slot: 3
+[2021-05-10 00:34:53,745 DEBUG] pbft_handler->_post: 	 make request to 0, preprepare
+[2021-05-10 00:34:53,746 INFO] pbft_handler->feedback: 	 ---> 0: on feedback
+[2021-05-10 00:34:53,746 INFO] pbft_handler->feedback: 	 ---> 0: receive preprepare msg from 0
+[2021-05-10 00:34:53,746 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:53,746 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:53,746 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 0
+[2021-05-10 00:34:53,747 DEBUG] pbft_handler->_post: 	 make request to 1, preprepare
+[2021-05-10 00:34:53,748 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:53,748 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 1
+[2021-05-10 00:34:53,748 DEBUG] pbft_handler->_post: 	 make request to 2, preprepare
+[2021-05-10 00:34:53,749 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:53,750 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 2
+[2021-05-10 00:34:53,750 DEBUG] pbft_handler->_post: 	 make request to 3, preprepare
+[2021-05-10 00:34:53,751 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:53,751 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 3
+[2021-05-10 00:34:53,751 DEBUG] pbft_handler->_post: 	 make request to 4, preprepare
+[2021-05-10 00:34:53,753 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:53,753 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 4
+[2021-05-10 00:34:53,753 DEBUG] pbft_handler->_post: 	 make request to 5, preprepare
+[2021-05-10 00:34:53,754 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:53,754 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 5
+[2021-05-10 00:34:53,755 DEBUG] pbft_handler->_post: 	 make request to 6, preprepare
+[2021-05-10 00:34:53,756 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:53,756 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 6
+[2021-05-10 00:34:53,756 DEBUG] pbft_handler->_post: 	 make request to 7, preprepare
+[2021-05-10 00:34:53,757 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:53,757 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 7
+[2021-05-10 00:34:53,758 DEBUG] pbft_handler->_post: 	 make request to 8, preprepare
+[2021-05-10 00:34:53,759 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:53,759 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 8
+[2021-05-10 00:34:53,759 DEBUG] pbft_handler->_post: 	 make request to 9, preprepare
+[2021-05-10 00:34:53,760 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:53,760 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 9
+[2021-05-10 00:34:53,761 DEBUG] pbft_handler->_post: 	 make request to 10, preprepare
+[2021-05-10 00:34:53,762 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:53,762 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 10
+[2021-05-10 00:34:53,762 DEBUG] pbft_handler->_post: 	 make request to 11, preprepare
+[2021-05-10 00:34:53,763 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:53,763 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 11
+[2021-05-10 00:34:53,764 DEBUG] pbft_handler->_post: 	 make request to 12, preprepare
+[2021-05-10 00:34:53,765 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:53,765 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 12
+[2021-05-10 00:34:53,765 DEBUG] pbft_handler->_post: 	 make request to 0, CONFIRM
+[2021-05-10 00:34:53,766 INFO] pbft_handler->fast_reply: 	 ---> 0: on fast_reply
+[2021-05-10 00:34:53,766 INFO] pbft_handler->fast_reply: 	 ---> 0: receive confirm msg from 0
+[2021-05-10 00:34:53,766 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 3
+[2021-05-10 00:34:53,767 INFO] pbft_handler->fast_reply: 	 0 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:53,767 DEBUG] pbft_handler->_post: 	 make request to 1, CONFIRM
+[2021-05-10 00:34:53,768 DEBUG] pbft_handler->_post: 	 make request to 2, CONFIRM
+[2021-05-10 00:34:53,770 DEBUG] pbft_handler->_post: 	 make request to 3, CONFIRM
+[2021-05-10 00:34:53,771 DEBUG] pbft_handler->_post: 	 make request to 4, CONFIRM
+[2021-05-10 00:34:53,773 DEBUG] pbft_handler->_post: 	 make request to 5, CONFIRM
+[2021-05-10 00:34:53,775 DEBUG] pbft_handler->_post: 	 make request to 6, CONFIRM
+[2021-05-10 00:34:53,776 DEBUG] pbft_handler->_post: 	 make request to 7, CONFIRM
+[2021-05-10 00:34:53,778 DEBUG] pbft_handler->_post: 	 make request to 8, CONFIRM
+[2021-05-10 00:34:53,780 DEBUG] pbft_handler->_post: 	 make request to 9, CONFIRM
+[2021-05-10 00:34:53,781 DEBUG] pbft_handler->_post: 	 make request to 10, CONFIRM
+[2021-05-10 00:34:53,784 DEBUG] pbft_handler->_post: 	 make request to 11, CONFIRM
+[2021-05-10 00:34:53,785 DEBUG] pbft_handler->_post: 	 make request to 12, CONFIRM
+[2021-05-10 00:34:54,476 INFO] pbft_handler->get_request: 	 ---> 0: on request
+[2021-05-10 00:34:54,492 INFO] pbft_handler->preprepare: 	 ---> 0: on preprepare, propose at slot: 4
+[2021-05-10 00:34:54,492 DEBUG] pbft_handler->_post: 	 make request to 0, preprepare
+[2021-05-10 00:34:54,493 INFO] pbft_handler->feedback: 	 ---> 0: on feedback
+[2021-05-10 00:34:54,493 INFO] pbft_handler->feedback: 	 ---> 0: receive preprepare msg from 0
+[2021-05-10 00:34:54,493 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:54,494 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:54,494 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 0
+[2021-05-10 00:34:54,494 DEBUG] pbft_handler->_post: 	 make request to 1, preprepare
+[2021-05-10 00:34:54,495 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:54,495 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 1
+[2021-05-10 00:34:54,496 DEBUG] pbft_handler->_post: 	 make request to 2, preprepare
+[2021-05-10 00:34:54,497 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:54,497 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 2
+[2021-05-10 00:34:54,498 DEBUG] pbft_handler->_post: 	 make request to 3, preprepare
+[2021-05-10 00:34:54,499 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:54,499 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 3
+[2021-05-10 00:34:54,499 DEBUG] pbft_handler->_post: 	 make request to 4, preprepare
+[2021-05-10 00:34:54,500 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:54,500 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 4
+[2021-05-10 00:34:54,501 DEBUG] pbft_handler->_post: 	 make request to 5, preprepare
+[2021-05-10 00:34:54,502 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:54,502 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 5
+[2021-05-10 00:34:54,502 DEBUG] pbft_handler->_post: 	 make request to 6, preprepare
+[2021-05-10 00:34:54,504 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:54,504 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 6
+[2021-05-10 00:34:54,504 DEBUG] pbft_handler->_post: 	 make request to 7, preprepare
+[2021-05-10 00:34:54,505 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:54,505 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 7
+[2021-05-10 00:34:54,506 DEBUG] pbft_handler->_post: 	 make request to 8, preprepare
+[2021-05-10 00:34:54,507 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:54,507 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 8
+[2021-05-10 00:34:54,507 DEBUG] pbft_handler->_post: 	 make request to 9, preprepare
+[2021-05-10 00:34:54,508 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:54,508 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 9
+[2021-05-10 00:34:54,509 DEBUG] pbft_handler->_post: 	 make request to 10, preprepare
+[2021-05-10 00:34:54,510 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:54,510 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 10
+[2021-05-10 00:34:54,510 DEBUG] pbft_handler->_post: 	 make request to 11, preprepare
+[2021-05-10 00:34:54,511 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:54,512 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 11
+[2021-05-10 00:34:54,512 DEBUG] pbft_handler->_post: 	 make request to 12, preprepare
+[2021-05-10 00:34:54,513 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:54,513 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 12
+[2021-05-10 00:34:54,513 DEBUG] pbft_handler->_post: 	 make request to 0, CONFIRM
+[2021-05-10 00:34:54,514 INFO] pbft_handler->fast_reply: 	 ---> 0: on fast_reply
+[2021-05-10 00:34:54,514 INFO] pbft_handler->fast_reply: 	 ---> 0: receive confirm msg from 0
+[2021-05-10 00:34:54,514 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 4
+[2021-05-10 00:34:54,514 INFO] pbft_handler->fast_reply: 	 0 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:54,515 DEBUG] pbft_handler->_post: 	 make request to 1, CONFIRM
+[2021-05-10 00:34:54,516 DEBUG] pbft_handler->_post: 	 make request to 2, CONFIRM
+[2021-05-10 00:34:54,518 DEBUG] pbft_handler->_post: 	 make request to 3, CONFIRM
+[2021-05-10 00:34:54,520 DEBUG] pbft_handler->_post: 	 make request to 4, CONFIRM
+[2021-05-10 00:34:54,522 DEBUG] pbft_handler->_post: 	 make request to 5, CONFIRM
+[2021-05-10 00:34:54,523 DEBUG] pbft_handler->_post: 	 make request to 6, CONFIRM
+[2021-05-10 00:34:54,525 DEBUG] pbft_handler->_post: 	 make request to 7, CONFIRM
+[2021-05-10 00:34:54,526 DEBUG] pbft_handler->_post: 	 make request to 8, CONFIRM
+[2021-05-10 00:34:54,528 DEBUG] pbft_handler->_post: 	 make request to 9, CONFIRM
+[2021-05-10 00:34:54,530 DEBUG] pbft_handler->_post: 	 make request to 10, CONFIRM
+[2021-05-10 00:34:54,531 DEBUG] pbft_handler->_post: 	 make request to 11, CONFIRM
+[2021-05-10 00:34:54,533 DEBUG] pbft_handler->_post: 	 make request to 12, CONFIRM
+[2021-05-10 00:34:55,017 INFO] pbft_handler->get_request: 	 ---> 0: on request
+[2021-05-10 00:34:55,017 INFO] pbft_handler->preprepare: 	 ---> 0: on preprepare, propose at slot: 5
+[2021-05-10 00:34:55,018 DEBUG] pbft_handler->_post: 	 make request to 0, preprepare
+[2021-05-10 00:34:55,019 INFO] pbft_handler->feedback: 	 ---> 0: on feedback
+[2021-05-10 00:34:55,019 INFO] pbft_handler->feedback: 	 ---> 0: receive preprepare msg from 0
+[2021-05-10 00:34:55,019 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:55,020 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,020 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 0
+[2021-05-10 00:34:55,021 DEBUG] pbft_handler->_post: 	 make request to 1, preprepare
+[2021-05-10 00:34:55,022 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,022 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 1
+[2021-05-10 00:34:55,022 DEBUG] pbft_handler->_post: 	 make request to 2, preprepare
+[2021-05-10 00:34:55,023 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,023 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 2
+[2021-05-10 00:34:55,024 DEBUG] pbft_handler->_post: 	 make request to 3, preprepare
+[2021-05-10 00:34:55,025 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,025 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 3
+[2021-05-10 00:34:55,025 DEBUG] pbft_handler->_post: 	 make request to 4, preprepare
+[2021-05-10 00:34:55,027 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,027 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 4
+[2021-05-10 00:34:55,027 DEBUG] pbft_handler->_post: 	 make request to 5, preprepare
+[2021-05-10 00:34:55,029 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,029 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 5
+[2021-05-10 00:34:55,029 DEBUG] pbft_handler->_post: 	 make request to 6, preprepare
+[2021-05-10 00:34:55,031 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,031 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 6
+[2021-05-10 00:34:55,031 DEBUG] pbft_handler->_post: 	 make request to 7, preprepare
+[2021-05-10 00:34:55,032 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,032 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 7
+[2021-05-10 00:34:55,033 DEBUG] pbft_handler->_post: 	 make request to 8, preprepare
+[2021-05-10 00:34:55,034 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,034 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 8
+[2021-05-10 00:34:55,035 DEBUG] pbft_handler->_post: 	 make request to 9, preprepare
+[2021-05-10 00:34:55,036 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,036 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 9
+[2021-05-10 00:34:55,036 DEBUG] pbft_handler->_post: 	 make request to 10, preprepare
+[2021-05-10 00:34:55,037 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,038 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 10
+[2021-05-10 00:34:55,038 DEBUG] pbft_handler->_post: 	 make request to 11, preprepare
+[2021-05-10 00:34:55,039 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,039 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 11
+[2021-05-10 00:34:55,039 DEBUG] pbft_handler->_post: 	 make request to 12, preprepare
+[2021-05-10 00:34:55,040 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,040 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 12
+[2021-05-10 00:34:55,040 DEBUG] pbft_handler->_post: 	 make request to 0, CONFIRM
+[2021-05-10 00:34:55,041 INFO] pbft_handler->fast_reply: 	 ---> 0: on fast_reply
+[2021-05-10 00:34:55,041 INFO] pbft_handler->fast_reply: 	 ---> 0: receive confirm msg from 0
+[2021-05-10 00:34:55,041 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 5
+[2021-05-10 00:34:55,042 INFO] pbft_handler->fast_reply: 	 0 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:55,042 DEBUG] pbft_handler->_post: 	 make request to 1, CONFIRM
+[2021-05-10 00:34:55,043 DEBUG] pbft_handler->_post: 	 make request to 2, CONFIRM
+[2021-05-10 00:34:55,045 DEBUG] pbft_handler->_post: 	 make request to 3, CONFIRM
+[2021-05-10 00:34:55,047 DEBUG] pbft_handler->_post: 	 make request to 4, CONFIRM
+[2021-05-10 00:34:55,048 DEBUG] pbft_handler->_post: 	 make request to 5, CONFIRM
+[2021-05-10 00:34:55,050 DEBUG] pbft_handler->_post: 	 make request to 6, CONFIRM
+[2021-05-10 00:34:55,052 DEBUG] pbft_handler->_post: 	 make request to 7, CONFIRM
+[2021-05-10 00:34:55,054 DEBUG] pbft_handler->_post: 	 make request to 8, CONFIRM
+[2021-05-10 00:34:55,056 DEBUG] pbft_handler->_post: 	 make request to 9, CONFIRM
+[2021-05-10 00:34:55,058 DEBUG] pbft_handler->_post: 	 make request to 10, CONFIRM
+[2021-05-10 00:34:55,059 DEBUG] pbft_handler->_post: 	 make request to 11, CONFIRM
+[2021-05-10 00:34:55,061 DEBUG] pbft_handler->_post: 	 make request to 12, CONFIRM
+[2021-05-10 00:34:55,788 INFO] pbft_handler->get_request: 	 ---> 0: on request
+[2021-05-10 00:34:55,789 INFO] pbft_handler->preprepare: 	 ---> 0: on preprepare, propose at slot: 6
+[2021-05-10 00:34:55,789 DEBUG] pbft_handler->_post: 	 make request to 0, preprepare
+[2021-05-10 00:34:55,789 INFO] pbft_handler->feedback: 	 ---> 0: on feedback
+[2021-05-10 00:34:55,789 INFO] pbft_handler->feedback: 	 ---> 0: receive preprepare msg from 0
+[2021-05-10 00:34:55,789 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:55,790 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,790 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 0
+[2021-05-10 00:34:55,790 DEBUG] pbft_handler->_post: 	 make request to 1, preprepare
+[2021-05-10 00:34:55,791 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,791 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 1
+[2021-05-10 00:34:55,792 DEBUG] pbft_handler->_post: 	 make request to 2, preprepare
+[2021-05-10 00:34:55,793 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,793 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 2
+[2021-05-10 00:34:55,794 DEBUG] pbft_handler->_post: 	 make request to 3, preprepare
+[2021-05-10 00:34:55,795 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,795 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 3
+[2021-05-10 00:34:55,795 DEBUG] pbft_handler->_post: 	 make request to 4, preprepare
+[2021-05-10 00:34:55,796 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,796 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 4
+[2021-05-10 00:34:55,797 DEBUG] pbft_handler->_post: 	 make request to 5, preprepare
+[2021-05-10 00:34:55,798 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,798 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 5
+[2021-05-10 00:34:55,798 DEBUG] pbft_handler->_post: 	 make request to 6, preprepare
+[2021-05-10 00:34:55,799 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,799 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 6
+[2021-05-10 00:34:55,800 DEBUG] pbft_handler->_post: 	 make request to 7, preprepare
+[2021-05-10 00:34:55,801 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,801 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 7
+[2021-05-10 00:34:55,801 DEBUG] pbft_handler->_post: 	 make request to 8, preprepare
+[2021-05-10 00:34:55,802 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,802 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 8
+[2021-05-10 00:34:55,803 DEBUG] pbft_handler->_post: 	 make request to 9, preprepare
+[2021-05-10 00:34:55,804 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,804 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 9
+[2021-05-10 00:34:55,805 DEBUG] pbft_handler->_post: 	 make request to 10, preprepare
+[2021-05-10 00:34:55,806 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,806 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 10
+[2021-05-10 00:34:55,806 DEBUG] pbft_handler->_post: 	 make request to 11, preprepare
+[2021-05-10 00:34:55,807 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,808 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 11
+[2021-05-10 00:34:55,808 DEBUG] pbft_handler->_post: 	 make request to 12, preprepare
+[2021-05-10 00:34:55,809 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:55,809 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 12
+[2021-05-10 00:34:55,809 DEBUG] pbft_handler->_post: 	 make request to 0, CONFIRM
+[2021-05-10 00:34:55,810 INFO] pbft_handler->fast_reply: 	 ---> 0: on fast_reply
+[2021-05-10 00:34:55,810 INFO] pbft_handler->fast_reply: 	 ---> 0: receive confirm msg from 0
+[2021-05-10 00:34:55,810 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 6
+[2021-05-10 00:34:55,810 INFO] pbft_handler->fast_reply: 	 0 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:55,811 DEBUG] pbft_handler->_post: 	 make request to 1, CONFIRM
+[2021-05-10 00:34:55,812 DEBUG] pbft_handler->_post: 	 make request to 2, CONFIRM
+[2021-05-10 00:34:55,814 DEBUG] pbft_handler->_post: 	 make request to 3, CONFIRM
+[2021-05-10 00:34:55,815 DEBUG] pbft_handler->_post: 	 make request to 4, CONFIRM
+[2021-05-10 00:34:55,817 DEBUG] pbft_handler->_post: 	 make request to 5, CONFIRM
+[2021-05-10 00:34:55,819 DEBUG] pbft_handler->_post: 	 make request to 6, CONFIRM
+[2021-05-10 00:34:55,821 DEBUG] pbft_handler->_post: 	 make request to 7, CONFIRM
+[2021-05-10 00:34:55,823 DEBUG] pbft_handler->_post: 	 make request to 8, CONFIRM
+[2021-05-10 00:34:55,825 DEBUG] pbft_handler->_post: 	 make request to 9, CONFIRM
+[2021-05-10 00:34:55,827 DEBUG] pbft_handler->_post: 	 make request to 10, CONFIRM
+[2021-05-10 00:34:55,829 DEBUG] pbft_handler->_post: 	 make request to 11, CONFIRM
+[2021-05-10 00:34:55,831 DEBUG] pbft_handler->_post: 	 make request to 12, CONFIRM
+[2021-05-10 00:34:56,477 INFO] pbft_handler->get_request: 	 ---> 0: on request
+[2021-05-10 00:34:56,477 INFO] pbft_handler->preprepare: 	 ---> 0: on preprepare, propose at slot: 7
+[2021-05-10 00:34:56,478 DEBUG] pbft_handler->_post: 	 make request to 0, preprepare
+[2021-05-10 00:34:56,480 INFO] pbft_handler->feedback: 	 ---> 0: on feedback
+[2021-05-10 00:34:56,480 INFO] pbft_handler->feedback: 	 ---> 0: receive preprepare msg from 0
+[2021-05-10 00:34:56,480 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:56,481 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:56,481 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 0
+[2021-05-10 00:34:56,482 DEBUG] pbft_handler->_post: 	 make request to 1, preprepare
+[2021-05-10 00:34:56,483 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:56,483 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 1
+[2021-05-10 00:34:56,483 DEBUG] pbft_handler->_post: 	 make request to 2, preprepare
+[2021-05-10 00:34:56,484 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:56,484 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 2
+[2021-05-10 00:34:56,485 DEBUG] pbft_handler->_post: 	 make request to 3, preprepare
+[2021-05-10 00:34:56,486 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:56,486 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 3
+[2021-05-10 00:34:56,486 DEBUG] pbft_handler->_post: 	 make request to 4, preprepare
+[2021-05-10 00:34:56,487 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:56,488 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 4
+[2021-05-10 00:34:56,488 DEBUG] pbft_handler->_post: 	 make request to 5, preprepare
+[2021-05-10 00:34:56,489 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:56,489 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 5
+[2021-05-10 00:34:56,489 DEBUG] pbft_handler->_post: 	 make request to 6, preprepare
+[2021-05-10 00:34:56,491 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:56,491 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 6
+[2021-05-10 00:34:56,491 DEBUG] pbft_handler->_post: 	 make request to 7, preprepare
+[2021-05-10 00:34:56,492 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:56,493 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 7
+[2021-05-10 00:34:56,493 DEBUG] pbft_handler->_post: 	 make request to 8, preprepare
+[2021-05-10 00:34:56,494 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:56,494 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 8
+[2021-05-10 00:34:56,494 DEBUG] pbft_handler->_post: 	 make request to 9, preprepare
+[2021-05-10 00:34:56,496 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:56,496 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 9
+[2021-05-10 00:34:56,496 DEBUG] pbft_handler->_post: 	 make request to 10, preprepare
+[2021-05-10 00:34:56,497 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:56,497 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 10
+[2021-05-10 00:34:56,498 DEBUG] pbft_handler->_post: 	 make request to 11, preprepare
+[2021-05-10 00:34:56,499 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:56,499 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 11
+[2021-05-10 00:34:56,499 DEBUG] pbft_handler->_post: 	 make request to 12, preprepare
+[2021-05-10 00:34:56,500 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:56,500 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 12
+[2021-05-10 00:34:56,500 DEBUG] pbft_handler->_post: 	 make request to 0, CONFIRM
+[2021-05-10 00:34:56,501 INFO] pbft_handler->fast_reply: 	 ---> 0: on fast_reply
+[2021-05-10 00:34:56,501 INFO] pbft_handler->fast_reply: 	 ---> 0: receive confirm msg from 0
+[2021-05-10 00:34:56,501 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 7
+[2021-05-10 00:34:56,501 INFO] pbft_handler->fast_reply: 	 0 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:56,502 DEBUG] pbft_handler->_post: 	 make request to 1, CONFIRM
+[2021-05-10 00:34:56,503 DEBUG] pbft_handler->_post: 	 make request to 2, CONFIRM
+[2021-05-10 00:34:56,505 DEBUG] pbft_handler->_post: 	 make request to 3, CONFIRM
+[2021-05-10 00:34:56,506 DEBUG] pbft_handler->_post: 	 make request to 4, CONFIRM
+[2021-05-10 00:34:56,508 DEBUG] pbft_handler->_post: 	 make request to 5, CONFIRM
+[2021-05-10 00:34:56,509 DEBUG] pbft_handler->_post: 	 make request to 6, CONFIRM
+[2021-05-10 00:34:56,511 DEBUG] pbft_handler->_post: 	 make request to 7, CONFIRM
+[2021-05-10 00:34:56,513 DEBUG] pbft_handler->_post: 	 make request to 8, CONFIRM
+[2021-05-10 00:34:56,514 DEBUG] pbft_handler->_post: 	 make request to 9, CONFIRM
+[2021-05-10 00:34:56,517 DEBUG] pbft_handler->_post: 	 make request to 10, CONFIRM
+[2021-05-10 00:34:56,519 DEBUG] pbft_handler->_post: 	 make request to 11, CONFIRM
+[2021-05-10 00:34:56,521 DEBUG] pbft_handler->_post: 	 make request to 12, CONFIRM
+[2021-05-10 00:34:57,111 INFO] pbft_handler->get_request: 	 ---> 0: on request
+[2021-05-10 00:34:57,111 INFO] pbft_handler->preprepare: 	 ---> 0: on preprepare, propose at slot: 8
+[2021-05-10 00:34:57,111 DEBUG] pbft_handler->_post: 	 make request to 0, preprepare
+[2021-05-10 00:34:57,113 INFO] pbft_handler->feedback: 	 ---> 0: on feedback
+[2021-05-10 00:34:57,114 INFO] pbft_handler->feedback: 	 ---> 0: receive preprepare msg from 0
+[2021-05-10 00:34:57,114 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:57,114 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,115 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 0
+[2021-05-10 00:34:57,115 DEBUG] pbft_handler->_post: 	 make request to 1, preprepare
+[2021-05-10 00:34:57,116 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,116 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 1
+[2021-05-10 00:34:57,117 DEBUG] pbft_handler->_post: 	 make request to 2, preprepare
+[2021-05-10 00:34:57,118 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,118 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 2
+[2021-05-10 00:34:57,118 DEBUG] pbft_handler->_post: 	 make request to 3, preprepare
+[2021-05-10 00:34:57,119 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,119 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 3
+[2021-05-10 00:34:57,120 DEBUG] pbft_handler->_post: 	 make request to 4, preprepare
+[2021-05-10 00:34:57,121 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,121 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 4
+[2021-05-10 00:34:57,121 DEBUG] pbft_handler->_post: 	 make request to 5, preprepare
+[2021-05-10 00:34:57,122 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,122 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 5
+[2021-05-10 00:34:57,123 DEBUG] pbft_handler->_post: 	 make request to 6, preprepare
+[2021-05-10 00:34:57,124 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,124 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 6
+[2021-05-10 00:34:57,125 DEBUG] pbft_handler->_post: 	 make request to 7, preprepare
+[2021-05-10 00:34:57,126 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,126 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 7
+[2021-05-10 00:34:57,126 DEBUG] pbft_handler->_post: 	 make request to 8, preprepare
+[2021-05-10 00:34:57,127 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,127 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 8
+[2021-05-10 00:34:57,128 DEBUG] pbft_handler->_post: 	 make request to 9, preprepare
+[2021-05-10 00:34:57,129 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,129 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 9
+[2021-05-10 00:34:57,129 DEBUG] pbft_handler->_post: 	 make request to 10, preprepare
+[2021-05-10 00:34:57,130 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,131 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 10
+[2021-05-10 00:34:57,131 DEBUG] pbft_handler->_post: 	 make request to 11, preprepare
+[2021-05-10 00:34:57,132 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,132 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 11
+[2021-05-10 00:34:57,133 DEBUG] pbft_handler->_post: 	 make request to 12, preprepare
+[2021-05-10 00:34:57,134 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,134 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 12
+[2021-05-10 00:34:57,134 DEBUG] pbft_handler->_post: 	 make request to 0, CONFIRM
+[2021-05-10 00:34:57,135 INFO] pbft_handler->fast_reply: 	 ---> 0: on fast_reply
+[2021-05-10 00:34:57,135 INFO] pbft_handler->fast_reply: 	 ---> 0: receive confirm msg from 0
+[2021-05-10 00:34:57,135 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 8
+[2021-05-10 00:34:57,136 INFO] pbft_handler->fast_reply: 	 0 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:57,136 DEBUG] pbft_handler->_post: 	 make request to 1, CONFIRM
+[2021-05-10 00:34:57,138 DEBUG] pbft_handler->_post: 	 make request to 2, CONFIRM
+[2021-05-10 00:34:57,140 DEBUG] pbft_handler->_post: 	 make request to 3, CONFIRM
+[2021-05-10 00:34:57,142 DEBUG] pbft_handler->_post: 	 make request to 4, CONFIRM
+[2021-05-10 00:34:57,144 DEBUG] pbft_handler->_post: 	 make request to 5, CONFIRM
+[2021-05-10 00:34:57,146 DEBUG] pbft_handler->_post: 	 make request to 6, CONFIRM
+[2021-05-10 00:34:57,149 DEBUG] pbft_handler->_post: 	 make request to 7, CONFIRM
+[2021-05-10 00:34:57,150 DEBUG] pbft_handler->_post: 	 make request to 8, CONFIRM
+[2021-05-10 00:34:57,152 DEBUG] pbft_handler->_post: 	 make request to 9, CONFIRM
+[2021-05-10 00:34:57,154 DEBUG] pbft_handler->_post: 	 make request to 10, CONFIRM
+[2021-05-10 00:34:57,156 DEBUG] pbft_handler->_post: 	 make request to 11, CONFIRM
+[2021-05-10 00:34:57,157 DEBUG] pbft_handler->_post: 	 make request to 12, CONFIRM
+[2021-05-10 00:34:57,184 INFO] pbft_handler->get_request: 	 ---> 0: on request
+[2021-05-10 00:34:57,184 INFO] pbft_handler->preprepare: 	 ---> 0: on preprepare, propose at slot: 9
+[2021-05-10 00:34:57,184 DEBUG] pbft_handler->_post: 	 make request to 0, preprepare
+[2021-05-10 00:34:57,185 INFO] pbft_handler->feedback: 	 ---> 0: on feedback
+[2021-05-10 00:34:57,185 INFO] pbft_handler->feedback: 	 ---> 0: receive preprepare msg from 0
+[2021-05-10 00:34:57,185 DEBUG] pbft_handler->_post: 	 make request to 0, FEEDBACK
+[2021-05-10 00:34:57,185 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,185 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 0
+[2021-05-10 00:34:57,186 DEBUG] pbft_handler->_post: 	 make request to 1, preprepare
+[2021-05-10 00:34:57,187 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,187 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 1
+[2021-05-10 00:34:57,187 DEBUG] pbft_handler->_post: 	 make request to 2, preprepare
+[2021-05-10 00:34:57,188 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,188 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 2
+[2021-05-10 00:34:57,189 DEBUG] pbft_handler->_post: 	 make request to 3, preprepare
+[2021-05-10 00:34:57,190 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,190 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 3
+[2021-05-10 00:34:57,190 DEBUG] pbft_handler->_post: 	 make request to 4, preprepare
+[2021-05-10 00:34:57,191 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,192 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 4
+[2021-05-10 00:34:57,192 DEBUG] pbft_handler->_post: 	 make request to 5, preprepare
+[2021-05-10 00:34:57,193 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,193 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 5
+[2021-05-10 00:34:57,193 DEBUG] pbft_handler->_post: 	 make request to 6, preprepare
+[2021-05-10 00:34:57,194 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,194 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 6
+[2021-05-10 00:34:57,195 DEBUG] pbft_handler->_post: 	 make request to 7, preprepare
+[2021-05-10 00:34:57,196 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,196 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 7
+[2021-05-10 00:34:57,196 DEBUG] pbft_handler->_post: 	 make request to 8, preprepare
+[2021-05-10 00:34:57,197 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,197 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 8
+[2021-05-10 00:34:57,198 DEBUG] pbft_handler->_post: 	 make request to 9, preprepare
+[2021-05-10 00:34:57,199 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,199 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 9
+[2021-05-10 00:34:57,199 DEBUG] pbft_handler->_post: 	 make request to 10, preprepare
+[2021-05-10 00:34:57,200 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,200 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 10
+[2021-05-10 00:34:57,201 DEBUG] pbft_handler->_post: 	 make request to 11, preprepare
+[2021-05-10 00:34:57,202 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,202 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 11
+[2021-05-10 00:34:57,202 DEBUG] pbft_handler->_post: 	 make request to 12, preprepare
+[2021-05-10 00:34:57,203 INFO] pbft_handler->confirm: 	 ---> 0: on confirm
+[2021-05-10 00:34:57,203 INFO] pbft_handler->confirm: 	 ---> 0: receive feedback msg from 12
+[2021-05-10 00:34:57,203 DEBUG] pbft_handler->_post: 	 make request to 0, CONFIRM
+[2021-05-10 00:34:57,204 INFO] pbft_handler->fast_reply: 	 ---> 0: on fast_reply
+[2021-05-10 00:34:57,204 INFO] pbft_handler->fast_reply: 	 ---> 0: receive confirm msg from 0
+[2021-05-10 00:34:57,204 DEBUG] pbft_handler->fast_reply: 	 Add commit certifiacte to slot 9
+[2021-05-10 00:34:57,204 DEBUG] checkpoint->_post: 	 make request to 0, receive_ckpt_vote
+[2021-05-10 00:34:57,205 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 0: receive checkpoint vote.
+[2021-05-10 00:34:57,205 DEBUG] checkpoint->receive_vote: 	 ---> 0: Receive checkpoint votes
+[2021-05-10 00:34:57,205 DEBUG] checkpoint->_post: 	 make request to 1, receive_ckpt_vote
+[2021-05-10 00:34:57,206 DEBUG] checkpoint->_post: 	 make request to 2, receive_ckpt_vote
+[2021-05-10 00:34:57,208 DEBUG] checkpoint->_post: 	 make request to 3, receive_ckpt_vote
+[2021-05-10 00:34:57,209 DEBUG] checkpoint->_post: 	 make request to 4, receive_ckpt_vote
+[2021-05-10 00:34:57,210 DEBUG] checkpoint->_post: 	 make request to 5, receive_ckpt_vote
+[2021-05-10 00:34:57,211 DEBUG] checkpoint->_post: 	 make request to 6, receive_ckpt_vote
+[2021-05-10 00:34:57,212 DEBUG] checkpoint->_post: 	 make request to 7, receive_ckpt_vote
+[2021-05-10 00:34:57,213 DEBUG] checkpoint->_post: 	 make request to 8, receive_ckpt_vote
+[2021-05-10 00:34:57,214 DEBUG] checkpoint->_post: 	 make request to 9, receive_ckpt_vote
+[2021-05-10 00:34:57,215 DEBUG] checkpoint->_post: 	 make request to 10, receive_ckpt_vote
+[2021-05-10 00:34:57,217 DEBUG] checkpoint->_post: 	 make request to 11, receive_ckpt_vote
+[2021-05-10 00:34:57,218 DEBUG] checkpoint->_post: 	 make request to 12, receive_ckpt_vote
+[2021-05-10 00:34:57,219 INFO] pbft_handler->fast_reply: 	 ---> 0: Propose checkpoint with last slot: 9. In addition, current checkpoint's next_slot is: 0
+[2021-05-10 00:34:57,220 INFO] pbft_handler->fast_reply: 	 0 fast reply to http://localhost:20001/reply successfully!!
+[2021-05-10 00:34:57,220 DEBUG] pbft_handler->_post: 	 make request to 1, CONFIRM
+[2021-05-10 00:34:57,221 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 0: receive checkpoint vote.
+[2021-05-10 00:34:57,222 DEBUG] checkpoint->receive_vote: 	 ---> 0: Receive checkpoint votes
+[2021-05-10 00:34:57,238 DEBUG] pbft_handler->_post: 	 make request to 2, CONFIRM
+[2021-05-10 00:34:57,240 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 0: receive checkpoint vote.
+[2021-05-10 00:34:57,240 DEBUG] checkpoint->receive_vote: 	 ---> 0: Receive checkpoint votes
+[2021-05-10 00:34:57,255 DEBUG] pbft_handler->_post: 	 make request to 3, CONFIRM
+[2021-05-10 00:34:57,257 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 0: receive checkpoint vote.
+[2021-05-10 00:34:57,257 DEBUG] checkpoint->receive_vote: 	 ---> 0: Receive checkpoint votes
+[2021-05-10 00:34:57,274 DEBUG] pbft_handler->_post: 	 make request to 4, CONFIRM
+[2021-05-10 00:34:57,276 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 0: receive checkpoint vote.
+[2021-05-10 00:34:57,276 DEBUG] checkpoint->receive_vote: 	 ---> 0: Receive checkpoint votes
+[2021-05-10 00:34:57,291 DEBUG] pbft_handler->_post: 	 make request to 5, CONFIRM
+[2021-05-10 00:34:57,294 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 0: receive checkpoint vote.
+[2021-05-10 00:34:57,294 DEBUG] checkpoint->receive_vote: 	 ---> 0: Receive checkpoint votes
+[2021-05-10 00:34:57,311 DEBUG] pbft_handler->_post: 	 make request to 6, CONFIRM
+[2021-05-10 00:34:57,312 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 0: receive checkpoint vote.
+[2021-05-10 00:34:57,313 DEBUG] checkpoint->receive_vote: 	 ---> 0: Receive checkpoint votes
+[2021-05-10 00:34:57,328 DEBUG] pbft_handler->_post: 	 make request to 7, CONFIRM
+[2021-05-10 00:34:57,330 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 0: receive checkpoint vote.
+[2021-05-10 00:34:57,330 DEBUG] checkpoint->receive_vote: 	 ---> 0: Receive checkpoint votes
+[2021-05-10 00:34:57,345 DEBUG] pbft_handler->_post: 	 make request to 8, CONFIRM
+[2021-05-10 00:34:57,347 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 0: receive checkpoint vote.
+[2021-05-10 00:34:57,347 DEBUG] checkpoint->receive_vote: 	 ---> 0: Receive checkpoint votes
+[2021-05-10 00:34:57,348 INFO] checkpoint->receive_vote: 	 ---> 0: Update checkpoint by receiving votes
+[2021-05-10 00:34:57,365 DEBUG] pbft_handler->_post: 	 make request to 9, CONFIRM
+[2021-05-10 00:34:57,365 DEBUG] pbft_handler->_post: 	 make request to 10, CONFIRM
+[2021-05-10 00:34:57,366 DEBUG] pbft_handler->_post: 	 make request to 11, CONFIRM
+[2021-05-10 00:34:57,367 DEBUG] pbft_handler->_post: 	 make request to 12, CONFIRM
