@@ -1,0 +1,1467 @@
+[2021-05-09 19:13:14,600 DEBUG] node->main: 	 {'nodes': [{'host': 'localhost', 'port': 30000}, {'host': 'localhost', 'port': 30001}, {'host': 'localhost', 'port': 30002}, {'host': 'localhost', 'port': 30003}, {'host': 'localhost', 'port': 30004}, {'host': 'localhost', 'port': 30005}, {'host': 'localhost', 'port': 30006}, {'host': 'localhost', 'port': 30007}, {'host': 'localhost', 'port': 30008}, {'host': 'localhost', 'port': 30009}], 'clients': [{'host': 'localhost', 'port': 20001}, {'host': 'localhost', 'port': 20002}], 'loss%': 0, 'ckpt_interval': 10, 'retry_times_before_view_change': 2, 'sync_interval': 5, 'misc': {'network_timeout': 1000}}
+[2021-05-09 19:13:14,600 INFO] checkpoint->__init__: 	 ---> 4: Create checkpoint.
+[2021-05-09 19:13:14,601 DEBUG] selector_events->__init__: 	 Using selector: EpollSelector
+[2021-05-09 19:13:27,718 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:27,719 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 0
+[2021-05-09 19:13:27,734 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:27,734 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 1
+[2021-05-09 19:13:27,749 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:27,749 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 2
+[2021-05-09 19:13:27,762 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:27,762 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 3
+[2021-05-09 19:13:27,769 INFO] pbft_handler->prepare: 	 ---> 4: on prepare
+[2021-05-09 19:13:27,770 INFO] pbft_handler->prepare: 	 ---> 4: receive preprepare msg from 0
+[2021-05-09 19:13:27,770 DEBUG] pbft_handler->_post: 	 make request to 0, prepare
+[2021-05-09 19:13:27,771 DEBUG] pbft_handler->_post: 	 make request to 1, prepare
+[2021-05-09 19:13:27,773 DEBUG] pbft_handler->_post: 	 make request to 2, prepare
+[2021-05-09 19:13:27,774 DEBUG] pbft_handler->_post: 	 make request to 3, prepare
+[2021-05-09 19:13:27,775 DEBUG] pbft_handler->_post: 	 make request to 4, prepare
+[2021-05-09 19:13:27,776 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:27,776 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 4
+[2021-05-09 19:13:27,776 DEBUG] pbft_handler->_post: 	 make request to 5, prepare
+[2021-05-09 19:13:27,777 DEBUG] pbft_handler->_post: 	 make request to 6, prepare
+[2021-05-09 19:13:27,779 DEBUG] pbft_handler->_post: 	 make request to 7, prepare
+[2021-05-09 19:13:27,780 DEBUG] pbft_handler->_post: 	 make request to 8, prepare
+[2021-05-09 19:13:27,781 DEBUG] pbft_handler->_post: 	 make request to 9, prepare
+[2021-05-09 19:13:27,788 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:27,788 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 5
+[2021-05-09 19:13:27,801 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,801 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:27,812 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,812 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:27,821 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,821 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:27,830 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,830 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:27,836 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:27,836 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 6
+[2021-05-09 19:13:27,836 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:27,837 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:27,838 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:27,839 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:27,840 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:27,840 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,840 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:27,840 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:27,841 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:27,842 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:27,842 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:27,843 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:27,849 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,849 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:27,865 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,865 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:27,865 DEBUG] pbft_handler->reply: 	 Add commit certifiacte to slot 0
+[2021-05-09 19:13:27,867 INFO] pbft_handler->reply: 	 4 reply to http://localhost:20001/reply successfully!!
+[2021-05-09 19:13:27,883 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,883 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:27,897 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,897 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:27,910 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,910 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:27,921 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,921 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:27,931 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,931 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:27,940 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,940 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:27,948 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,948 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:27,953 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:27,953 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 7
+[2021-05-09 19:13:27,953 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:27,954 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:27,955 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:27,956 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:27,957 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:27,958 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,958 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:27,958 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:27,959 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:27,960 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:27,960 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:27,961 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:27,966 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,967 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:27,974 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,974 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:27,982 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,982 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:27,992 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:27,992 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:28,000 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,000 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:28,008 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,008 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:28,019 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,019 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:28,028 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,028 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:28,036 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,036 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:28,040 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:28,040 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 8
+[2021-05-09 19:13:28,040 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:28,041 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:28,042 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:28,043 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:28,044 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:28,044 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,044 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:28,044 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:28,045 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:28,046 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:28,047 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:28,047 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:28,053 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,054 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:28,062 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,062 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:28,070 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,070 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:28,078 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,078 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:28,087 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,087 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:28,096 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,096 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:28,105 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,105 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:28,114 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,114 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:28,123 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,123 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:28,127 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:28,127 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 9
+[2021-05-09 19:13:28,127 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:28,128 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:28,129 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:28,130 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:28,130 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:28,131 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,131 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:28,131 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:28,132 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:28,132 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:28,133 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:28,134 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:28,139 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,139 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:28,148 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,148 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:28,157 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,157 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:28,164 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,165 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:28,173 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,173 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:28,899 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:28,899 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 0
+[2021-05-09 19:13:28,910 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:28,910 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 1
+[2021-05-09 19:13:28,919 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:28,919 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 2
+[2021-05-09 19:13:28,928 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:28,928 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 3
+[2021-05-09 19:13:28,933 INFO] pbft_handler->prepare: 	 ---> 4: on prepare
+[2021-05-09 19:13:28,933 INFO] pbft_handler->prepare: 	 ---> 4: receive preprepare msg from 0
+[2021-05-09 19:13:28,933 DEBUG] pbft_handler->_post: 	 make request to 0, prepare
+[2021-05-09 19:13:28,934 DEBUG] pbft_handler->_post: 	 make request to 1, prepare
+[2021-05-09 19:13:28,935 DEBUG] pbft_handler->_post: 	 make request to 2, prepare
+[2021-05-09 19:13:28,936 DEBUG] pbft_handler->_post: 	 make request to 3, prepare
+[2021-05-09 19:13:28,937 DEBUG] pbft_handler->_post: 	 make request to 4, prepare
+[2021-05-09 19:13:28,937 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:28,937 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 4
+[2021-05-09 19:13:28,937 DEBUG] pbft_handler->_post: 	 make request to 5, prepare
+[2021-05-09 19:13:28,938 DEBUG] pbft_handler->_post: 	 make request to 6, prepare
+[2021-05-09 19:13:28,939 DEBUG] pbft_handler->_post: 	 make request to 7, prepare
+[2021-05-09 19:13:28,940 DEBUG] pbft_handler->_post: 	 make request to 8, prepare
+[2021-05-09 19:13:28,940 DEBUG] pbft_handler->_post: 	 make request to 9, prepare
+[2021-05-09 19:13:28,946 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:28,946 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 5
+[2021-05-09 19:13:28,956 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,956 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:28,965 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,965 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:28,974 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,974 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:28,982 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,982 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:28,987 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:28,987 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 6
+[2021-05-09 19:13:28,987 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:28,988 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:28,989 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:28,990 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:28,991 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:28,991 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:28,991 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:28,992 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:28,992 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:28,993 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:28,994 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:28,995 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:29,000 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,000 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:29,012 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,012 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:29,012 DEBUG] pbft_handler->reply: 	 Add commit certifiacte to slot 1
+[2021-05-09 19:13:29,013 INFO] pbft_handler->reply: 	 4 reply to http://localhost:20001/reply successfully!!
+[2021-05-09 19:13:29,029 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,029 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:29,037 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,037 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:29,046 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,046 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:29,056 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,056 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:29,065 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,066 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:29,074 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,074 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:29,083 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,083 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:29,088 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:29,088 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 7
+[2021-05-09 19:13:29,088 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:29,089 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:29,090 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:29,091 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:29,092 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:29,092 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,092 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:29,092 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:29,093 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:29,094 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:29,094 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:29,095 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:29,100 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,100 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:29,109 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,109 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:29,119 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,119 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:29,128 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,128 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:29,136 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,136 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:29,147 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,147 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:29,155 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,156 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:29,163 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,163 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:29,172 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,172 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:29,177 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:29,177 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 8
+[2021-05-09 19:13:29,177 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:29,178 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:29,179 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:29,180 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:29,180 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:29,181 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,181 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:29,181 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:29,182 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:29,183 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:29,184 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:29,184 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:29,189 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,189 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:29,197 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,197 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:29,207 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,207 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:29,216 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,216 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:29,224 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,224 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:29,233 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,233 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:29,242 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,242 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:29,251 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,251 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:29,259 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,259 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:29,264 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:29,264 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 9
+[2021-05-09 19:13:29,264 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:29,265 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:29,266 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:29,268 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:29,269 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:29,269 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,270 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:29,270 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:29,271 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:29,272 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:29,272 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:29,273 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:29,278 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,278 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:29,288 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,288 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:29,297 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,297 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:29,307 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,307 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:29,315 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:29,315 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:30,091 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:30,091 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 0
+[2021-05-09 19:13:30,099 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:30,100 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 1
+[2021-05-09 19:13:30,108 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:30,108 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 2
+[2021-05-09 19:13:30,117 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:30,117 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 3
+[2021-05-09 19:13:30,122 INFO] pbft_handler->prepare: 	 ---> 4: on prepare
+[2021-05-09 19:13:30,122 INFO] pbft_handler->prepare: 	 ---> 4: receive preprepare msg from 0
+[2021-05-09 19:13:30,122 DEBUG] pbft_handler->_post: 	 make request to 0, prepare
+[2021-05-09 19:13:30,123 DEBUG] pbft_handler->_post: 	 make request to 1, prepare
+[2021-05-09 19:13:30,124 DEBUG] pbft_handler->_post: 	 make request to 2, prepare
+[2021-05-09 19:13:30,124 DEBUG] pbft_handler->_post: 	 make request to 3, prepare
+[2021-05-09 19:13:30,125 DEBUG] pbft_handler->_post: 	 make request to 4, prepare
+[2021-05-09 19:13:30,125 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:30,125 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 4
+[2021-05-09 19:13:30,126 DEBUG] pbft_handler->_post: 	 make request to 5, prepare
+[2021-05-09 19:13:30,126 DEBUG] pbft_handler->_post: 	 make request to 6, prepare
+[2021-05-09 19:13:30,127 DEBUG] pbft_handler->_post: 	 make request to 7, prepare
+[2021-05-09 19:13:30,128 DEBUG] pbft_handler->_post: 	 make request to 8, prepare
+[2021-05-09 19:13:30,129 DEBUG] pbft_handler->_post: 	 make request to 9, prepare
+[2021-05-09 19:13:30,133 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:30,134 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 5
+[2021-05-09 19:13:30,142 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,142 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:30,151 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,152 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:30,160 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,160 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:30,168 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,168 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:30,173 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:30,173 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 6
+[2021-05-09 19:13:30,173 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:30,174 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:30,175 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:30,175 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:30,176 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:30,177 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,177 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:30,177 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:30,178 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:30,178 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:30,179 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:30,180 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:30,186 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,186 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:30,197 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,197 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:30,197 DEBUG] pbft_handler->reply: 	 Add commit certifiacte to slot 2
+[2021-05-09 19:13:30,198 INFO] pbft_handler->reply: 	 4 reply to http://localhost:20001/reply successfully!!
+[2021-05-09 19:13:30,211 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,211 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:30,220 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,220 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:30,228 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,228 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:30,237 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,237 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:30,246 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,246 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:30,254 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,254 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:30,262 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,262 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:30,266 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:30,266 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 7
+[2021-05-09 19:13:30,266 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:30,267 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:30,268 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:30,269 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:30,269 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:30,270 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,270 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:30,270 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:30,271 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:30,272 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:30,273 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:30,274 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:30,279 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,279 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:30,287 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,287 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:30,295 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,295 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:30,303 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,303 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:30,312 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,312 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:30,320 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,320 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:30,328 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,328 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:30,337 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,337 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:30,346 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,346 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:30,350 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:30,350 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 8
+[2021-05-09 19:13:30,351 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:30,351 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:30,352 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:30,353 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:30,353 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:30,354 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,354 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:30,354 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:30,355 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:30,355 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:30,356 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:30,357 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:30,362 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,362 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:30,371 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,371 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:30,379 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,379 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:30,386 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,386 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:30,394 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,394 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:30,404 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,404 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:30,412 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,412 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:30,420 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,420 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:30,429 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,429 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:30,434 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:30,434 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 9
+[2021-05-09 19:13:30,434 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:30,435 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:30,435 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:30,436 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:30,437 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:30,437 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,437 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:30,438 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:30,438 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:30,439 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:30,440 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:30,440 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:30,445 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,445 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:30,453 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,453 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:30,462 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,462 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:30,470 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,470 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:30,478 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:30,478 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:31,418 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:31,419 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 0
+[2021-05-09 19:13:31,428 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:31,428 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 1
+[2021-05-09 19:13:31,437 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:31,437 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 2
+[2021-05-09 19:13:31,446 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:31,446 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 3
+[2021-05-09 19:13:31,451 INFO] pbft_handler->prepare: 	 ---> 4: on prepare
+[2021-05-09 19:13:31,451 INFO] pbft_handler->prepare: 	 ---> 4: receive preprepare msg from 0
+[2021-05-09 19:13:31,451 DEBUG] pbft_handler->_post: 	 make request to 0, prepare
+[2021-05-09 19:13:31,452 DEBUG] pbft_handler->_post: 	 make request to 1, prepare
+[2021-05-09 19:13:31,453 DEBUG] pbft_handler->_post: 	 make request to 2, prepare
+[2021-05-09 19:13:31,453 DEBUG] pbft_handler->_post: 	 make request to 3, prepare
+[2021-05-09 19:13:31,454 DEBUG] pbft_handler->_post: 	 make request to 4, prepare
+[2021-05-09 19:13:31,454 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:31,455 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 4
+[2021-05-09 19:13:31,455 DEBUG] pbft_handler->_post: 	 make request to 5, prepare
+[2021-05-09 19:13:31,455 DEBUG] pbft_handler->_post: 	 make request to 6, prepare
+[2021-05-09 19:13:31,456 DEBUG] pbft_handler->_post: 	 make request to 7, prepare
+[2021-05-09 19:13:31,457 DEBUG] pbft_handler->_post: 	 make request to 8, prepare
+[2021-05-09 19:13:31,458 DEBUG] pbft_handler->_post: 	 make request to 9, prepare
+[2021-05-09 19:13:31,463 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:31,463 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 5
+[2021-05-09 19:13:31,471 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,471 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:31,480 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,480 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:31,488 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,488 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:31,496 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,496 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:31,501 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:31,501 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 6
+[2021-05-09 19:13:31,501 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:31,502 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:31,503 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:31,503 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:31,504 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:31,505 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,505 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:31,505 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:31,506 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:31,507 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:31,508 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:31,509 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:31,514 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,514 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:31,525 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,525 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:31,525 DEBUG] pbft_handler->reply: 	 Add commit certifiacte to slot 3
+[2021-05-09 19:13:31,526 INFO] pbft_handler->reply: 	 4 reply to http://localhost:20001/reply successfully!!
+[2021-05-09 19:13:31,540 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,540 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:31,548 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,549 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:31,557 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,557 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:31,566 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,566 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:31,575 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,575 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:31,583 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,583 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:31,591 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,591 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:31,595 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:31,595 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 7
+[2021-05-09 19:13:31,595 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:31,596 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:31,597 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:31,598 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:31,598 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:31,599 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,599 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:31,600 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:31,600 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:31,601 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:31,602 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:31,603 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:31,608 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,608 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:31,616 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,616 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:31,624 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,624 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:31,632 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,632 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:31,641 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,641 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:31,650 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,650 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:31,658 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,658 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:31,666 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,666 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:31,675 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,675 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:31,679 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:31,680 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 8
+[2021-05-09 19:13:31,680 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:31,680 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:31,681 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:31,682 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:31,683 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:31,683 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,683 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:31,683 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:31,684 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:31,685 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:31,685 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:31,686 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:31,692 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,692 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:31,701 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,701 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:31,709 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,709 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:31,716 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,716 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:31,726 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,726 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:31,735 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,735 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:31,743 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,743 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:31,750 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,751 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:31,760 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,760 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:31,764 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:31,764 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 9
+[2021-05-09 19:13:31,764 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:31,765 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:31,766 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:31,767 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:31,767 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:31,768 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,768 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:31,768 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:31,769 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:31,769 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:31,770 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:31,771 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:31,775 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,775 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:31,783 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,783 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:31,792 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,792 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:31,800 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,801 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:31,808 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,808 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:31,850 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:31,850 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 0
+[2021-05-09 19:13:31,860 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:31,860 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 1
+[2021-05-09 19:13:31,868 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:31,869 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 2
+[2021-05-09 19:13:31,877 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:31,877 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 3
+[2021-05-09 19:13:31,882 INFO] pbft_handler->prepare: 	 ---> 4: on prepare
+[2021-05-09 19:13:31,882 INFO] pbft_handler->prepare: 	 ---> 4: receive preprepare msg from 0
+[2021-05-09 19:13:31,882 DEBUG] pbft_handler->_post: 	 make request to 0, prepare
+[2021-05-09 19:13:31,883 DEBUG] pbft_handler->_post: 	 make request to 1, prepare
+[2021-05-09 19:13:31,884 DEBUG] pbft_handler->_post: 	 make request to 2, prepare
+[2021-05-09 19:13:31,884 DEBUG] pbft_handler->_post: 	 make request to 3, prepare
+[2021-05-09 19:13:31,885 DEBUG] pbft_handler->_post: 	 make request to 4, prepare
+[2021-05-09 19:13:31,886 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:31,886 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 4
+[2021-05-09 19:13:31,886 DEBUG] pbft_handler->_post: 	 make request to 5, prepare
+[2021-05-09 19:13:31,887 DEBUG] pbft_handler->_post: 	 make request to 6, prepare
+[2021-05-09 19:13:31,888 DEBUG] pbft_handler->_post: 	 make request to 7, prepare
+[2021-05-09 19:13:31,888 DEBUG] pbft_handler->_post: 	 make request to 8, prepare
+[2021-05-09 19:13:31,889 DEBUG] pbft_handler->_post: 	 make request to 9, prepare
+[2021-05-09 19:13:31,894 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:31,894 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 5
+[2021-05-09 19:13:31,903 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,903 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:31,911 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,911 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:31,920 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,920 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:31,929 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,929 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:31,934 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:31,934 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 6
+[2021-05-09 19:13:31,934 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:31,935 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:31,935 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:31,936 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:31,937 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:31,937 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,937 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:31,938 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:31,938 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:31,939 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:31,940 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:31,941 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:31,947 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,947 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:31,959 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,959 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:31,959 DEBUG] pbft_handler->reply: 	 Add commit certifiacte to slot 4
+[2021-05-09 19:13:31,960 INFO] pbft_handler->reply: 	 4 reply to http://localhost:20001/reply successfully!!
+[2021-05-09 19:13:31,973 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,973 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:31,982 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,982 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:31,990 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,990 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:31,999 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:31,999 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:32,007 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,008 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:32,016 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,016 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:32,024 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,024 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:32,028 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:32,028 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 7
+[2021-05-09 19:13:32,028 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:32,029 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:32,029 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:32,030 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:32,031 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:32,031 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,031 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:32,032 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:32,033 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:32,033 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:32,034 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:32,035 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:32,041 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,041 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:32,050 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,050 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:32,058 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,058 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:32,066 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,066 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:32,075 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,075 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:32,084 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,084 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:32,092 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,092 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:32,101 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,101 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:32,110 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,110 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:32,114 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:32,114 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 8
+[2021-05-09 19:13:32,114 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:32,115 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:32,116 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:32,116 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:32,117 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:32,117 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,117 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:32,117 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:32,118 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:32,119 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:32,119 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:32,120 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:32,125 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,125 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:32,134 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,134 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:32,143 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,143 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:32,150 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,151 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:32,159 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,159 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:32,168 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,168 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:32,177 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,177 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:32,185 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,185 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:32,193 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,193 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:32,198 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:32,198 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 9
+[2021-05-09 19:13:32,198 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:32,199 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:32,200 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:32,201 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:32,201 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:32,202 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,202 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:32,202 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:32,203 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:32,204 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:32,204 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:32,205 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:32,210 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,210 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:32,218 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,218 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:32,227 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,227 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:32,236 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,236 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:32,243 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:32,243 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:33,209 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:33,209 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 0
+[2021-05-09 19:13:33,218 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:33,218 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 1
+[2021-05-09 19:13:33,225 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:33,225 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 2
+[2021-05-09 19:13:33,234 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:33,234 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 3
+[2021-05-09 19:13:33,240 INFO] pbft_handler->prepare: 	 ---> 4: on prepare
+[2021-05-09 19:13:33,240 INFO] pbft_handler->prepare: 	 ---> 4: receive preprepare msg from 0
+[2021-05-09 19:13:33,240 DEBUG] pbft_handler->_post: 	 make request to 0, prepare
+[2021-05-09 19:13:33,240 DEBUG] pbft_handler->_post: 	 make request to 1, prepare
+[2021-05-09 19:13:33,241 DEBUG] pbft_handler->_post: 	 make request to 2, prepare
+[2021-05-09 19:13:33,242 DEBUG] pbft_handler->_post: 	 make request to 3, prepare
+[2021-05-09 19:13:33,243 DEBUG] pbft_handler->_post: 	 make request to 4, prepare
+[2021-05-09 19:13:33,243 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:33,243 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 4
+[2021-05-09 19:13:33,243 DEBUG] pbft_handler->_post: 	 make request to 5, prepare
+[2021-05-09 19:13:33,244 DEBUG] pbft_handler->_post: 	 make request to 6, prepare
+[2021-05-09 19:13:33,245 DEBUG] pbft_handler->_post: 	 make request to 7, prepare
+[2021-05-09 19:13:33,246 DEBUG] pbft_handler->_post: 	 make request to 8, prepare
+[2021-05-09 19:13:33,246 DEBUG] pbft_handler->_post: 	 make request to 9, prepare
+[2021-05-09 19:13:33,251 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:33,251 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 5
+[2021-05-09 19:13:33,260 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,261 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:33,269 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,270 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:33,278 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,278 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:33,286 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,286 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:33,290 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:33,291 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 6
+[2021-05-09 19:13:33,291 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:33,291 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:33,292 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:33,293 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:33,294 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:33,294 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,294 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:33,295 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:33,295 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:33,296 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:33,297 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:33,298 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:33,304 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,304 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:33,315 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,316 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:33,316 DEBUG] pbft_handler->reply: 	 Add commit certifiacte to slot 5
+[2021-05-09 19:13:33,316 INFO] pbft_handler->reply: 	 4 reply to http://localhost:20001/reply successfully!!
+[2021-05-09 19:13:33,329 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,329 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:33,338 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,338 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:33,347 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,347 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:33,356 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,356 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:33,365 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,365 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:33,373 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,373 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:33,381 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,381 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:33,386 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:33,386 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 7
+[2021-05-09 19:13:33,386 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:33,387 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:33,388 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:33,388 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:33,389 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:33,390 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,390 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:33,390 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:33,391 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:33,392 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:33,393 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:33,394 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:33,399 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,399 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:33,407 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,407 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:33,415 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,415 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:33,425 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,425 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:33,433 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,433 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:33,442 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,442 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:33,450 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,450 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:33,459 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,459 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:33,467 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,467 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:33,472 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:33,472 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 8
+[2021-05-09 19:13:33,472 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:33,473 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:33,473 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:33,474 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:33,475 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:33,475 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,475 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:33,475 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:33,476 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:33,477 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:33,478 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:33,478 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:33,484 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,484 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:33,493 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,493 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:33,501 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,501 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:33,509 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,509 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:33,518 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,518 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:33,527 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,527 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:33,535 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,535 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:33,543 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,543 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:33,552 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,552 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:33,557 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:33,557 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 9
+[2021-05-09 19:13:33,557 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:33,558 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:33,559 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:33,560 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:33,560 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:33,561 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,561 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:33,561 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:33,562 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:33,562 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:33,563 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:33,564 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:33,569 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,569 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:33,578 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,578 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:33,587 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,587 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:33,595 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,595 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:33,603 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:33,603 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:34,548 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:34,548 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 0
+[2021-05-09 19:13:34,556 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:34,557 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 1
+[2021-05-09 19:13:34,565 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:34,565 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 2
+[2021-05-09 19:13:34,573 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:34,573 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 3
+[2021-05-09 19:13:34,578 INFO] pbft_handler->prepare: 	 ---> 4: on prepare
+[2021-05-09 19:13:34,578 INFO] pbft_handler->prepare: 	 ---> 4: receive preprepare msg from 0
+[2021-05-09 19:13:34,578 DEBUG] pbft_handler->_post: 	 make request to 0, prepare
+[2021-05-09 19:13:34,579 DEBUG] pbft_handler->_post: 	 make request to 1, prepare
+[2021-05-09 19:13:34,580 DEBUG] pbft_handler->_post: 	 make request to 2, prepare
+[2021-05-09 19:13:34,581 DEBUG] pbft_handler->_post: 	 make request to 3, prepare
+[2021-05-09 19:13:34,582 DEBUG] pbft_handler->_post: 	 make request to 4, prepare
+[2021-05-09 19:13:34,582 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:34,582 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 4
+[2021-05-09 19:13:34,582 DEBUG] pbft_handler->_post: 	 make request to 5, prepare
+[2021-05-09 19:13:34,583 DEBUG] pbft_handler->_post: 	 make request to 6, prepare
+[2021-05-09 19:13:34,584 DEBUG] pbft_handler->_post: 	 make request to 7, prepare
+[2021-05-09 19:13:34,584 DEBUG] pbft_handler->_post: 	 make request to 8, prepare
+[2021-05-09 19:13:34,585 DEBUG] pbft_handler->_post: 	 make request to 9, prepare
+[2021-05-09 19:13:34,590 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:34,590 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 5
+[2021-05-09 19:13:34,598 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,598 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:34,608 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,608 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:34,617 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,617 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:34,625 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,625 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:34,630 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:34,630 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 6
+[2021-05-09 19:13:34,630 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:34,631 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:34,632 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:34,632 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:34,633 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:34,634 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,634 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:34,634 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:34,635 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:34,636 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:34,637 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:34,638 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:34,643 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,643 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:34,654 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,654 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:34,654 DEBUG] pbft_handler->reply: 	 Add commit certifiacte to slot 6
+[2021-05-09 19:13:34,655 INFO] pbft_handler->reply: 	 4 reply to http://localhost:20001/reply successfully!!
+[2021-05-09 19:13:34,668 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,668 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:34,677 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,677 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:34,684 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,685 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:34,693 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,693 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:34,703 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,703 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:34,711 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,711 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:34,719 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,719 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:34,723 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:34,723 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 7
+[2021-05-09 19:13:34,723 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:34,724 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:34,725 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:34,725 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:34,726 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:34,727 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,727 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:34,727 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:34,728 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:34,728 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:34,729 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:34,730 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:34,736 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,736 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:34,745 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,745 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:34,753 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,753 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:34,761 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,761 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:34,770 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,770 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:34,779 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,779 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:34,787 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,787 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:34,796 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,796 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:34,805 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,805 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:34,809 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:34,809 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 8
+[2021-05-09 19:13:34,809 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:34,810 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:34,811 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:34,811 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:34,812 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:34,812 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,812 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:34,813 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:34,813 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:34,814 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:34,815 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:34,815 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:34,821 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,821 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:34,830 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,830 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:34,838 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,838 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:34,846 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,846 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:34,854 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,854 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:34,864 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,864 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:34,872 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,872 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:34,880 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,880 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:34,889 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,890 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:34,894 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:34,894 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 9
+[2021-05-09 19:13:34,894 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:34,895 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:34,896 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:34,897 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:34,897 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:34,898 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,898 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:34,898 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:34,899 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:34,900 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:34,900 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:34,901 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:34,906 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,906 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:34,914 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,915 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:34,924 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,924 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:34,932 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,932 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:34,940 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:34,940 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:35,535 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:35,535 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 0
+[2021-05-09 19:13:35,545 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:35,545 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 1
+[2021-05-09 19:13:35,554 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:35,554 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 2
+[2021-05-09 19:13:35,563 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:35,563 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 3
+[2021-05-09 19:13:35,568 INFO] pbft_handler->prepare: 	 ---> 4: on prepare
+[2021-05-09 19:13:35,568 INFO] pbft_handler->prepare: 	 ---> 4: receive preprepare msg from 0
+[2021-05-09 19:13:35,568 DEBUG] pbft_handler->_post: 	 make request to 0, prepare
+[2021-05-09 19:13:35,569 DEBUG] pbft_handler->_post: 	 make request to 1, prepare
+[2021-05-09 19:13:35,569 DEBUG] pbft_handler->_post: 	 make request to 2, prepare
+[2021-05-09 19:13:35,570 DEBUG] pbft_handler->_post: 	 make request to 3, prepare
+[2021-05-09 19:13:35,571 DEBUG] pbft_handler->_post: 	 make request to 4, prepare
+[2021-05-09 19:13:35,571 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:35,571 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 4
+[2021-05-09 19:13:35,572 DEBUG] pbft_handler->_post: 	 make request to 5, prepare
+[2021-05-09 19:13:35,572 DEBUG] pbft_handler->_post: 	 make request to 6, prepare
+[2021-05-09 19:13:35,573 DEBUG] pbft_handler->_post: 	 make request to 7, prepare
+[2021-05-09 19:13:35,574 DEBUG] pbft_handler->_post: 	 make request to 8, prepare
+[2021-05-09 19:13:35,575 DEBUG] pbft_handler->_post: 	 make request to 9, prepare
+[2021-05-09 19:13:35,580 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:35,580 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 5
+[2021-05-09 19:13:35,590 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,590 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:35,598 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,598 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:35,607 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,607 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:35,616 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,616 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:35,621 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:35,621 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 6
+[2021-05-09 19:13:35,621 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:35,622 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:35,623 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:35,623 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:35,624 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:35,624 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,624 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:35,625 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:35,625 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:35,626 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:35,627 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:35,627 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:35,633 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,633 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:35,646 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,646 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:35,646 DEBUG] pbft_handler->reply: 	 Add commit certifiacte to slot 7
+[2021-05-09 19:13:35,647 INFO] pbft_handler->reply: 	 4 reply to http://localhost:20001/reply successfully!!
+[2021-05-09 19:13:35,661 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,661 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:35,671 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,671 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:35,680 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,680 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:35,689 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,689 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:35,697 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,697 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:35,707 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,707 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:35,715 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,715 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:35,719 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:35,719 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 7
+[2021-05-09 19:13:35,719 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:35,720 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:35,721 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:35,722 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:35,722 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:35,723 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,723 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:35,723 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:35,723 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:35,724 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:35,725 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:35,726 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:35,731 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,732 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:35,740 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,741 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:35,749 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,749 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:35,758 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,758 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:35,766 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,766 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:35,776 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,776 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:35,784 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,784 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:35,792 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,792 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:35,801 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,801 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:35,806 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:35,806 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 8
+[2021-05-09 19:13:35,806 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:35,807 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:35,808 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:35,808 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:35,809 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:35,809 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,809 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:35,810 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:35,810 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:35,811 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:35,812 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:35,812 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:35,817 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,817 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:35,827 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,827 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:35,835 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,835 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:35,843 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,843 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:35,851 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,851 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:35,861 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,861 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:35,869 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,869 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:35,877 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,877 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:35,885 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,886 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:35,891 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:35,891 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 9
+[2021-05-09 19:13:35,891 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:35,892 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:35,893 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:35,894 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:35,894 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:35,895 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,895 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:35,895 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:35,896 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:35,897 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:35,898 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:35,899 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:35,904 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,904 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:35,912 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,912 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:35,921 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,921 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:35,929 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,929 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:35,937 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:35,937 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:36,277 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:36,277 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 0
+[2021-05-09 19:13:36,286 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:36,286 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 1
+[2021-05-09 19:13:36,295 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:36,295 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 2
+[2021-05-09 19:13:36,304 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:36,304 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 3
+[2021-05-09 19:13:36,309 INFO] pbft_handler->prepare: 	 ---> 4: on prepare
+[2021-05-09 19:13:36,309 INFO] pbft_handler->prepare: 	 ---> 4: receive preprepare msg from 0
+[2021-05-09 19:13:36,309 DEBUG] pbft_handler->_post: 	 make request to 0, prepare
+[2021-05-09 19:13:36,310 DEBUG] pbft_handler->_post: 	 make request to 1, prepare
+[2021-05-09 19:13:36,311 DEBUG] pbft_handler->_post: 	 make request to 2, prepare
+[2021-05-09 19:13:36,312 DEBUG] pbft_handler->_post: 	 make request to 3, prepare
+[2021-05-09 19:13:36,312 DEBUG] pbft_handler->_post: 	 make request to 4, prepare
+[2021-05-09 19:13:36,313 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:36,313 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 4
+[2021-05-09 19:13:36,313 DEBUG] pbft_handler->_post: 	 make request to 5, prepare
+[2021-05-09 19:13:36,314 DEBUG] pbft_handler->_post: 	 make request to 6, prepare
+[2021-05-09 19:13:36,314 DEBUG] pbft_handler->_post: 	 make request to 7, prepare
+[2021-05-09 19:13:36,315 DEBUG] pbft_handler->_post: 	 make request to 8, prepare
+[2021-05-09 19:13:36,316 DEBUG] pbft_handler->_post: 	 make request to 9, prepare
+[2021-05-09 19:13:36,321 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:36,321 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 5
+[2021-05-09 19:13:36,329 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,329 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:36,338 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,339 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:36,347 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,347 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:36,355 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,355 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:36,359 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:36,359 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 6
+[2021-05-09 19:13:36,359 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:36,360 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:36,361 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:36,362 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:36,363 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:36,363 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,363 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:36,364 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:36,364 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:36,365 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:36,366 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:36,367 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:36,372 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,372 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:36,384 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,384 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:36,384 DEBUG] pbft_handler->reply: 	 Add commit certifiacte to slot 8
+[2021-05-09 19:13:36,385 INFO] pbft_handler->reply: 	 4 reply to http://localhost:20001/reply successfully!!
+[2021-05-09 19:13:36,398 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,398 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:36,407 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,407 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:36,415 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,415 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:36,424 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,424 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:36,433 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,433 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:36,441 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,441 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:36,449 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,449 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:36,454 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:36,454 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 7
+[2021-05-09 19:13:36,454 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:36,455 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:36,456 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:36,457 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:36,458 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:36,458 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,458 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:36,459 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:36,459 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:36,460 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:36,461 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:36,462 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:36,467 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,467 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:36,474 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,475 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:36,483 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,483 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:36,492 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,492 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:36,501 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,501 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:36,510 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,510 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:36,519 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,519 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:36,528 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,528 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:36,537 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,537 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:36,541 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:36,541 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 8
+[2021-05-09 19:13:36,541 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:36,542 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:36,543 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:36,544 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:36,544 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:36,545 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,545 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:36,545 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:36,546 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:36,547 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:36,548 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:36,549 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:36,555 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,555 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:36,564 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,564 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:36,573 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,573 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:36,582 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,582 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:36,591 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,591 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:36,600 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,600 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:36,608 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,608 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:36,616 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,616 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:36,625 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,625 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:36,630 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:36,630 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 9
+[2021-05-09 19:13:36,630 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:36,631 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:36,631 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:36,632 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:36,633 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:36,633 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,633 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:36,633 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:36,634 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:36,635 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:36,635 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:36,636 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:36,641 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,641 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:36,651 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,651 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:36,660 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,660 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 7
+[2021-05-09 19:13:36,668 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,668 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 8
+[2021-05-09 19:13:36,677 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:36,678 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 9
+[2021-05-09 19:13:37,117 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:37,118 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 0
+[2021-05-09 19:13:37,127 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:37,127 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 1
+[2021-05-09 19:13:37,135 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:37,135 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 2
+[2021-05-09 19:13:37,144 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:37,144 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 3
+[2021-05-09 19:13:37,149 INFO] pbft_handler->prepare: 	 ---> 4: on prepare
+[2021-05-09 19:13:37,149 INFO] pbft_handler->prepare: 	 ---> 4: receive preprepare msg from 0
+[2021-05-09 19:13:37,149 DEBUG] pbft_handler->_post: 	 make request to 0, prepare
+[2021-05-09 19:13:37,150 DEBUG] pbft_handler->_post: 	 make request to 1, prepare
+[2021-05-09 19:13:37,151 DEBUG] pbft_handler->_post: 	 make request to 2, prepare
+[2021-05-09 19:13:37,152 DEBUG] pbft_handler->_post: 	 make request to 3, prepare
+[2021-05-09 19:13:37,153 DEBUG] pbft_handler->_post: 	 make request to 4, prepare
+[2021-05-09 19:13:37,153 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:37,153 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 4
+[2021-05-09 19:13:37,154 DEBUG] pbft_handler->_post: 	 make request to 5, prepare
+[2021-05-09 19:13:37,154 DEBUG] pbft_handler->_post: 	 make request to 6, prepare
+[2021-05-09 19:13:37,155 DEBUG] pbft_handler->_post: 	 make request to 7, prepare
+[2021-05-09 19:13:37,156 DEBUG] pbft_handler->_post: 	 make request to 8, prepare
+[2021-05-09 19:13:37,157 DEBUG] pbft_handler->_post: 	 make request to 9, prepare
+[2021-05-09 19:13:37,162 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:37,162 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 5
+[2021-05-09 19:13:37,171 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:37,171 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 0
+[2021-05-09 19:13:37,181 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:37,181 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 1
+[2021-05-09 19:13:37,190 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:37,190 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 2
+[2021-05-09 19:13:37,198 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:37,198 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 3
+[2021-05-09 19:13:37,204 INFO] pbft_handler->commit: 	 ---> 4: on commit
+[2021-05-09 19:13:37,204 INFO] pbft_handler->commit: 	 ---> 4: receive prepare msg from 6
+[2021-05-09 19:13:37,204 DEBUG] pbft_handler->_post: 	 make request to 0, commit
+[2021-05-09 19:13:37,205 DEBUG] pbft_handler->_post: 	 make request to 1, commit
+[2021-05-09 19:13:37,206 DEBUG] pbft_handler->_post: 	 make request to 2, commit
+[2021-05-09 19:13:37,207 DEBUG] pbft_handler->_post: 	 make request to 3, commit
+[2021-05-09 19:13:37,208 DEBUG] pbft_handler->_post: 	 make request to 4, commit
+[2021-05-09 19:13:37,208 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:37,208 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 4
+[2021-05-09 19:13:37,209 DEBUG] pbft_handler->_post: 	 make request to 5, commit
+[2021-05-09 19:13:37,210 DEBUG] pbft_handler->_post: 	 make request to 6, commit
+[2021-05-09 19:13:37,211 DEBUG] pbft_handler->_post: 	 make request to 7, commit
+[2021-05-09 19:13:37,211 DEBUG] pbft_handler->_post: 	 make request to 8, commit
+[2021-05-09 19:13:37,212 DEBUG] pbft_handler->_post: 	 make request to 9, commit
+[2021-05-09 19:13:37,218 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:37,218 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 5
+[2021-05-09 19:13:37,229 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 4: receive checkpoint vote.
+[2021-05-09 19:13:37,229 DEBUG] checkpoint->receive_vote: 	 ---> 4: Receive checkpoint votes
+[2021-05-09 19:13:37,245 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 4: receive checkpoint vote.
+[2021-05-09 19:13:37,245 DEBUG] checkpoint->receive_vote: 	 ---> 4: Receive checkpoint votes
+[2021-05-09 19:13:37,259 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 4: receive checkpoint vote.
+[2021-05-09 19:13:37,259 DEBUG] checkpoint->receive_vote: 	 ---> 4: Receive checkpoint votes
+[2021-05-09 19:13:37,274 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 4: receive checkpoint vote.
+[2021-05-09 19:13:37,274 DEBUG] checkpoint->receive_vote: 	 ---> 4: Receive checkpoint votes
+[2021-05-09 19:13:37,283 INFO] pbft_handler->reply: 	 ---> 4: on reply
+[2021-05-09 19:13:37,283 INFO] pbft_handler->reply: 	 ---> 4: receive commit msg from 6
+[2021-05-09 19:13:37,283 DEBUG] pbft_handler->reply: 	 Add commit certifiacte to slot 9
+[2021-05-09 19:13:37,283 DEBUG] checkpoint->_post: 	 make request to 0, receive_ckpt_vote
+[2021-05-09 19:13:37,284 DEBUG] checkpoint->_post: 	 make request to 1, receive_ckpt_vote
+[2021-05-09 19:13:37,285 DEBUG] checkpoint->_post: 	 make request to 2, receive_ckpt_vote
+[2021-05-09 19:13:37,287 DEBUG] checkpoint->_post: 	 make request to 3, receive_ckpt_vote
+[2021-05-09 19:13:37,288 DEBUG] checkpoint->_post: 	 make request to 4, receive_ckpt_vote
+[2021-05-09 19:13:37,288 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 4: receive checkpoint vote.
+[2021-05-09 19:13:37,288 DEBUG] checkpoint->receive_vote: 	 ---> 4: Receive checkpoint votes
+[2021-05-09 19:13:37,289 DEBUG] checkpoint->_post: 	 make request to 5, receive_ckpt_vote
+[2021-05-09 19:13:37,290 DEBUG] checkpoint->_post: 	 make request to 6, receive_ckpt_vote
+[2021-05-09 19:13:37,291 DEBUG] checkpoint->_post: 	 make request to 7, receive_ckpt_vote
+[2021-05-09 19:13:37,292 DEBUG] checkpoint->_post: 	 make request to 8, receive_ckpt_vote
+[2021-05-09 19:13:37,293 DEBUG] checkpoint->_post: 	 make request to 9, receive_ckpt_vote
+[2021-05-09 19:13:37,294 INFO] pbft_handler->reply: 	 ---> 4: Propose checkpoint with last slot: 9. In addition, current checkpoint's next_slot is: 0
+[2021-05-09 19:13:37,295 INFO] pbft_handler->reply: 	 4 reply to http://localhost:20001/reply successfully!!
+[2021-05-09 19:13:37,303 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 4: receive checkpoint vote.
+[2021-05-09 19:13:37,303 DEBUG] checkpoint->receive_vote: 	 ---> 4: Receive checkpoint votes
+[2021-05-09 19:13:37,319 INFO] pbft_handler->receive_ckpt_vote: 	 ---> 4: receive checkpoint vote.
+[2021-05-09 19:13:37,319 DEBUG] checkpoint->receive_vote: 	 ---> 4: Receive checkpoint votes
+[2021-05-09 19:13:37,319 INFO] checkpoint->receive_vote: 	 ---> 4: Update checkpoint by receiving votes
