@@ -171,6 +171,34 @@ class PBFTHandler:
             return False
         else:
             return True
+    
+    async def get_request(self, request):
+        '''
+        Handle the request from client if leader, otherwise 
+        redirect to the leader.
+        '''
+        self._log.info("---> %d: on request", self._index)
+
+        if not self._is_leader:
+            if self._leader != None:
+                raise web.HTTPTemporaryRedirect(self.make_url(
+                    self._nodes[self._leader], PBFTHandler.REQUEST))
+            else:
+                raise web.HTTPServiceUnavailable()
+        else:
+
+            # print(request.headers)
+            # print(request.__dict__)
+
+            json_data = await request.json()
+
+
+            # print("\t\t--->node"+str(self._index)+": on request :")
+            # print(json_data)
+
+            await self.preprepare(json_data)
+            return web.Response()
+
 
     async def preprepare(self, json_data):
         '''
@@ -210,81 +238,7 @@ class PBFTHandler:
         # require replicas to feedback instead of prepare
         await self._post(self._nodes, PBFTHandler.FEEDBACK, preprepare_msg)
 
-    async def get_request(self, request):
-        '''
-        Handle the request from client if leader, otherwise 
-        redirect to the leader.
-        '''
-        self._log.info("---> %d: on request", self._index)
-
-        if not self._is_leader:
-            if self._leader != None:
-                raise web.HTTPTemporaryRedirect(self.make_url(
-                    self._nodes[self._leader], PBFTHandler.REQUEST))
-            else:
-                raise web.HTTPServiceUnavailable()
-        else:
-
-            # print(request.headers)
-            # print(request.__dict__)
-
-            json_data = await request.json()
-
-
-            # print("\t\t--->node"+str(self._index)+": on request :")
-            # print(json_data)
-
-            await self.preprepare(json_data)
-            return web.Response()
-
-    async def prepare(self, request):
-        '''
-        Once receive preprepare message from leader, broadcast 
-        prepare message to all replicas.
-
-        input: 
-            request: preprepare message from preprepare:
-                preprepare_msg = {
-                    'leader': self._index,
-                    'view': self._view.get_view(),
-                    'proposal': {
-                        this_slot: json_data
-                    }
-                    'type': 'preprepare'
-                }
-
-        '''
-        json_data = await request.json()
-
-        if json_data['view'] < self._follow_view.get_view():
-            # when receive message with view < follow_view, do nothing
-            return web.Response()
-
-        self._log.info("---> %d: on prepare", self._index)
-        self._log.info("---> %d: receive preprepare msg from %d", 
-            self._index, json_data['leader'])
-
-
-        for slot in json_data['proposal']:
-
-            if not self._legal_slot(slot):
-                continue
-
-            if slot not in self._status_by_slot:
-                self._status_by_slot[slot] = Status(self._f)
-
-            prepare_msg = {
-                'index': self._index,
-                'view': json_data['view'],
-                'proposal': {
-                    slot: json_data['proposal'][slot]
-                },
-                'type': Status.PREPARE
-            }
-            await self._post(self._nodes, PBFTHandler.COMMIT, prepare_msg)
-        return web.Response()
-
-
+    # similar to prepare
     async def feedback(self, request):
         '''
         Once receive preprepare message from leader, send feedback to leader in return.
@@ -331,7 +285,7 @@ class PBFTHandler:
             await self._post([self._nodes[self._leader]], PBFTHandler.CONFIRM, feedback_msg)
         return web.Response()
 
-
+    # similar to commit 
     async def confirm(self, request):
         '''
         Once receive 3f + 1 message from replica, send confirm in return
@@ -467,6 +421,53 @@ class PBFTHandler:
                         self._log.info("%d fast reply to %s successfully!!", 
                             self._index, json_data['proposal'][slot]['client_url'])
                 
+        return web.Response()
+
+    async def prepare(self, request):
+        '''
+        Once receive preprepare message from leader, broadcast 
+        prepare message to all replicas.
+
+        input: 
+            request: preprepare message from preprepare:
+                preprepare_msg = {
+                    'leader': self._index,
+                    'view': self._view.get_view(),
+                    'proposal': {
+                        this_slot: json_data
+                    }
+                    'type': 'preprepare'
+                }
+
+        '''
+        json_data = await request.json()
+
+        if json_data['view'] < self._follow_view.get_view():
+            # when receive message with view < follow_view, do nothing
+            return web.Response()
+
+        self._log.info("---> %d: on prepare", self._index)
+        self._log.info("---> %d: receive preprepare msg from %d", 
+            self._index, json_data['leader'])
+
+
+        for slot in json_data['proposal']:
+
+            if not self._legal_slot(slot):
+                continue
+
+            if slot not in self._status_by_slot:
+                self._status_by_slot[slot] = Status(self._f)
+
+            prepare_msg = {
+                'index': self._index,
+                'view': json_data['view'],
+                'proposal': {
+                    slot: json_data['proposal'][slot]
+                },
+                'type': Status.PREPARE
+            }
+            await self._post(self._nodes, PBFTHandler.COMMIT, prepare_msg)
         return web.Response()
 
     async def commit(self, request):
