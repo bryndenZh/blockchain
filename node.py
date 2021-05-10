@@ -7,6 +7,7 @@ import asyncio
 from aiohttp import web
 
 from pbft_handler import PBFTHandler
+from constants import MessageType
 
 VIEW_SET_INTERVAL = 10
 
@@ -106,18 +107,18 @@ def main():
 
     app = web.Application()
     app.add_routes([
-        web.post('/' + PBFTHandler.REQUEST, pbft.get_request),
-        web.post('/' + PBFTHandler.PREPREPARE, pbft.preprepare),
-        web.post('/' + PBFTHandler.PREPARE, pbft.prepare),
-        web.post('/' + PBFTHandler.COMMIT, pbft.commit),
-        web.post('/' + PBFTHandler.REPLY, pbft.reply),
-        web.post('/' + PBFTHandler.FEEDBACK, pbft.feedback),
-        web.post('/' + PBFTHandler.CONFIRM, pbft.confirm),
-        web.post('/' + PBFTHandler.FAST_REPLY, pbft.fast_reply),
-        web.post('/' + PBFTHandler.RECEIVE_CKPT_VOTE, pbft.receive_ckpt_vote),
-        web.post('/' + PBFTHandler.RECEIVE_SYNC, pbft.receive_sync),
-        web.post('/' + PBFTHandler.VIEW_CHANGE_REQUEST, pbft.get_view_change_request),
-        web.post('/' + PBFTHandler.VIEW_CHANGE_VOTE, pbft.receive_view_change_vote),
+        web.post('/' + MessageType.REQUEST, pbft.get_request),
+        web.post('/' + MessageType.PREPREPARE, pbft.preprepare),
+        web.post('/' + MessageType.PREPARE, pbft.prepare),
+        web.post('/' + MessageType.COMMIT, pbft.commit),
+        web.post('/' + MessageType.REPLY, pbft.reply),
+        web.post('/' + MessageType.FEEDBACK, pbft.feedback),
+        web.post('/' + MessageType.CONFIRM, pbft.confirm),
+        web.post('/' + MessageType.FAST_REPLY, pbft.fast_reply),
+        web.post('/' + MessageType.RECEIVE_CKPT_VOTE, pbft.receive_ckpt_vote),
+        web.post('/' + MessageType.RECEIVE_SYNC, pbft.receive_sync),
+        web.post('/' + MessageType.VIEW_CHANGE_REQUEST, pbft.get_view_change_request),
+        web.post('/' + MessageType.VIEW_CHANGE_VOTE, pbft.receive_view_change_vote),
         web.get('/'+'blockchain', pbft.show_blockchain),
         ])
 

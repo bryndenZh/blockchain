@@ -1,16 +1,11 @@
 import hashlib
 import json
 
+from constants import MessageType
 class Status:
     '''
     Record the state for every slot.
     '''
-    PREPARE = 'prepare'
-    COMMIT = 'commit'
-    REPLY = "reply"
-    FEEDBACK = "FEEDBACK"
-    CONFIRM = "CONFIRM"
-    FAST_REPLY = "FAST_REPLY"
 
     def __init__(self, f):
         self.f = f
@@ -85,15 +80,15 @@ class Status:
         # hash everytime.
         hash_object = hashlib.sha256(json.dumps(proposal, sort_keys=True).encode())
         key = (view.get_view(), hash_object.digest())
-        if msg_type == Status.PREPARE:
+        if msg_type == MessageType.PREPARE:
             if key not in self.prepare_msgs:
                 self.prepare_msgs[key] = self.SequenceElement(proposal)
             self.prepare_msgs[key].from_nodes.add(from_node)
-        elif msg_type == Status.COMMIT:
+        elif msg_type == MessageType.COMMIT:
             if key not in self.commit_msgs:
                 self.commit_msgs[key] = self.SequenceElement(proposal)
             self.commit_msgs[key].from_nodes.add(from_node)
-        if msg_type == Status.FEEDBACK:
+        if msg_type == MessageType.FEEDBACK:
             if key not in self.feedback_msgs:
                 self.feedback_msgs[key] = self.SequenceElement(proposal)
             self.feedback_msgs[key].from_nodes.add(from_node)
@@ -104,7 +99,7 @@ class Status:
         input:
             msg_type: self.PREPARE or self.COMMIT
         '''
-        if msg_type == Status.PREPARE:
+        if msg_type == MessageType.PREPARE:
             if self.prepare_certificate:
                 return True
             for key in self.prepare_msgs:
@@ -112,7 +107,7 @@ class Status:
                     return True
             return False
 
-        if msg_type == Status.COMMIT:
+        if msg_type == MessageType.COMMIT:
             if self.commit_certificate:
                 return True
             for key in self.commit_msgs:
@@ -121,7 +116,7 @@ class Status:
             return False 
 
         # must receive 3f + 1 feedback instead of 2f + 1 
-        if msg_type == Status.FEEDBACK:
+        if msg_type == MessageType.FEEDBACK:
             if self.feedback_certificate:
                 return True
             for key in self.feedback_msgs:

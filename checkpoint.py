@@ -71,7 +71,7 @@ class CheckPoint:
                 'type': 'vote'
             }
         '''
-        self._log.debug("---> %d: Receive checkpoint votes", self._node_index)
+        self._log.debug("%d: Receive checkpoint votes", self._node_index)
         ckpt = json.loads(ckpt_vote['ckpt'])
         next_slot = ckpt_vote['next_slot']
         from_node = ckpt_vote['node_index']
@@ -85,7 +85,7 @@ class CheckPoint:
         for hash_ckpt in self._received_votes_by_ckpt:
             if (self._received_votes_by_ckpt[hash_ckpt].next_slot > self.next_slot and 
                     len(self._received_votes_by_ckpt[hash_ckpt].from_nodes) >= 2 * self._f + 1):
-                self._log.info("---> %d: Update checkpoint by receiving votes", self._node_index)
+                self._log.info("-%d: Update checkpoint by receiving votes", self._node_index)
                 self.next_slot = self._received_votes_by_ckpt[hash_ckpt].next_slot
                 self.checkpoint = self._received_votes_by_ckpt[hash_ckpt].checkpoint
                

@@ -1,5 +1,6 @@
 import json
 import hashlib
+import logging
 
 class Block:
     def __init__(self, index, transactions, timestamp, previous_hash):
@@ -25,6 +26,7 @@ class Blockchain:
         self.length = 0
         self.chain = []
         self.create_genesis_block()
+        self._log = self._log = logging.getLogger() 
 
     def create_genesis_block(self):
         """

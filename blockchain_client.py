@@ -11,7 +11,7 @@ from random import random
 import hashlib
 import traceback
 
-
+from constants import MessageType
 
 class View:
     def __init__(self, view_number, num_nodes):
@@ -129,10 +129,7 @@ def make_url(node, command):
     return "http://{}:{}/{}".format(node['host'], node['port'], command)
 
 class Client:
-    REQUEST = "request"
-    REPLY = "reply"
-    VIEW_CHANGE_REQUEST = 'view_change_request'
-
+  
     def __init__(self, conf, args, log):
         self._nodes = conf['nodes']
         self._resend_interval = conf['misc']['network_timeout']
@@ -160,7 +157,7 @@ class Client:
         for i in range(len(self._nodes)):
             try:
                 await self._session.post(make_url(
-                    self._nodes[i], Client.VIEW_CHANGE_REQUEST), json=json_data)
+                    self._nodes[i], MessageType.VIEW_CHANGE_REQUEST), json=json_data)
             except:
                 self._log.info("---> %d failed to send view change message to node %d.", 
                     self._client_id, i)
@@ -225,7 +222,7 @@ class Client:
         # await asyncio.sleep(random())
         json_data = {
             'id': (self._client_id, i),
-            'client_url': self._client_url + "/" + Client.REPLY,
+            'client_url': self._client_url + "/" + MessageType.REPLY,
             'timestamp': time.time(),
             'data': "data packet "+str(message)        
         }
@@ -234,7 +231,7 @@ class Client:
             try:
                 self._status = Status(self._f)
                 self._log.info("client %d's  message %d sent.", self._client_id, i)
-                await self._session.post(make_url(self._nodes[dest_ind], Client.REQUEST), json=json_data)
+                await self._session.post(make_url(self._nodes[dest_ind], MessageType.REQUEST), json=json_data)
                
                 await asyncio.wait_for(self._is_request_succeed.wait(), self._resend_interval)
             except:
@@ -299,7 +296,7 @@ def run_app(client):
 
     app = web.Application()
     app.add_routes([
-        web.post('/' + Client.REPLY, client.get_reply),
+        web.post('/' + MessageType.REPLY, client.get_reply),
     ])
 
     web.run_app(app, host=host, port=port, access_log=None)
