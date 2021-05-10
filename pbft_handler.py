@@ -216,7 +216,6 @@ class PBFTHandler:
                 }
 
         '''
-
         this_slot = str(self._next_propose_slot)
         self._next_propose_slot = int(this_slot) + 1
 
@@ -668,107 +667,6 @@ class PBFTHandler:
         await self._ckpt.receive_vote(json_data)
         return web.Response()
 
-    async def receive_sync(self, request):
-        '''
-        Update the checkpoint and fill the bubble when receive sync messages.
-        input:
-            request: {
-                'checkpoint': json_data = {
-                    'next_slot': self._next_slot
-                    'ckpt': json.dumps(ckpt)
-                }
-                'commit_certificates':commit_certificates
-                    (Elements are commit_certificate.to_dict())
-            }
-        '''
-        self._log.info("%d: on receive sync stage.", self._index)
-        json_data = await request.json()
-
-        try:
-            # print(len(self._status_by_slot))
-            # print(self._ckpt.next_slot, self._last_commit_slot + 1)
-            # # print(len(json_data['checkpoint']))
-            # print('node :' + str(self._index) +' > '+str(self._blockchain.commit_counter)+' : '+str(self._blockchain.length))
-            # print()
-            # print()
-            self.committed_to_blockchain = False
-        except Exception as e:
-            traceback.print_exc()
-            print('for i = ' +str(i))
-            print(e)
-
-
-        self._ckpt.update_checkpoint(json_data['checkpoint'])
-        self._last_commit_slot = max(self._last_commit_slot, self._ckpt.next_slot - 1)
-        # TODO: Only check bubble instead of all slots between lowerbound
-        # and upperbound of the commit.
-
-        for slot in json_data['commit_certificates']:
-            # Skip those slot not qualified for update.
-            if int(slot) >= self._ckpt.get_commit_upperbound() or (
-                    int(slot) < self._ckpt.next_slot):
-                continue
-
-            certificate = json_data['commit_certificates'][slot]
-            if slot not in self._status_by_slot:
-                self._status_by_slot[slot] = Status(self._f)
-                commit_certificate = Status.Certificate(View(0, self._node_cnt))
-                commit_certificate.dumps_from_dict(certificate)
-                self._status_by_slot[slot].commit_certificate =  commit_certificate
-            elif not self._status_by_slot[slot].commit_certificate:
-                commit_certificate = Status.Certificate(View(0, self._node_cnt))
-                commit_certificate.dumps_from_dict(certificate)
-                self._status_by_slot[slot].commit_certificate =  commit_certificate
-
-        # Commit once the next slot of the last_commit_slot get commit certificate
-        while (str(self._last_commit_slot + 1) in self._status_by_slot and 
-                self._status_by_slot[str(self._last_commit_slot + 1)].commit_certificate):
-            self._last_commit_slot += 1
-
-            # When commit messages fill the next checkpoint, 
-            # propose a new checkpoint.
-            if (self._last_commit_slot + 1) % self._checkpoint_interval == 0:
-                await self._ckpt.propose_vote(self.get_commit_decisions())
-
-                self._log.info("%d: During rev_sync, Propose checkpoint with l "
-                    "ast slot: %d. In addition, current checkpoint's next_slot is: %d", 
-                    self._index, self._last_commit_slot, self._ckpt.next_slot)
-
-        await self.dump_to_file()
-
-        return web.Response()
-        
-
-    async def synchronize(self):
-        '''
-        Broadcast current checkpoint and all the commit certificate 
-        between next slot of the checkpoint and commit upperbound.
-
-        output:
-            json_data = {
-                'checkpoint': json_data = {
-                    'next_slot': self._next_slot
-                    'ckpt': json.dumps(ckpt)
-                }
-                'commit_certificates':commit_certificates
-                    (Elements are commit_certificate.to_dict())
-            }
-        '''
-        # TODO: Only send bubble slot message instead of all.
-        while 1:
-            await asyncio.sleep(self._sync_interval)
-            commit_certificates = {}
-            for i in range(self._ckpt.next_slot, self._ckpt.get_commit_upperbound()):
-                slot = str(i)
-                if (slot in self._status_by_slot) and (
-                        self._status_by_slot[slot].commit_certificate):
-                    status = self._status_by_slot[slot]
-                    commit_certificates[slot] = status.commit_certificate.to_dict()
-            json_data = {
-                'checkpoint': self._ckpt.get_ckpt_info(),
-                'commit_certificates':commit_certificates
-            }
-            await self._post(self._nodes, MessageType.RECEIVE_SYNC, json_data)
 
     async def get_prepare_certificates(self):
         '''
@@ -959,3 +857,105 @@ class PBFTHandler:
         print('Node '+str(self._index)+' anything')
         return web.Response(text=text)
 
+
+    async def receive_sync(self, request):
+        '''
+        Update the checkpoint and fill the bubble when receive sync messages.
+        input:
+            request: {
+                'checkpoint': json_data = {
+                    'next_slot': self._next_slot
+                    'ckpt': json.dumps(ckpt)
+                }
+                'commit_certificates':commit_certificates
+                    (Elements are commit_certificate.to_dict())
+            }
+        '''
+        self._log.info("%d: on receive sync stage.", self._index)
+        json_data = await request.json()
+
+        try:
+            # print(len(self._status_by_slot))
+            # print(self._ckpt.next_slot, self._last_commit_slot + 1)
+            # # print(len(json_data['checkpoint']))
+            # print('node :' + str(self._index) +' > '+str(self._blockchain.commit_counter)+' : '+str(self._blockchain.length))
+            # print()
+            # print()
+            self.committed_to_blockchain = False
+        except Exception as e:
+            traceback.print_exc()
+            print('for i = ' +str(i))
+            print(e)
+
+
+        self._ckpt.update_checkpoint(json_data['checkpoint'])
+        self._last_commit_slot = max(self._last_commit_slot, self._ckpt.next_slot - 1)
+        # TODO: Only check bubble instead of all slots between lowerbound
+        # and upperbound of the commit.
+
+        for slot in json_data['commit_certificates']:
+            # Skip those slot not qualified for update.
+            if int(slot) >= self._ckpt.get_commit_upperbound() or (
+                    int(slot) < self._ckpt.next_slot):
+                continue
+
+            certificate = json_data['commit_certificates'][slot]
+            if slot not in self._status_by_slot:
+                self._status_by_slot[slot] = Status(self._f)
+                commit_certificate = Status.Certificate(View(0, self._node_cnt))
+                commit_certificate.dumps_from_dict(certificate)
+                self._status_by_slot[slot].commit_certificate =  commit_certificate
+            elif not self._status_by_slot[slot].commit_certificate:
+                commit_certificate = Status.Certificate(View(0, self._node_cnt))
+                commit_certificate.dumps_from_dict(certificate)
+                self._status_by_slot[slot].commit_certificate =  commit_certificate
+
+        # Commit once the next slot of the last_commit_slot get commit certificate
+        while (str(self._last_commit_slot + 1) in self._status_by_slot and 
+                self._status_by_slot[str(self._last_commit_slot + 1)].commit_certificate):
+            self._last_commit_slot += 1
+
+            # When commit messages fill the next checkpoint, 
+            # propose a new checkpoint.
+            if (self._last_commit_slot + 1) % self._checkpoint_interval == 0:
+                await self._ckpt.propose_vote(self.get_commit_decisions())
+
+                self._log.info("%d: During rev_sync, Propose checkpoint with l "
+                    "ast slot: %d. In addition, current checkpoint's next_slot is: %d", 
+                    self._index, self._last_commit_slot, self._ckpt.next_slot)
+
+        await self.dump_to_file()
+
+        return web.Response()
+        
+
+    async def synchronize(self):
+        '''
+        Broadcast current checkpoint and all the commit certificate 
+        between next slot of the checkpoint and commit upperbound.
+
+        output:
+            json_data = {
+                'checkpoint': json_data = {
+                    'next_slot': self._next_slot
+                    'ckpt': json.dumps(ckpt)
+                }
+                'commit_certificates':commit_certificates
+                    (Elements are commit_certificate.to_dict())
+            }
+        '''
+        # TODO: Only send bubble slot message instead of all.
+        while 1:
+            await asyncio.sleep(self._sync_interval)
+            commit_certificates = {}
+            for i in range(self._ckpt.next_slot, self._ckpt.get_commit_upperbound()):
+                slot = str(i)
+                if (slot in self._status_by_slot) and (
+                        self._status_by_slot[slot].commit_certificate):
+                    status = self._status_by_slot[slot]
+                    commit_certificates[slot] = status.commit_certificate.to_dict()
+            json_data = {
+                'checkpoint': self._ckpt.get_ckpt_info(),
+                'commit_certificates':commit_certificates
+            }
+            await self._post(self._nodes, MessageType.RECEIVE_SYNC, json_data)

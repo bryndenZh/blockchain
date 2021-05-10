@@ -9,6 +9,7 @@ class MessageType():
     CONFIRM = "CONFIRM"
     FAST_REPLY = "FAST_REPLY"
 
+    REGISTER = 'register'
     JOIN = 'join'
     JOIN_REPLY = 'join_reply'
 

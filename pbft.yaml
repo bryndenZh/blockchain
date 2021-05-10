@@ -41,6 +41,9 @@ clients:
       port: 20001
     - host: localhost
       port: 20002
+ca: 
+  host: localhost
+  port: 40000
 
 loss%: 0
 
