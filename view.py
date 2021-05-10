@@ -67,7 +67,7 @@ class ViewChangeVotes:
                     "node_index": self._index,
                     "view_number": self._follow_view.get_view(),
                     "checkpoint":self._ckpt.get_ckpt_info(),
-                    "prepared_certificates":self.get_prepare_certificates(),
+                    "prepare_certificates":self.get_prepare_certificates(),
                 }
         '''
         update_view = None

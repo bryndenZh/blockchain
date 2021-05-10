@@ -9,6 +9,10 @@ class MessageType():
     CONFIRM = "CONFIRM"
     FAST_REPLY = "FAST_REPLY"
 
+    JOIN = 'join'
+    JOIN_REPLY = 'join_reply'
+
+
     NO_OP = 'NOP'
 
     RECEIVE_SYNC = 'receive_sync'

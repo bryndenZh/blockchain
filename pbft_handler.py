@@ -157,7 +157,7 @@ class PBFTHandler:
                     _ = await self._session.post(self.make_url(node, command), json=json_data)
                 except Exception as e:
                     #resp_list.append((i, e))
-                    self._log.error(e)
+                    self._log.error(" %s while making request %s", str(e),  self.make_url(node, command))
                     pass
 
     def _legal_slot(self, slot):
@@ -168,7 +168,9 @@ class PBFTHandler:
         output:
             boolean to express the result.
         '''
-        if int(slot) < self._ckpt.next_slot or int(slot) >= self._ckpt.get_commit_upperbound():
+        # special case: before commit, a node has recevied 2f + 1 ckpt_vote and update its ckpt
+        #  so the msg to be commit becomes illegal
+        if int(slot) < self._ckpt.next_slot - 1 or int(slot) >= self._ckpt.get_commit_upperbound():
             return False
         else:
             return True
@@ -234,9 +236,9 @@ class PBFTHandler:
             'type': 'preprepare'
         }
         
-        # await self._post(self._nodes, MessageType.PREPARE, preprepare_msg)
-        # require replicas to feedback instead of prepare
-        await self._post(self._nodes, MessageType.FEEDBACK, preprepare_msg)
+        await self._post(self._nodes, MessageType.PREPARE, preprepare_msg)
+        # # require replicas to feedback instead of prepare
+        # await self._post(self._nodes, MessageType.FEEDBACK, preprepare_msg)
 
     # similar to prepare
     async def feedback(self, request):
@@ -399,11 +401,11 @@ class PBFTHandler:
 
                     # When commit messages fill the next checkpoint, 
                     # propose a new checkpoint.
-                    # if (self._last_commit_slot + 1) % self._checkpoint_interval == 0:
-                    #     await self._ckpt.propose_vote(self.get_commit_decisions())
-                    #     self._log.info("%d: Propose checkpoint with last slot: %d. "
-                    #         "In addition, current checkpoint's next_slot is: %d", 
-                    #         self._index, self._last_commit_slot, self._ckpt.next_slot)
+                    if (self._last_commit_slot + 1) % self._checkpoint_interval == 0:
+                        await self._ckpt.propose_vote(self.get_commit_decisions())
+                        self._log.info("%d: Propose checkpoint with last slot: %d. "
+                            "In addition, current checkpoint's next_slot is: %d", 
+                            self._index, self._last_commit_slot, self._ckpt.next_slot)
 
 
                     # Write to blockchain
@@ -578,14 +580,13 @@ class PBFTHandler:
                     status.is_committed = True
                     self._last_commit_slot += 1
 
-                    # When commit messages fill the next checkpoint, 
-                    # propose a new checkpoint.
-                    # if (self._last_commit_slot + 1) % self._checkpoint_interval == 0:
-                    #     self._log.info("%d: Propose checkpoint with last slot: %d. "
-                    #             "In addition, current checkpoint's next_slot is: %d", 
-                    #         self._index, self._last_commit_slot, self._ckpt.next_slot)
-                    #     await self._ckpt.propose_vote(self.get_commit_decisions())
-
+                    #    When commit messages fill the next checkpoint, propose a new checkpoint.
+                    if (self._last_commit_slot + 1) % self._checkpoint_interval == 0:
+                        self._log.info("%d: Propose checkpoint with last slot: %d. "
+                                "In addition, current checkpoint's next_slot is: %d", 
+                            self._index, self._last_commit_slot, self._ckpt.next_slot)
+                        await self._ckpt.propose_vote(self.get_commit_decisions())
+                    
                     if (self._last_commit_slot + 1) % self._dump_interval == 0:
                         await self.dump_to_file()
 
@@ -615,7 +616,6 @@ class PBFTHandler:
             commit_decisions: list of tuple: [((client_index, client_seq), data), ... ]
         '''
         commit_decisions = []
-        self._log.debug("get commit decisions, committed=%s, len(commit_decisions)=%d", self.committed_to_blockchain, len(commit_decisions))
         # print(self._ckpt.next_slot, self._last_commit_slot + 1)
         for i in range(self._ckpt.next_slot, self._last_commit_slot + 1):
             status = self._status_by_slot[str(i)]
@@ -664,16 +664,6 @@ class PBFTHandler:
         '''
         self._log.info("%d: receive checkpoint vote.", self._index)
         json_data = await request.json()
-
-        # print ()
-        # print ()
-        # print ('json_data')
-        # print(json_data)
-        # print ()
-        # print ()
-        # # print ('ckpt')
-        # # print (ckpt)
-        # print ()
 
         await self._ckpt.receive_vote(json_data)
         return web.Response()

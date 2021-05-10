@@ -44,7 +44,7 @@ clients:
 
 loss%: 0
 
-ckpt_interval: 100
+ckpt_interval: 10
 dump_interval: 10
 
 retry_times_before_view_change: 2

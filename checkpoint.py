@@ -71,11 +71,11 @@ class CheckPoint:
                 'type': 'vote'
             }
         '''
-        self._log.debug("%d: Receive checkpoint votes", self._node_index)
+
         ckpt = json.loads(ckpt_vote['ckpt'])
         next_slot = ckpt_vote['next_slot']
         from_node = ckpt_vote['node_index']
-
+        self._log.debug("%d: Receive checkpoint votes from %d", self._node_index, from_node)
         hash_ckpt = self._hash_ckpt(ckpt)
         if hash_ckpt not in self._received_votes_by_ckpt:
             self._received_votes_by_ckpt[hash_ckpt] = (

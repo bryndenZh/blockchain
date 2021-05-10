@@ -103,7 +103,7 @@ def main():
     pbft = PBFTHandler(args.index, conf)
 
     # asyncio.ensure_future(pbft.synchronize())
-    asyncio.ensure_future(pbft.garbage_collection())
+    # asyncio.ensure_future(pbft.garbage_collection())
 
     app = web.Application()
     app.add_routes([
