@@ -25,7 +25,8 @@ class CA():
         node = await request.json()
         logging.info("receive request to register %s", str(node))
         self._nodes.append(node)
-        resp = {'index': len(self._nodes)}
+        resp = {'index': len(self._nodes), 'nodes': self._nodes}
+        logging.info("return %s", str(resp))
         return web.json_response(resp)
 
 def arg_parse():

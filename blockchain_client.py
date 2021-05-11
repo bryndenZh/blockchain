@@ -152,7 +152,7 @@ class Client:
 
     async def request_view_change(self):
         json_data = {
-            "action" : "view change"
+            "type" : MessageType.VIEW_CHANGE_REQUEST
         }
         for i in range(len(self._nodes)):
             try:
@@ -195,7 +195,6 @@ class Client:
             self._log.info("check majority for message %s passed!", json_data['proposal']['id'])
             self._is_request_succeed.set()
            
-
         return web.Response()
 
 

@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 import logging, traceback
+from spbft_handler import SPBFTHandler
 import argparse
 import yaml
 from collections import Counter
@@ -8,6 +9,7 @@ from aiohttp import web
 
 from pbft_handler import PBFTHandler
 from constants import MessageType
+from dynamic_pbft_handler import DynamicPBFTHandler
 
 VIEW_SET_INTERVAL = 10
 
@@ -48,38 +50,12 @@ def arg_parse():
     parser = argparse.ArgumentParser(description='PBFT Node')
     parser.add_argument('-i', '--index', type=int, help='node index')
     parser.add_argument('-c', '--config', default='pbft.yaml', type=argparse.FileType('r'), help='use configuration [%(default)s]')  
+    parser.add_argument('--host', help='custom host address')
+    parser.add_argument('--port', help='custom port')
     args = parser.parse_args()
     return args
 
 def conf_parse(conf_file) -> dict:
-    '''
-    nodes:
-        - host: localhost
-          port: 30000
-        - host: localhost
-          port: 30001
-        - host: localhost
-          port: 30002
-        - host: localhost
-          port: 30003
-
-    clients:
-        - host: localhost
-          port: 20001
-        - host: localhost
-          port: 20002
-
-    loss%: 0
-
-    ckpt_interval: 10
-
-    retry_times_before_view_change: 2
-
-    sync_interval: 5
-
-    misc:
-        network_timeout: 5
-    '''
     conf = yaml.safe_load(conf_file)
     return conf
 
@@ -88,41 +64,51 @@ def conf_parse(conf_file) -> dict:
 
 def main():
     args = arg_parse()
-    # if args.log_to_file:
-    #     logging.basicConfig(filename='~$node_' + str(args.index)+'.log',
-    #                         filemode='a', level=logging.DEBUG)
-    logging_config(log_level=logging.DEBUG ,log_file='~$node_' + str(args.index)+'.log')
-    log = logging.getLogger()
     conf = conf_parse(args.config)
+
+    # if set --host, use it instead of config
+    if args.host and args.port:
+        host = args.host
+        port = args.port
+        print(host, port)
+        logging_config(log_level=logging.DEBUG ,log_file='~$node_' + host + ':' + port +'.log')
+        log = logging.getLogger()
+        handler = DynamicPBFTHandler(-1, conf, {'host': host, 'port': port})
+        log.info("create a dbft handler at %s:%s", host, port)
+        asyncio.ensure_future(handler.register())
+    else: 
+        addr = conf['nodes'][args.index]
+        host = addr['host']
+        port = addr['port']
+        logging_config(log_level=logging.DEBUG ,log_file='~$node_' + str(args.index)+'.log')
+        log = logging.getLogger()
+        # handler = PBFTHandler(args.index, conf)
+        handler = SPBFTHandler(args.index, conf)
+        asyncio.ensure_future(handler.score())
+
     log.debug(conf)
-
-    addr = conf['nodes'][args.index]
-    host = addr['host']
-    port = addr['port']
-
-    pbft = PBFTHandler(args.index, conf)
 
     # asyncio.ensure_future(pbft.synchronize())
     # asyncio.ensure_future(pbft.garbage_collection())
 
     app = web.Application()
     app.add_routes([
-        web.post('/' + MessageType.REQUEST, pbft.get_request),
-        web.post('/' + MessageType.PREPREPARE, pbft.preprepare),
-        web.post('/' + MessageType.PREPARE, pbft.prepare),
-        web.post('/' + MessageType.COMMIT, pbft.commit),
-        web.post('/' + MessageType.REPLY, pbft.reply),
-        web.post('/' + MessageType.FEEDBACK, pbft.feedback),
-        web.post('/' + MessageType.CONFIRM, pbft.confirm),
-        web.post('/' + MessageType.FAST_REPLY, pbft.fast_reply),
-        web.post('/' + MessageType.RECEIVE_CKPT_VOTE, pbft.receive_ckpt_vote),
-        web.post('/' + MessageType.RECEIVE_SYNC, pbft.receive_sync),
-        web.post('/' + MessageType.VIEW_CHANGE_REQUEST, pbft.get_view_change_request),
-        web.post('/' + MessageType.VIEW_CHANGE_VOTE, pbft.receive_view_change_vote),
-        web.get('/'+'blockchain', pbft.show_blockchain),
+        web.post('/' + MessageType.REQUEST, handler.get_request),
+        web.post('/' + MessageType.PREPREPARE, handler.preprepare),
+        web.post('/' + MessageType.PREPARE, handler.prepare),
+        web.post('/' + MessageType.COMMIT, handler.commit),
+        web.post('/' + MessageType.REPLY, handler.reply),
+        web.post('/' + MessageType.FEEDBACK, handler.feedback),
+        web.post('/' + MessageType.CONFIRM, handler.confirm),
+        web.post('/' + MessageType.FAST_REPLY, handler.fast_reply),
+        web.post('/' + MessageType.RECEIVE_CKPT_VOTE, handler.receive_ckpt_vote),
+        web.post('/' + MessageType.RECEIVE_SYNC, handler.receive_sync),
+        web.post('/' + MessageType.VIEW_CHANGE_REQUEST, handler.get_view_change_request),
+        web.post('/' + MessageType.VIEW_CHANGE_VOTE, handler.receive_view_change_vote),
+        web.post('/' + MessageType.ELECT, handler.elect),
+        web.post('/' + MessageType.NEW_LEADER, handler.new_leader),
+        web.get('/'+'blockchain', handler.show_blockchain),
         ])
-
-
 
 
     web.run_app(app, host=host, port=port, access_log=None)

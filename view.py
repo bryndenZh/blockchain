@@ -64,7 +64,7 @@ class ViewChangeVotes:
         input: 
             json_data: the json_data received by view change vote broadcast:
                 {
-                    "node_index": self._index,
+                    "index": self._index,
                     "view_number": self._follow_view.get_view(),
                     "checkpoint":self._ckpt.get_ckpt_info(),
                     "prepare_certificates":self.get_prepare_certificates(),
@@ -74,8 +74,8 @@ class ViewChangeVotes:
 
         prepare_certificates = json_data["prepare_certificates"]
 
-        self._log.debug("%d update prepare_certificate for view %d", 
-            self._node_index, json_data['view_number'])
+        self._log.debug("%d update prepare_certificate for view %d. %s", 
+            self._node_index, json_data['view_number'], str(prepare_certificates))
 
         for slot in prepare_certificates:
             prepare_certificate = Status.Certificate(View(0, self._num_total_nodes))
@@ -86,7 +86,7 @@ class ViewChangeVotes:
                     prepare_certificate._view.get_view())):
                 self.prepare_certificate_by_slot[slot] = prepare_certificate
 
-        self.from_nodes.add(json_data['node_index'])
+        self.from_nodes.add(json_data['index'])
 
 
 

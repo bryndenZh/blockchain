@@ -10,7 +10,9 @@ class MessageType():
     FAST_REPLY = "FAST_REPLY"
 
     REGISTER = 'register'
+    JOIN_REQUEST = 'join_request'
     JOIN = 'join'
+    NEW_VIEW = 'new_view'
     JOIN_REPLY = 'join_reply'
 
 
@@ -21,3 +23,7 @@ class MessageType():
 
     VIEW_CHANGE_REQUEST = 'view_change_request'
     VIEW_CHANGE_VOTE = "view_change_vote"
+
+    SCORE = 'score'
+    ELECT = 'elect'
+    NEW_LEADER = 'new_leader'
