@@ -130,7 +130,7 @@ class PBFTHandler:
             self._session = aiohttp.ClientSession(timeout=timeout)
         for i, node in enumerate(nodes):
             if random() > self._loss_rate:
-                self._log.debug("make request to %d, %s", i, json_data['type'] )
+                self._log.info("make request to %d, %s", i, json_data['type'] )
                 try:
                     _ = await self._session.post(self.make_url(node, command), json=json_data)
                 except Exception as e:

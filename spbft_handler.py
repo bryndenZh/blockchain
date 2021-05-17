@@ -7,10 +7,14 @@ from pbft_handler import PBFTHandler
 class SPBFTHandler(PBFTHandler):
     def __init__(self, index, conf):
         super().__init__(index, conf)
-        self._score = 9
-        self._candidates = {self._index: self._score}
-        self._temp_leader = self._index
+        self._score = conf['nodes'][self._index]['score']
+        # node score by their index in this round
+        self._candidates = {}
+        # max score chosen in elect stage
+        self._temp_leader = -1
+        # node's received vote count by their index
         self._leader_votes = {}
+        # whether this round has finished
         self._elected = False
 
 
@@ -26,8 +30,6 @@ class SPBFTHandler(PBFTHandler):
         # wait other replicas to start up
         await asyncio.sleep(self._sync_interval)
         # each time start a elect process, clear history candidates
-        if self._index == 3:
-            self._score = 10
         self._elected = False
         msg = {
             'index': self._index,
@@ -44,10 +46,12 @@ class SPBFTHandler(PBFTHandler):
         if self._elected:
             return web.Response()
         msg = await request.json()
-        self._log.debug("receive score msg: %s", str(msg))
+        self._log.info("receive score msg: %s", str(msg))
         self._candidates[msg['index']] = msg['score']
-        self._log.debug('self._candidates %s', self._candidates)
-        if msg['score'] > self._candidates[self._temp_leader] or (msg['score'] == self._candidates[self._temp_leader] and msg['index'] < self._temp_leader):
+        self._log.info('self._candidates %s', self._candidates)
+        if self._temp_leader == -1:
+            self._temp_leader = msg['index']
+        elif msg['score'] > self._candidates[self._temp_leader] or (msg['score'] == self._candidates[self._temp_leader] and msg['index'] < self._temp_leader):
             self._temp_leader = msg['index']
         if len(self._candidates) == len(self._nodes):
             self._log.info('receive all score meesages, elect %d to be leader', self._temp_leader)
@@ -63,7 +67,7 @@ class SPBFTHandler(PBFTHandler):
 
     async def new_leader(self, request):
         '''
-        when receive f + 1 leader message, update leader 
+        when receive 2f + 1 leader message, update leader 
         '''
         
         if self._elected:
@@ -74,14 +78,14 @@ class SPBFTHandler(PBFTHandler):
         if leader not in self._leader_votes:
             self._leader_votes[leader] = []
         self._leader_votes[leader].append(leader_vote)
-        if len(self._leader_votes[leader]) == self._f + 1:
+        if len(self._leader_votes[leader]) == 2 * self._f + 1:
             self._leader = leader
             self._log.info("%d is elected to be leader", self._leader)
             if self._index == self._leader:
                 self._is_leader = True
             self._elected = True
             self._leader_votes = []
-            self._candidates = {self._index: self._score}
+            
         return web.Response()
 
         

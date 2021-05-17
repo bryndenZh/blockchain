@@ -1,12 +1,16 @@
 nodes:
     - host: localhost
       port: 30000
+      score: 80
     - host: localhost
       port: 30001
+      score: 80
     - host: localhost
       port: 30002
+      score: 80
     - host: localhost
       port: 30003
+      score: 85
     # - host: localhost
     #   port: 30004
     # - host: localhost
