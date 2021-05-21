@@ -12,8 +12,11 @@ class MessageType():
     REGISTER = 'register'
     JOIN_REQUEST = 'join_request'
     JOIN = 'join'
+    JOIN_ACCEPT = 'join_accept'
     NEW_VIEW = 'new_view'
     JOIN_REPLY = 'join_reply'
+    GET_JOIN_REPLY = 'get_join_reply'
+
 
 
     NO_OP = 'NOP'

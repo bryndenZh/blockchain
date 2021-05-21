@@ -1,3 +1,4 @@
+from asyncio.events import set_event_loop
 import hashlib
 import json
 
@@ -20,10 +21,16 @@ class Status:
         # {(view, digest(proposal)) : SequenceElement}
         self.feedback_msgs = {}
         self.feedback_certificate = None
-        self.confim_msgs = {}
     
         # Set it to True only after commit
         self.is_committed = False
+
+        self.join_msgs = {}
+        self.is_joined = False
+        self.join_accept_msgs = {}
+        self.is_join_accepted = False
+        self.join_reply_msgs = {}
+        self.get_enough_join_reply = False
     
     class Certificate:
         def __init__(self, view, proposal = 0):
@@ -88,10 +95,22 @@ class Status:
             if key not in self.commit_msgs:
                 self.commit_msgs[key] = self.SequenceElement(proposal)
             self.commit_msgs[key].from_nodes.add(from_node)
-        if msg_type == MessageType.FEEDBACK:
+        elif msg_type == MessageType.FEEDBACK:
             if key not in self.feedback_msgs:
                 self.feedback_msgs[key] = self.SequenceElement(proposal)
             self.feedback_msgs[key].from_nodes.add(from_node)
+        elif msg_type == MessageType.JOIN:
+            if key not in self.join_msgs:
+                self.join_msgs[key] = self.SequenceElement(proposal)
+            self.join_msgs[key].from_nodes.add(from_node)
+        elif msg_type == MessageType.JOIN_ACCEPT:
+            if key not in self.join_accept_msgs:
+                self.join_accept_msgs[key] = self.SequenceElement(proposal)
+            self.join_accept_msgs[key].from_nodes.add(from_node)
+        elif msg_type == MessageType.JOIN_REPLY:
+            if key not in self.join_reply_msgs:
+                self.join_reply_msgs[key] = self.SequenceElement(proposal)
+            self.join_reply_msgs[key].from_nodes.add(from_node)
 
     def _check_majority(self, msg_type):
         '''
@@ -107,7 +126,7 @@ class Status:
                     return True
             return False
 
-        if msg_type == MessageType.COMMIT:
+        elif msg_type == MessageType.COMMIT:
             if self.commit_certificate:
                 return True
             for key in self.commit_msgs:
@@ -116,10 +135,37 @@ class Status:
             return False 
 
         # must receive 3f + 1 feedback instead of 2f + 1 
-        if msg_type == MessageType.FEEDBACK:
+        elif msg_type == MessageType.FEEDBACK:
             if self.feedback_certificate:
                 return True
             for key in self.feedback_msgs:
                 if len(self.feedback_msgs[key].from_nodes) == 3 * self.f + 1:
+                    return True
+            return False 
+
+        elif msg_type == MessageType.JOIN:
+            if self.is_joined:
+                return True
+            for key in self.join_msgs:
+                if len(self.join_msgs[key].from_nodes) >= 2 * self.f + 1:
+                    self.is_joined = True
+                    return True
+            return False 
+
+        elif msg_type == MessageType.JOIN_ACCEPT:
+            if self.is_join_accepted:
+                return True
+            for key in self.join_accept_msgs:
+                if len(self.join_accept_msgs[key].from_nodes) >= 2 * self.f + 1:
+                    self.is_join_accepted = True
+                    return True
+            return False 
+
+        elif msg_type == MessageType.JOIN_REPLY:
+            if self.is_join_accepted:
+                return True
+            for key in self.join_accept_msgs:
+                if len(self.join_accept_msgs[key].from_nodes) >= 2 * self.f + 1:
+                    self.is_join_accepted = True
                     return True
             return False 

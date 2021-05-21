@@ -51,7 +51,7 @@ class SPBFTHandler(PBFTHandler):
         msg = await request.json()
         self._log.info("receive score msg: %s", str(msg))
         self._candidates[msg['index']] = msg['score']
-        self._log.info('self._candidates %s', self._candidates)
+        self._log.debug('self._candidates %s', self._candidates)
         if self._temp_leader == -1:
             self._temp_leader = msg['index']
         elif msg['score'] > self._candidates[self._temp_leader] or (msg['score'] == self._candidates[self._temp_leader] and msg['index'] < self._temp_leader):
@@ -141,7 +141,7 @@ class SPBFTHandler(PBFTHandler):
     async def confirm(self, request):
         '''
         Once receive 3f + 1 message from replica, send confirm in return
-        similar to commit 
+        similar to commit
 
         input: 
             request: feedback message from replica
@@ -193,9 +193,8 @@ class SPBFTHandler(PBFTHandler):
 
     async def fast_reply(self, request):
         '''
-        Once receive confirm message from leader, append the commit 
-        certificate and cannot change anymore. In addition, if there is 
-        no bubbles ahead, commit the given slots and update the last_commit_slot.
+        Once receive confirm message from leader, write to blockchain and reply to client
+        no need to save confirm messages
         input:
             request: confirm message from leader:
                 confirm_msg = {

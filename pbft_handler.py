@@ -445,7 +445,7 @@ class PBFTHandler:
             print(e)
 
         with open("~$node_{}.blockchain".format(self._index), 'a') as f:
-            self._log.debug("write block %d to %d", self._blockchain.commit_counter, self._blockchain.length)
+            self._log.debug("write block from %d to %d", self._blockchain.commit_counter, self._blockchain.length)
             for i in range(self._blockchain.commit_counter, self._blockchain.length):
                 f.write(str(self._blockchain.chain[i].get_json())+'\n------------\n')
                 self._blockchain.update_commit_counter()
