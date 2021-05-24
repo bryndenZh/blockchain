@@ -29,7 +29,7 @@ class CheckPoint:
         self._session = None
         self._network_timeout = network_timeout
 
-        self._log.info("---> %d: Create checkpoint.", self._node_index)
+        # self._log.info("---> %d: Create checkpoint.", self._node_index)
 
     # Class to record the status of received checkpoints
     class ReceiveVotes:

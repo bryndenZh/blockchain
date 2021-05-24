@@ -31,7 +31,7 @@ class SPBFTHandler(PBFTHandler):
         }
         '''
         # wait other replicas to start up
-        await asyncio.sleep(self._sync_interval)
+        await asyncio.sleep(10)
         # each time start a elect process, clear history candidates
         self._elected = False
         msg = {
@@ -86,6 +86,8 @@ class SPBFTHandler(PBFTHandler):
             self._log.info("%d is elected to be leader", self._leader)
             if self._index == self._leader:
                 self._is_leader = True
+            else:
+                self._is_leader = False
             self._elected = True
             self._leader_votes = []
             
@@ -236,7 +238,7 @@ class SPBFTHandler(PBFTHandler):
                     json_data['proposal'][slot])
 
                 self._log.debug("Add commit certifiacte to slot %d", int(slot))
-                
+                self._log.debug("last_commit_slot = %d, slot=%s, %d", self._last_commit_slot, slot, status.is_committed)
                 if self._last_commit_slot == int(slot) - 1 and not status.is_committed:
 
                     # client doesn't distinguish fast_reply or reply, so send type REPLY for convenience
@@ -248,6 +250,8 @@ class SPBFTHandler(PBFTHandler):
                     }
                     status.is_committed = True
                     self._last_commit_slot += 1
+                    if not self._is_leader:
+                        self._next_propose_slot += 1
 
                     # When commit messages fill the next checkpoint, 
                     # propose a new checkpoint.

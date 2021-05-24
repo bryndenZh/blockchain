@@ -4,15 +4,15 @@ nodes:
       port: 30000
       score: 80
     # - host: 10.4.10.248
-    - host: 10.4.10.239
+    - host: localhost
       port: 30001
       score: 80
     # - host: 10.4.10.238
-    - host: 10.4.10.239
+    - host: localhost
       port: 30002
       score: 80
     # - host: 10.4.10.238
-    - host: 10.4.10.239
+    - host: localhost
       port: 30003
       score: 85
     # - host: localhost

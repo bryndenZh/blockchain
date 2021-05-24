@@ -130,7 +130,7 @@ class PBFTHandler:
             self._session = aiohttp.ClientSession(timeout=timeout)
         for i, node in enumerate(nodes):
             if random() > self._loss_rate:
-                self._log.info("make request to %d, %s", i, json_data['type'] )
+                self._log.info("make request to %s, %s", node['host'] + ':' + str(node['port']), json_data['type'] )
                 try:
                     _ = await self._session.post(self.make_url(node, command), json=json_data)
                 except Exception as e:
@@ -148,10 +148,13 @@ class PBFTHandler:
         '''
         # special case: before commit, a node has recevied 2f + 1 ckpt_vote and update its ckpt
         #  so the msg to be commit becomes illegal
-        if int(slot) < self._ckpt.next_slot - 1 or int(slot) >= self._ckpt.get_commit_upperbound():
-            return False
-        else:
-            return True
+
+        # TODO: restore after fix ckpt_sync
+        # if int(slot) < self._ckpt.next_slot - 1 or int(slot) >= self._ckpt.get_commit_upperbound():
+        #     return False
+        # else:
+        #     return True
+        return True
     
     async def get_request(self, request):
         '''
@@ -373,6 +376,8 @@ class PBFTHandler:
 
                     status.is_committed = True
                     self._last_commit_slot += 1
+                    if not self._is_leader:
+                        self._next_propose_slot += 1
 
                     #    When commit messages fill the next checkpoint, propose a new checkpoint.
                     if (self._last_commit_slot + 1) % self._checkpoint_interval == 0:

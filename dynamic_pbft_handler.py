@@ -1,3 +1,4 @@
+from aiohttp.helpers import NO_EXTENSIONS
 from blockchain_client import Status
 import json
 import logging, traceback
@@ -10,15 +11,19 @@ import asyncio
 from constants import MessageType
 from view import View
 from status import Status
-from pbft_handler import PBFTHandler
+from spbft_handler import SPBFTHandler
+from checkpoint import CheckPoint
 
-class DynamicPBFTHandler(PBFTHandler):
-    def __init__(self, index, conf, node):
-        super().__init__(index, conf)
-        # dynamic add from outside instead of reading from configuration
-        self._node = node
+class DynamicPBFTHandler(SPBFTHandler):
+    def __init__(self, index, conf, node=None):
         self._ca = conf['ca']
         self._join_status = None
+        # dynamic add from outside instead of reading from configuration
+        if node != None:
+            self._node = node
+        super().__init__(index, conf)
+
+
 
     async def register(self):
         """
@@ -32,8 +37,15 @@ class DynamicPBFTHandler(PBFTHandler):
         self._index = resp['index']
         self._nodes = resp['nodes']
         self._log.info('register to ca, get index %d, current nodes: %s', self._index, self._nodes)
-        await self.join_request()
 
+        self._node_cnt = len(self._nodes)
+        self._f = (self._node_cnt - 1) // 3
+        self._is_leader = False
+        self._ckpt = CheckPoint(self._checkpoint_interval, self._nodes, 
+            self._f, self._index, self._loss_rate, self._network_timeout)
+
+        await self.join_request()
+        
 
     async def join_request(self):
         """
@@ -55,7 +67,8 @@ class DynamicPBFTHandler(PBFTHandler):
             'node': self._node,
             'type': MessageType.JOIN_REQUEST
         }
-        await self._post(self._nodes, MessageType.JOIN, join_req)
+        # broadcast to others except itself
+        await self._post(self._nodes[ : -1], MessageType.JOIN, join_req)
 
 
     async def join(self, request):
@@ -67,6 +80,16 @@ class DynamicPBFTHandler(PBFTHandler):
         broadcast join message:
         join_msg = {
                 'index': self._index,
+                'view': self._view.get_view(),
+                'proposal': {
+                        'index': n
+                        'node': {
+                                'host': localhost
+                                'port': xxx
+                        }
+                        'type': join_request
+                }
+                'type': MessageType.JOIN,
         }
         """   
         json_data = await request.json()
@@ -87,6 +110,19 @@ class DynamicPBFTHandler(PBFTHandler):
     async def join_accept(self, request):
         '''
         handle join message. if 2f + 1, broadcast join_accept message(similar to commit)
+        join_accept_msg = {
+                'index': self._index,
+                'view': self._view.get_view(),
+                'proposal': {
+                        'index': n
+                        'node': {
+                                'host': localhost
+                                'port': xxx
+                        }
+                        'type': join_request
+                }
+                'type': MessageType.JOIN_ACCEPT,
+            }
         '''
         json_data = await request.json()
         self._log.info("receive join message from %i", json_data['index'])
@@ -100,10 +136,12 @@ class DynamicPBFTHandler(PBFTHandler):
             join_accept_msg = {
                 'index': self._index,
                 'view': self._view.get_view(),
-                'proposal': json_data,
+                'proposal': json_data['proposal'],
                 'type': MessageType.JOIN_ACCEPT,
             }
             await self._post(self._nodes, MessageType.JOIN_REPLY, join_accept_msg)
+        return web.Response()
+
 
     async def join_reply(self, request):
         '''
@@ -117,13 +155,25 @@ class DynamicPBFTHandler(PBFTHandler):
         self._join_status._update_sequence(json_data['type'], 
             view, json_data['proposal'], json_data['index'])
         if not self._join_status.is_join_accepted and self._join_status._check_majority(json_data['type']):
+            new_node = json_data['proposal']['node']
+            self._nodes.append(new_node)
+            self._node_cnt = len(self._nodes)
+            self._f = (self._node_cnt - 1) // 3
+            self._log.info("receive 2f + 1 join accept messages! update local node list to: %s", str(self._nodes))
             join_reply_msg = {
                 'index': self._index,
                 'view': self._view.get_view(),
-                'proposal': json_data,
+                'proposal': json_data['proposal'],
                 'type': MessageType.JOIN_REPLY,
+                'sync': {
+                    'leader': self._leader,
+                    'view': self._view.get_view(),
+                    'next_propose_slot': self._next_propose_slot,
+                    'blocks': [block.__dict__ for block in self._blockchain.chain[1:]]
+                }
             }
-            await self._post(self._nodes, MessageType.GET_JOIN_REPLY, join_reply_msg)
+            await self._post([new_node], MessageType.GET_JOIN_REPLY, join_reply_msg)
+        return web.Response()
 
     async def get_join_reply(self, request):
         '''
@@ -137,7 +187,20 @@ class DynamicPBFTHandler(PBFTHandler):
         self._join_status._update_sequence(json_data['type'], 
             view, json_data['proposal'], json_data['index'])
         if not self._join_status.get_enough_join_reply and self._join_status._check_majority(json_data['type']):
-            self._log.info("receive f + 1 join_accept messages, start syncing!")
+            self._log.info("receive f + 1 join_accept messages, start syncing! %s", str(json_data))
+            self._leader = json_data['sync']['leader']
+            self._view = View(json_data['sync']['view'], self._node_cnt)
+            self._follow_view = View(json_data['sync']['view'], self._node_cnt)
+            self._next_propose_slot = json_data['sync']['next_propose_slot']
+            self._last_commit_slot = self._next_propose_slot - 1
+            self._blockchain.update(json_data['sync']['blocks'])
+            self._log.info("update leader=%d, view=%d, slot=%d", self._leader, self._view.get_view(), self._next_propose_slot)
+            with open("~$node_{}.blockchain".format(self._index), 'a') as f:
+                self._log.debug("write block from %d to %d", self._blockchain.commit_counter, self._blockchain.length)
+                for i in range(self._blockchain.commit_counter, self._blockchain.length):
+                    f.write(str(self._blockchain.chain[i].get_json())+'\n------------\n')
+                    self._blockchain.update_commit_counter()
+        return web.Response()
             
 
         

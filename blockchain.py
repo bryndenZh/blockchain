@@ -3,11 +3,11 @@ import hashlib
 import logging
 
 class Block:
-    def __init__(self, index, transactions, timestamp, previous_hash):
+    def __init__(self, index, transactions, timestamp, previous_hash, hash=''):
         self.index          = index
         self.transactions   = transactions
         self.timestamp      = timestamp
-        self.hash           = ''
+        self.hash           = hash
         self.previous_hash  = previous_hash
 
     def compute_hash(self):
@@ -75,4 +75,17 @@ class Blockchain:
         self.length += 1
         self.chain.append(block)
 
+    def update(self, chain):
+        '''
+        update blockchain by dict type chain
+        chain: [
+            {
+                index, transactions, timestamp, previous_hash
+            },
+        ]
+        '''
+        for block in chain:
+            b = Block(block['index'], block['transactions'], block['timestamp'], block['previous_hash'], block['hash'])
+            self.chain.append(b)
+            self.length += 1
 

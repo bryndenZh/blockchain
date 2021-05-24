@@ -1,5 +1,7 @@
 #! /usr/bin/env python3
 import logging, traceback
+
+from aiohttp.web_routedef import post
 from spbft_handler import SPBFTHandler
 import argparse
 import yaml
@@ -71,9 +73,9 @@ def main():
         host = args.host
         port = args.port
         print(host, port)
-        logging_config(log_level=logging.DEBUG ,log_file='~$node_' + host + ':' + port +'.log')
+        logging_config(log_level=logging.DEBUG ,log_file='~$node_' + host + '_' + port +'.log')
         log = logging.getLogger()
-        handler = DynamicPBFTHandler(-1, conf, {'host': host, 'port': port})
+        handler = DynamicPBFTHandler(-1, conf, {'host': host, 'port': port, 'score': 0})
         log.info("create a dbft handler at %s:%s", host, port)
         asyncio.ensure_future(handler.register())
     else: 
@@ -82,8 +84,8 @@ def main():
         port = addr['port']
         logging_config(log_level=logging.DEBUG ,log_file='~$node_' + str(args.index)+'.log')
         log = logging.getLogger()
-        # handler = PBFTHandler(args.index, conf)
-        handler = SPBFTHandler(args.index, conf)
+        handler = DynamicPBFTHandler(args.index, conf)
+        # handler = SPBFTHandler(args.index, conf)
         asyncio.ensure_future(handler.score())
 
     log.debug(conf)
@@ -107,6 +109,10 @@ def main():
         web.post('/' + MessageType.VIEW_CHANGE_VOTE, handler.receive_view_change_vote),
         web.post('/' + MessageType.ELECT, handler.elect),
         web.post('/' + MessageType.NEW_LEADER, handler.new_leader),
+        web.post('/' + MessageType.JOIN, handler.join),
+        web.post('/' + MessageType.JOIN_ACCEPT, handler.join_accept),
+        web.post('/' + MessageType.JOIN_REPLY, handler.join_reply),
+        web.post('/' + MessageType.GET_JOIN_REPLY, handler.get_join_reply),
         web.get('/'+'blockchain', handler.show_blockchain),
         ])
 

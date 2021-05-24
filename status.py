@@ -162,10 +162,10 @@ class Status:
             return False 
 
         elif msg_type == MessageType.JOIN_REPLY:
-            if self.is_join_accepted:
+            if self.get_enough_join_reply:
                 return True
-            for key in self.join_accept_msgs:
-                if len(self.join_accept_msgs[key].from_nodes) >= 2 * self.f + 1:
-                    self.is_join_accepted = True
+            for key in self.join_reply_msgs:
+                if len(self.join_reply_msgs[key].from_nodes) >= self.f + 1:
+                    self.get_enough_join_reply = True
                     return True
             return False 
