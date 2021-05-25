@@ -86,7 +86,7 @@ def main():
         log = logging.getLogger()
         handler = DynamicPBFTHandler(args.index, conf)
         # handler = SPBFTHandler(args.index, conf)
-        asyncio.ensure_future(handler.score())
+        # asyncio.ensure_future(handler.score())
 
     log.debug(conf)
 

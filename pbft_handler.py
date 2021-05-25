@@ -216,9 +216,9 @@ class PBFTHandler:
             'type': 'preprepare'
         }
         
-        # await self._post(self._nodes, MessageType.PREPARE, preprepare_msg)
+        await self._post(self._nodes, MessageType.PREPARE, preprepare_msg)
         # # require replicas to feedback instead of prepare
-        await self._post(self._nodes, MessageType.FEEDBACK, preprepare_msg)
+        # await self._post(self._nodes, MessageType.FEEDBACK, preprepare_msg)
 
 
     async def prepare(self, request):

@@ -205,7 +205,7 @@ class Client:
          
         for i in range(self._num_messages):
             # Every time succeed in sending message, wait for 0 - 1 second.
-            await asyncio.sleep(random())
+            # await asyncio.sleep(random())
             
             await self.send_request( str(i), i)
             
@@ -232,7 +232,7 @@ class Client:
                 self._log.info("client %d's  message %d sent.", self._client_id, i)
                 await self._session.post(make_url(self._nodes[dest_ind], MessageType.REQUEST), json=json_data)
                
-                await asyncio.wait_for(self._is_request_succeed.wait(), self._resend_interval)
+                # await asyncio.wait_for(self._is_request_succeed.wait(), self._resend_interval)
             except:
                 json_data['timestamp'] = time.time()
                 self._status = Status(self._f)

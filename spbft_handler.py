@@ -10,7 +10,10 @@ from constants import MessageType
 class SPBFTHandler(PBFTHandler):
     def __init__(self, index, conf):
         super().__init__(index, conf)
-        self._score = conf['nodes'][self._index]['score']
+        if 'score' not in conf['nodes'][self._index]:
+            self._score = 60
+        else: 
+            self._score = conf['nodes'][self._index]['score']
         # node score by their index in this round
         self._candidates = {}
         # max score chosen in elect stage
@@ -36,6 +39,7 @@ class SPBFTHandler(PBFTHandler):
         self._elected = False
         msg = {
             'index': self._index,
+            'leader': self._index,
             'score': self._score,
             'type': MessageType.SCORE
         }

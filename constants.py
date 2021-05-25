@@ -28,5 +28,5 @@ class MessageType():
     VIEW_CHANGE_VOTE = "view_change_vote"
 
     SCORE = 'score'
-    ELECT = 'elect'
+    VOTE = 'vote'
     NEW_LEADER = 'new_leader'

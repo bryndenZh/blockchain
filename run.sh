@@ -13,7 +13,7 @@ do
         rm *node*.log
         node_id=0
         while [ $node_id -lt $2 ]; do
-	        python ./node.py -i $node_id &
+	        python3 ./node.py -i $node_id &
           echo "运行 node $node_id"
           node_id=$(($node_id+1)) 
         done
